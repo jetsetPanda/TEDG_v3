@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar, Nav, NavDropdown, Container} from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 
-function MenuBar(props) {
+const MenuBar = () => {
     return (
         <Container>
             <header className='d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom'>
