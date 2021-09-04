@@ -1,9 +1,9 @@
 import React from 'react';
-import NavBar from "./NavBar";
+import MenuBar from "./MenuBar";
 
 const Home = props => (
     <>
-        <NavBar/>
+        <MenuBar/>
         <h1>HOME!</h1>
     </>
 );
