@@ -1,17 +1,33 @@
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
+import { Container } from 'react-bootstrap'
+
+import Layout from "./layout/Layout";
+
 import Home from "./components/Home";
 import About from "./components/About";
 import SmileGallery from "./components/SmileGallery";
+import NewPatients from "./components/NewPatients";
+import Faq from "./components/FAQ";
+import Services from "./components/Services";
+import OurTeam from "./components/OurTeam";
+
+
 
 function App() {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route component={Home} path={'/'} exact />
-        <Route component={About} path={'/about'} />
-        <Route component={SmileGallery} path={'/smile-gallery'} />
-      </Switch>
-    </BrowserRouter>
+    <Layout>
+        <Container>
+            <Switch>
+                <Route component={Home} path={'/'} exact />
+                <Route component={About} path={'/about'} />
+                <Route component={OurTeam} path={'/our-team'} />
+                <Route component={NewPatients} path={'/new-patients'} />
+                <Route component={Faq} path={'/faq'} />
+                <Route component={Services} path={'/services'} />
+                <Route component={SmileGallery} path={'/smile-gallery'} />
+            </Switch>
+        </Container>
+    </Layout>
   );
 }
 
