@@ -1,8 +1,16 @@
 import React from 'react';
 import {Navbar, Nav, NavDropdown, Container, Button} from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
+import styled from 'styled-components';
 
 import logo from "../assets/images/logosvg.svg";
+
+const MenuDiv = styled(Nav)`
+    a {
+      font-size: 14px;
+      margin: auto ${props => props.sideMargins || '10px'};
+    }
+`
 
 const MenuBar = () => {
     return (
@@ -14,7 +22,6 @@ const MenuBar = () => {
                         <img
                             src={logo}
                             width="100%"
-                            height="100%"
                             className="d-inline-block align-top"
                             alt="React Bootstrap logo"
                         />
@@ -22,7 +29,7 @@ const MenuBar = () => {
                 </LinkContainer>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto d-flex justify-content-around">
+                    <MenuDiv className="me-auto d-flex justify-content-around">
                         <LinkContainer to="/about">
                             <Nav.Link>ABOUT US</Nav.Link>
                         </LinkContainer>
@@ -55,11 +62,11 @@ const MenuBar = () => {
                         {/*    <NavDropdown.Divider />*/}
                         {/*    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>*/}
                         {/*</NavDropdown>*/}
-                    </Nav>
-                    <Nav>
+                    </MenuDiv>
+                    <MenuDiv sideMargins="10px">
                         <LinkContainer to="#">
                             <Button>
-                                Call Us
+                                CALL US
                             </Button>
                         </LinkContainer>
 
@@ -73,7 +80,7 @@ const MenuBar = () => {
                         {/*<Nav.Link eventKey={2} href="#memes">*/}
                         {/*    Dank memes*/}
                         {/*</Nav.Link>*/}
-                    </Nav>
+                    </MenuDiv>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
