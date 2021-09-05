@@ -8,7 +8,7 @@ function SmileGallery(props) {
     const [postData, setPost] = useState(null);
 
     useEffect(() => {
-        // grok internal sanity query lang (similar to graphQL)
+        // grok custom sanity query lang (similar to graphQL)
         sanityClient.fetch(`*[_type == "post"] {
             title,
             slug,
@@ -20,7 +20,10 @@ function SmileGallery(props) {
                 alt
             }
         }`)
-        .then((data) => setPost(data))
+        .then((data) => {
+            console.log("DATA: ", data);
+            setPost(data);
+        })
         .catch(console.error);
     }, []);
 
@@ -35,17 +38,20 @@ function SmileGallery(props) {
 
                             <Link to={"/post/" + post.slug.current} key={post.slug.current}>
                             <span key={index}>
-                            <img
-                                src={post.mainImage.asset.url}
-                                alt={post.mainImage.alt}
-                                className=""
-                            />
-                            <span className="d-flex justify-content-end">
-                                <h3>
-                                    {post.title}
-                                </h3>
+                                {post.mainImage && (
+                                    <img
+                                        src={post.mainImage.asset.url}
+                                        alt={post.mainImage.alt}
+                                        className=""
+                                    />
+                                )}
+
+                                <span className="d-flex justify-content-end">
+                                    <h3>
+                                        {post.title}
+                                    </h3>
+                                </span>
                             </span>
-                        </span>
                             </Link>
 
                     ))}
