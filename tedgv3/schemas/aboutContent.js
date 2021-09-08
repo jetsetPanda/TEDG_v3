@@ -11,12 +11,12 @@ export default {
         {
             name: "headliner",
             title: "Jumbotron Headliner",
-            type: "blockContent",
+            type: "text",
         },
         {
             name: "subHeadline",
             title: "Long Copy",
-            type: "blockContent",
+            type: "text",
         },
         {
             name: 'aboutImage',

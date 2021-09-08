@@ -26,8 +26,7 @@ function About(props) {
             .then((data) => setAboutContent(data))
             .catch(console.error);
     }, []);
-
-
+ 
     return (
         <>
             <Container fluid>
@@ -49,13 +48,13 @@ function About(props) {
 
                             </Col>
                             <Col className="d-flex justify-content-center align-items-center">
-                                <h1 className="text-left m-5 p-4">{aboutContent.headline}</h1>
+                                <h1 className="text-left m-5 p-4">{aboutContent.headliner}</h1>
                             </Col>
                         </Row>
 
-                        <TopRow className="d-flex justify-content-center align-items-center">
-                            {/*<p>{aboutContent.subHeadline}</p>*/}
-                        </TopRow>
+                        <Row className="d-flex justify-content-center align-items-center">
+                            <p>{aboutContent.subHeadline}</p>
+                        </Row>
 
                     </span>
 
