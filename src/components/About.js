@@ -22,6 +22,13 @@ function About(props) {
             pageName,
             headliner,
             subHeadline,
+            aboutImage{
+                asset->{
+                    _id,
+                    url
+                },
+                alt
+            }
         }`)
             .then((data) => setAboutContent(data))
             .catch(console.error);
@@ -42,8 +49,9 @@ function About(props) {
                         <Row>
                             <Col>
                                 <img
-                                    src={aboutImg2x}
-                                    alt="man smiling"
+                                    src={aboutContent.aboutImage.asset.url}
+                                    alt={aboutContent.aboutImage.alt}
+                                    className=""
                                 />
 
                             </Col>
