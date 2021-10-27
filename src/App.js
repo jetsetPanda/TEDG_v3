@@ -11,7 +11,7 @@ import NewPatients from "./components/NewPatients";
 import Faq from "./components/FAQ";
 import Services from "./components/Services";
 import OurTeam from "./components/OurTeam";
-
+import OurTechnology from "./components/OurTechnology";
 
 
 function App() {
@@ -21,7 +21,8 @@ function App() {
             <Switch>
                 <Route component={Home} path={'/'} exact />
                 <Route component={About} path={'/about'} />
-                <Route component={OurTeam} path={'/our-team'} />
+                <Route component={OurTeam} path={'/meet-the-team'} />
+                <Route component={OurTechnology} path={'our-technology'} />
                 <Route component={NewPatients} path={'/new-patients'} />
                 <Route component={SingleSmile} path={'/smile-gallery/:slug'} />
                 <Route component={Faq} path={'/faq'} />
