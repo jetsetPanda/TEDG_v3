@@ -1,12 +1,20 @@
 export default {
     name: "aboutContent",
-    title: "About Page Content",
+    title: "Page Content -- ABOUT US",
     type: "document",
     fields: [
         {
             name: "pageName",
-            title: "Page Name",
+            title: "Page Name (note: bish dis will also show in breadcrumb)",
             type: "string",
+        },
+        {
+            name: 'aboutImage',
+            title: 'Banner Image',
+            type: 'image',
+            options: {
+                hotspot: true,
+            },
         },
         {
             name: "headliner",
@@ -15,17 +23,20 @@ export default {
         },
         {
             name: "subHeadline",
-            title: "Long Copy",
+            title: "Old Long Copy",
             type: "text",
         },
         {
-            name: 'aboutImage',
-            title: 'About Image',
-            type: 'image',
-            options: {
-                hotspot: true,
-            },
+            name: "subHeadlinePortableText",
+            title: "Long Copy (structured data, replace this old long copy)",
+            type: "array",
+            of: [
+                {
+                    type: 'block'
+                }
+            ]
         },
+
     ],
 
 }
