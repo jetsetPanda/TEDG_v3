@@ -1,9 +1,161 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import sanityClient from '../client.js';
+import PortableText from '@sanity/block-content-to-react';
+import { LinkContainer } from "react-router-bootstrap";
 
-const OurTeam = props => (
-    <div>
-        <h1>Our Team!!!</h1>
-    </div>
-);
+
+import { Container, Breadcrumb, BreadcrumbItem, Row, Col, Stack, Image, Button, Card } from 'react-bootstrap';
+import styled from "styled-components";
+import homeBanner from '../assets/images/home-banner2x.png';
+import cardSample from '../assets/images/card-sample2x.png';
+
+const TopRow = styled(Row)`
+  background-color: darkblue;
+  h1 {
+    color: #ffffff;
+  }
+`
+
+
+
+const Div85WidthCentered = styled.div`
+  width: 85%;
+  margin: 0 auto;
+  align-items: center;
+`
+
+function OurTeam(props) {
+
+    const [aboutContentData, setAboutContent] = useState(null);
+
+    useEffect(() => {
+        // grok custom sanity query lang (similar to graphQL)
+        sanityClient.fetch(`*[_type == "aboutContent"] {
+            pageName,
+            headliner,
+            subHeadline,
+            aboutImage{
+                asset->{
+                    _id,
+                    url
+                },
+                alt
+            },
+            subHeadlinePortableText
+        }`)
+            .then((data) => setAboutContent(data))
+            .catch(console.error);
+    }, []);
+
+    return (
+        <>
+            <Container fluid>
+                {aboutContentData && aboutContentData.map((aboutContent,index) => {
+                    console.log("ABOUT DATAAA:", aboutContentData[0]);
+                    console.log("reach in: ", aboutContentData[0].headliner[0][0])
+
+                    return (
+                        <span key={index}>
+                        <Stack gap={5}>
+
+                            <div>
+                                <Image
+                                    src={aboutContent.aboutImage.asset.url}
+                                    alt=""
+                                    className=""
+                                    fluid
+                                />
+                            </div>
+
+                            <Breadcrumb>
+                                <BreadcrumbItem>
+                                  <a href="/">
+                                    Home
+                                  </a>
+                                </BreadcrumbItem>
+                                <BreadcrumbItem active>
+                                    Our Team
+                                  {/*{aboutContent.pageName}*/}
+                                </BreadcrumbItem>
+                              </Breadcrumb>
+
+
+                            <div>
+                                <h1 className="text-center">
+                                    {aboutContent.headliner}
+                                </h1>
+
+                            </div>
+                            <Div85WidthCentered>
+                                <h6>
+                                    <PortableText blocks={aboutContent.subHeadlinePortableText}/>
+                                </h6>
+                            </Div85WidthCentered>
+
+                            <div className="text-center" >
+                                <Button variant="outline-primary" size="lg">DR. HOWARD WIMMER'S 20 YEAR TRIBUTE</Button>
+                            </div>
+
+                            <Row className="mt-5">
+                                <Col sm={12} md={6}>
+                                   <Image
+                                       src={cardSample}
+                                       alt=""
+                                       className=""
+                                       fluid
+                                   />
+
+                                </Col>
+                                <Col sm={12} md={6}>
+                                   <Stack gap={2}>
+                                       <h2>MEET THE TEAM</h2>
+                                       <p>You’re in great hands. Our dedicated team of dentists, specialists, and hygienists have decades of experience and form the fabric of our practice. </p>
+                                       <div>
+                                           <LinkContainer to="meet-the-team">
+                                                <Button variant="outline-primary" size="md">Come Meet Our Team</Button>
+                                           </LinkContainer>
+                                       </div>
+
+                                   </Stack>
+                                </Col>
+                            </Row>
+
+                            <Row className="mt-5">
+                                <Col sm={12} md={6}>
+                                   <Image
+                                       src={cardSample}
+                                       alt=""
+                                       className=""
+                                       fluid
+                                   />
+
+                                </Col>
+                                <Col sm={12} md={6}>
+                                   <Stack gap={2}>
+                                       <h2>OUR TECHNOLOGY</h2>
+                                       <p>As part of our effort to provide the best dental care possible, we use state-of-the-art equipment, modern technology and the most advanced dental techniques.. </p>
+                                       <div>
+                                          <Button variant="outline-primary" size="md">View Our Services</Button>
+                                       </div>
+
+                                   </Stack>
+                                </Col>
+                            </Row>
+
+                        </Stack>
+                    </span>
+
+                    )}
+                )}
+
+            </Container>
+        </>
+    );
+}
 
 export default OurTeam;
+// {/*<img*/}
+// {/*    src={post.mainImage.asset.url}*/}
+// {/*    alt={post.mainImage.alt}*/}
+// {/*    className=""*/}
+// {/*/>*/}
