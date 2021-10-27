@@ -34,7 +34,7 @@ const MenuBar = () => {
                             <Nav.Link>ABOUT US</Nav.Link>
                         </LinkContainer>
 
-                        <LinkContainer to="/our-team">
+                        <LinkContainer to="/meet-the-team">
                             <Nav.Link>OUR TEAM</Nav.Link>
                         </LinkContainer>
 
