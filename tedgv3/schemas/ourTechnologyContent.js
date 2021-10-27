@@ -1,6 +1,6 @@
 export default {
-    name: "aboutContent",
-    title: "Page Content -- ABOUT US",
+    name: "ourTechnologyContent",
+    title: "Page Content -- OUR TECHNOLOGY",
     type: "document",
     fields: [
         {
@@ -9,7 +9,7 @@ export default {
             type: "string",
         },
         {
-            name: 'aboutImage',
+            name: 'bannerImage',
             title: 'Banner Image',
             type: 'image',
             options: {
@@ -18,17 +18,12 @@ export default {
         },
         {
             name: "headliner",
-            title: "Jumbotron Headliner",
-            type: "text",
-        },
-        {
-            name: "subHeadline",
-            title: "Old Long Copy",
-            type: "text",
+            title: "Jumbo Headliner",
+            type: "string",
         },
         {
             name: "subHeadlinePortableText",
-            title: "Long Copy (structured data, replace this old long copy)",
+            title: "Long Copy",
             type: "array",
             of: [
                 {

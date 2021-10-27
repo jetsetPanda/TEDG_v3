@@ -24,7 +24,7 @@ const Div85WidthCentered = styled.div`
   align-items: center;
 `
 
-function OurTeam(props) {
+function OurTechnology(props) {
 
     const [aboutContentData, setAboutContent] = useState(null);
 
@@ -73,8 +73,15 @@ function OurTeam(props) {
                                     Home
                                   </a>
                                 </BreadcrumbItem>
+                                <LinkContainer  to="/about">
+                                    <BreadcrumbItem>
+                                      <a href="#">
+                                        About Us
+                                      </a>
+                                    </BreadcrumbItem>
+                                </LinkContainer>
                                 <BreadcrumbItem active>
-                                    Our Team
+                                    Our Technology
                                   {/*{aboutContent.pageName}*/}
                                 </BreadcrumbItem>
                               </Breadcrumb>
@@ -111,7 +118,7 @@ function OurTeam(props) {
                                        <h2>MEET THE TEAM</h2>
                                        <p>You’re in great hands. Our dedicated team of dentists, specialists, and hygienists have decades of experience and form the fabric of our practice. </p>
                                        <div>
-                                           <LinkContainer to="meet-the-team">
+                                           <LinkContainer to="/meet-the-team">
                                                 <Button variant="outline-primary" size="md">Come Meet Our Team</Button>
                                            </LinkContainer>
                                        </div>
@@ -153,7 +160,7 @@ function OurTeam(props) {
     );
 }
 
-export default OurTeam;
+export default OurTechnology;
 // {/*<img*/}
 // {/*    src={post.mainImage.asset.url}*/}
 // {/*    alt={post.mainImage.alt}*/}

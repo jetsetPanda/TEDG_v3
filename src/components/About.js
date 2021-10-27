@@ -1,15 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import sanityClient from '../client.js';
+import PortableText from '@sanity/block-content-to-react';
+import { LinkContainer } from "react-router-bootstrap";
 
-import { Container, Row, Col } from 'react-bootstrap';
+
+import { Container, Breadcrumb, BreadcrumbItem, Row, Col, Stack, Image, Button, Card } from 'react-bootstrap';
 import styled from "styled-components";
-import aboutImg2x from '../assets/images/aboutImg2x.png';
+import homeBanner from '../assets/images/home-banner2x.png';
+import cardSample from '../assets/images/card-sample2x.png';
 
 const TopRow = styled(Row)`
-    background-color: darkblue;
-    h1 {
-      color: #ffffff;
-    }
+  background-color: darkblue;
+  h1 {
+    color: #ffffff;
+  }
+`
+
+
+
+const Div85WidthCentered = styled.div`
+  width: 85%;
+  margin: 0 auto;
+  align-items: center;
 `
 
 function About(props) {
@@ -28,12 +40,13 @@ function About(props) {
                     url
                 },
                 alt
-            }
+            },
+            subHeadlinePortableText
         }`)
             .then((data) => setAboutContent(data))
             .catch(console.error);
     }, []);
- 
+
     return (
         <>
             <Container fluid>
@@ -42,31 +55,96 @@ function About(props) {
                     console.log("reach in: ", aboutContentData[0].headliner[0][0])
 
                     return (
-                    <span key={index}>
-                        <TopRow className="d-flex justify-content-center align-items-center">
-                            <h1 className="text-center m-5 p-4">{aboutContent.pageName}</h1>
-                        </TopRow>
-                        <Row>
-                            <Col>
-                                <img
+                        <span key={index}>
+                        <Stack gap={5}>
+
+                            <div>
+                                <Image
                                     src={aboutContent.aboutImage.asset.url}
-                                    alt={aboutContent.aboutImage.alt}
+                                    alt=""
                                     className=""
+                                    fluid
                                 />
+                            </div>
 
-                            </Col>
-                            <Col className="d-flex justify-content-center align-items-center">
-                                <h1 className="text-left m-5 p-4">{aboutContent.headliner}</h1>
-                            </Col>
-                        </Row>
+                            <Breadcrumb>
+                                <BreadcrumbItem>
+                                  <a href="/">
+                                    Home
+                                  </a>
+                                </BreadcrumbItem>
+                                <BreadcrumbItem active>
+                                  {aboutContent.pageName}
+                                </BreadcrumbItem>
+                              </Breadcrumb>
 
-                        <Row className="d-flex justify-content-center align-items-center">
-                            <p>{aboutContent.subHeadline}</p>
-                        </Row>
 
+                            <div>
+                                <h1 className="text-center">
+                                    {aboutContent.headliner}
+                                </h1>
+
+                            </div>
+                            <Div85WidthCentered>
+                                <h6>
+                                    <PortableText blocks={aboutContent.subHeadlinePortableText}/>
+                                </h6>
+                            </Div85WidthCentered>
+
+                            <div className="text-center" >
+                                <Button variant="outline-primary" size="lg">DR. HOWARD WIMMER'S 20 YEAR TRIBUTE</Button>
+                            </div>
+
+                            <Row className="mt-5">
+                                <Col sm={12} md={6}>
+                                   <Image
+                                       src={cardSample}
+                                       alt=""
+                                       className=""
+                                       fluid
+                                   />
+
+                                </Col>
+                                <Col sm={12} md={6}>
+                                   <Stack gap={2}>
+                                       <h2>MEET THE TEAM</h2>
+                                       <p>You’re in great hands. Our dedicated team of dentists, specialists, and hygienists have decades of experience and form the fabric of our practice. </p>
+                                       <div>
+                                           <LinkContainer to="meet-the-team">
+                                                <Button variant="outline-primary" size="md">Come Meet Our Team</Button>
+                                           </LinkContainer>
+                                       </div>
+
+                                   </Stack>
+                                </Col>
+                            </Row>
+
+                            <Row className="mt-5">
+                                <Col sm={12} md={6}>
+                                   <Image
+                                       src={cardSample}
+                                       alt=""
+                                       className=""
+                                       fluid
+                                   />
+
+                                </Col>
+                                <Col sm={12} md={6}>
+                                   <Stack gap={2}>
+                                       <h2>OUR TECHNOLOGY</h2>
+                                       <p>As part of our effort to provide the best dental care possible, we use state-of-the-art equipment, modern technology and the most advanced dental techniques.. </p>
+                                       <div>
+                                          <Button variant="outline-primary" size="md">View Our Services</Button>
+                                       </div>
+
+                                   </Stack>
+                                </Col>
+                            </Row>
+
+                        </Stack>
                     </span>
 
-                )}
+                    )}
                 )}
 
             </Container>
