@@ -10,6 +10,16 @@ import post from './post'
 import author from './author'
 import aboutContent from './aboutContent'
 import ourTeamContent from './ourTeamContent'
+import ourTechnologyContent from "./ourTechnologyContent"
+import staffDirectory from './staffDirectory'
+import servicesGeneral from './servicesGeneral'
+import servicesCosmetic from './servicesCosmetic'
+import servicesPediatric from "./servicesPediatric";
+import servicesOrthodontics from "./servicesOrthodontics";
+import servicesEndodontics from "./servicesEndodontics";
+import servicesOralSurgery from "./servicesOralSurgery";
+import servicesRestorative from "./servicesRestorative";
+import technologyList from "./technologyList";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -24,6 +34,17 @@ export default createSchema({
     author,
     aboutContent,
     ourTeamContent,
+    ourTechnologyContent,
+    staffDirectory,
+    servicesGeneral,
+    servicesCosmetic,
+    servicesPediatric,
+    servicesOrthodontics,
+    servicesEndodontics,
+    servicesOralSurgery,
+    servicesRestorative,
+    technologyList,
+
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,
