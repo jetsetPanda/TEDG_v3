@@ -1,6 +1,6 @@
 export default {
-    name: "servicesPediatric",
-    title: "Services -- PEDIATRIC",
+    name: "servicesPeriodontics",
+    title: "Services -- PERIODONTICS",
     type: "document",
     fields: [
         {
@@ -25,6 +25,13 @@ export default {
             options: {
                 hotspot: true,
             },
+            fields: [
+                {
+                    name: 'alt',
+                    type: 'string',
+                    title: 'Alternative text',
+                },
+            ],
         },
     ],
 
