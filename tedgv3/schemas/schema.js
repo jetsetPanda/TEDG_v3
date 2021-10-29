@@ -18,6 +18,7 @@ import servicesPediatric from "./servicesPediatric";
 import servicesOrthodontics from "./servicesOrthodontics";
 import servicesEndodontics from "./servicesEndodontics";
 import servicesOralSurgery from "./servicesOralSurgery";
+import servicesPeriodontics from "./servicesPeriodontics";
 import servicesRestorative from "./servicesRestorative";
 import technologyList from "./technologyList";
 
@@ -40,6 +41,7 @@ export default createSchema({
     servicesCosmetic,
     servicesPediatric,
     servicesOrthodontics,
+    servicesPeriodontics,
     servicesEndodontics,
     servicesOralSurgery,
     servicesRestorative,
