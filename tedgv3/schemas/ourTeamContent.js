@@ -1,31 +1,37 @@
 export default {
     name: "ourTeamContent",
-    title: "Our Team Page Content",
+    title: "Page Content -- MEET THE TEAM",
     type: "document",
     fields: [
         {
-            name: "teamMemberName",
-            title: "Team Member Name",
+            name: "pageName",
+            title: "Page Name (note: bish dis will also show in breadcrumb)",
             type: "string",
         },
         {
-            name: "teamMemberCaption",
-            title: "Team Member Caption",
-            type: "text",
-        },
-        {
-            name: "teamMemberBio",
-            title: "Team Member Bio",
-            type: "text",
-        },
-        {
-            name: 'teamMemberImage',
-            title: "Team Member Image",
+            name: 'bannerImage',
+            title: 'Banner Image',
             type: 'image',
             options: {
                 hotspot: true,
             },
         },
+        {
+            name: "headliner",
+            title: "Jumbo Headliner",
+            type: "string",
+        },
+        {
+            name: "subHeadlinePortableText",
+            title: "Long Copy",
+            type: "array",
+            of: [
+                {
+                    type: 'block'
+                }
+            ]
+        },
+
     ],
 
 }

@@ -79,12 +79,12 @@ function About(props) {
                               </Breadcrumb>
 
 
-                            <div>
+                            <section>
                                 <h1 className="text-center">
                                     {aboutContent.headliner}
                                 </h1>
 
-                            </div>
+                            </section>
                             <Div85WidthCentered>
                                 <h6>
                                     <PortableText blocks={aboutContent.subHeadlinePortableText}/>
