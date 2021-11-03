@@ -19,7 +19,8 @@ const Div85WidthCentered = styled.div`
 `
 
 const StyledCard = styled(Card)`
-  margin: 15px auto;
+  margin: 10px auto;
+  width: 18rem;
 `
 function Home(props) {
     return (
@@ -57,7 +58,23 @@ function Home(props) {
                     <div>
                         <h1 className="text-center mt-4">Our Services</h1>
                     </div>
-                    <Row xs={1} md={4}>
+
+                    <div className="d-flex flex-row flex-wrap">
+                        {/*<Card className="mx-1">*/}
+                        {/*    <Card.Img src={cardSample} />*/}
+                        {/*    <Card.Body>*/}
+                        {/*        <Card.Title>General Dentistry</Card.Title>*/}
+                        {/*    </Card.Body>*/}
+                        {/*</Card>*/}
+
+
+                        {/*<Card style={{ width: '18rem' }}>*/}
+                        {/*    <Card.Img variant="top" src={cardSample} />*/}
+                        {/*    <Card.Body>*/}
+                        {/*        <Card.Title>General Dentistry</Card.Title>*/}
+                        {/*        <Button variant="primary">Go somewhere</Button>*/}
+                        {/*    </Card.Body>*/}
+                        {/*</Card>*/}
                         <StyledCard>
                             <Card.Img variant="top" src={cardSample} />
                             <Card.Body>
@@ -106,7 +123,7 @@ function Home(props) {
                                 <Card.Title>General Dentistry</Card.Title>
                             </Card.Body>
                         </StyledCard>
-                    </Row>
+                    </div>
 
                     <div>
 
@@ -127,6 +144,11 @@ function Home(props) {
                         <h1 className="text-center mt-4">Smile Gallery</h1>
                     </div>
 
+                    <Stack direction="horizontal" gap={3}>
+                        <div className="bg-light border">First item</div>
+                        <div className="bg-light border">Second item</div>
+                        <div className="bg-light border">Third item</div>
+                    </Stack>
 
                     <Row>
                         <Card>
