@@ -21,6 +21,7 @@ import servicesOralSurgery from "./servicesOralSurgery";
 import servicesPeriodontics from "./servicesPeriodontics";
 import servicesRestorative from "./servicesRestorative";
 import technologyList from "./technologyList";
+import servicesList from "./servicesList";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -46,6 +47,7 @@ export default createSchema({
     servicesOralSurgery,
     servicesRestorative,
     technologyList,
+    servicesList,
 
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
