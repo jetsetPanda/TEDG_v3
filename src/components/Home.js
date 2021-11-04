@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import sanityClient from '../client.js';
+import PortableText from '@sanity/block-content-to-react';
+import { LinkContainer } from "react-router-bootstrap";
 
 import {Container, Row, Col, Stack, Image, Button, Card} from 'react-bootstrap';
 import styled from "styled-components";
@@ -19,10 +21,31 @@ const Div85WidthCentered = styled.div`
 `
 
 const StyledCard = styled(Card)`
-  margin: 10px auto;
+  margin: 10px 10px;
   width: 18rem;
 `
 function Home(props) {
+
+    const [servicesList, setServicesList] = useState(null);
+
+    useEffect(() => {
+        sanityClient.fetch(`*[_type == "servicesList"] {
+            serviceName,
+            serviceLink,
+            description,
+            serviceImage{
+                asset->{
+                    _id,
+                    url
+                },
+                alt
+            },
+        }`)
+            .then((data) => setServicesList(data))
+            .catch(console.error);
+    }, []);
+
+
     return (
         <>
             <Container fluid>
@@ -60,69 +83,21 @@ function Home(props) {
                     </div>
 
                     <div className="d-flex flex-row flex-wrap">
-                        {/*<Card className="mx-1">*/}
-                        {/*    <Card.Img src={cardSample} />*/}
-                        {/*    <Card.Body>*/}
-                        {/*        <Card.Title>General Dentistry</Card.Title>*/}
-                        {/*    </Card.Body>*/}
-                        {/*</Card>*/}
 
+                        {servicesList && servicesList.map((list, index) => {
+                            console.log("svcs list: ", list);
+                            return (
+                                <span key={index}>
+                                     <StyledCard>
+                                        <Card.Img variant="top" src={list.serviceImage.asset.url} />
+                                        <Card.Body>
+                                            <Card.Title className="text-center">{list.serviceName}</Card.Title>
+                                        </Card.Body>
+                                    </StyledCard>
+                                </span>
+                                )
+                        })}
 
-                        {/*<Card style={{ width: '18rem' }}>*/}
-                        {/*    <Card.Img variant="top" src={cardSample} />*/}
-                        {/*    <Card.Body>*/}
-                        {/*        <Card.Title>General Dentistry</Card.Title>*/}
-                        {/*        <Button variant="primary">Go somewhere</Button>*/}
-                        {/*    </Card.Body>*/}
-                        {/*</Card>*/}
-                        <StyledCard>
-                            <Card.Img variant="top" src={cardSample} />
-                            <Card.Body>
-                                <Card.Title>General Dentistry</Card.Title>
-                            </Card.Body>
-                        </StyledCard>
-                        <StyledCard>
-                            <Card.Img variant="top" src={cardSample} />
-                            <Card.Body>
-                                <Card.Title>General Dentistry</Card.Title>
-                            </Card.Body>
-                        </StyledCard>
-                        <StyledCard>
-                            <Card.Img variant="top" src={cardSample} />
-                            <Card.Body>
-                                <Card.Title>General Dentistry</Card.Title>
-                            </Card.Body>
-                        </StyledCard>
-                        <StyledCard>
-                            <Card.Img variant="top" src={cardSample} />
-                            <Card.Body>
-                                <Card.Title>General Dentistry</Card.Title>
-                            </Card.Body>
-                        </StyledCard>
-                        <StyledCard>
-                            <Card.Img variant="top" src={cardSample} />
-                            <Card.Body>
-                                <Card.Title>General Dentistry</Card.Title>
-                            </Card.Body>
-                        </StyledCard>
-                        <StyledCard>
-                            <Card.Img variant="top" src={cardSample} />
-                            <Card.Body>
-                                <Card.Title>General Dentistry</Card.Title>
-                            </Card.Body>
-                        </StyledCard>
-                        <StyledCard>
-                            <Card.Img variant="top" src={cardSample} />
-                            <Card.Body>
-                                <Card.Title>General Dentistry</Card.Title>
-                            </Card.Body>
-                        </StyledCard>
-                        <StyledCard>
-                            <Card.Img variant="top" src={cardSample} />
-                            <Card.Body>
-                                <Card.Title>General Dentistry</Card.Title>
-                            </Card.Body>
-                        </StyledCard>
                     </div>
 
                     <div>
