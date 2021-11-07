@@ -10,6 +10,13 @@ export default {
         isAdminStaff: false
     },
     fields: [
+        // https://www.sanity.io/plugins/order-documents
+        {
+            name: "order",
+            title: "Order",
+            type: "number",
+            hidden: true,
+        },
         {
             name: "teamMemberName",
             title: "Team Member Name",
