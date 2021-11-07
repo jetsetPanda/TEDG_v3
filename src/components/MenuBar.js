@@ -46,8 +46,8 @@ const MenuBar = () => {
                             <Nav.Link>SMILE GALLERY</Nav.Link>
                         </LinkContainer>
 
-                        <LinkContainer to="/new-patients">
-                            <Nav.Link>NEW PATIENTS</Nav.Link>
+                        <LinkContainer to="/patient-info">
+                            <Nav.Link>PATIENT INFORMATION</Nav.Link>
                         </LinkContainer>
 
                         <LinkContainer to="/faq">
