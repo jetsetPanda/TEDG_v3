@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Faq = props => (
+const ContactUs = props => (
     <div>
         <h1>FAQS !!!</h1>
     </div>
 );
 
-export default Faq;
+export default ContactUs;
