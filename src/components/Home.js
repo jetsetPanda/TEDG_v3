@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import sanityClient from '../client.js';
-import PortableText from '@sanity/block-content-to-react';
-import { LinkContainer } from "react-router-bootstrap";
+// import PortableText from '@sanity/block-content-to-react';
+// import { LinkContainer } from "react-router-bootstrap";
 
 import {Container, Row, Col, Stack, Image, Button, Card} from 'react-bootstrap';
 import styled from "styled-components";
 import homeBanner from '../assets/images/home-banner2x.png';
 import cardSample from '../assets/images/card-sample2x.png';
 import smileVirtualBanner from '../assets/images/home-smilevirtual-banner.png'
+
+import footerImage from '../assets/images/footerImage.png';
+import PreFooter from "./PreFooter";
+
+
 
 // const BannerImg = styled.img`
 //   min-width: 370px;
@@ -119,12 +124,6 @@ function Home(props) {
                         <h1 className="text-center mt-4">Smile Gallery</h1>
                     </div>
 
-                    <Stack direction="horizontal" gap={3}>
-                        <div className="bg-light border">First item</div>
-                        <div className="bg-light border">Second item</div>
-                        <div className="bg-light border">Third item</div>
-                    </Stack>
-
                     <Row>
                         <Card>
                             <Card.Img variant="bottom" src={cardSample} />
@@ -149,6 +148,63 @@ function Home(props) {
                         <h1 className="text-center mt-4">Visit Us</h1>
                     </div>
 
+                    <PreFooter/>
+
+                    <Row>
+                        <Col>
+                            <Card className="bg-light text-dark" border="light" >
+                                <Card.Img src={footerImage} alt="Card image" />
+                            </Card>
+                        </Col>
+
+                        <Col>
+                            <Card className="bg-dark text-white" border="light" >
+                                <Card.Img variant="bottom" src={cardSample} />
+                                <Card.ImgOverlay>
+
+                                    <Stack className="text-center">
+                                        <br/>
+                                        <h1>Location</h1>
+                                        <h5 style={{marginTop: "15px"}}>
+                                            39 Broadway Suite 2115 <br/>
+                                            Financial District <br/>
+                                            New York, NY 10006 <br/><br/>
+                                            T: (212) 422-9229
+                                        </h5>
+                                        <h1 style={{marginTop: "45px"}}>Hours</h1>
+                                        <Row className="ml-0 mr-auto text-start" style={{marginTop: "20px"}}>
+                                            <Col>
+                                                <h5 style={{paddingLeft: "60%"}}>
+                                                    Monday <br/>
+                                                    Tuesday <br/>
+                                                    Wednesday <br/>
+                                                    Thursday <br/>
+                                                    Friday <br/>
+                                                    Saturday <br/>
+                                                    Sunday <br/>
+                                                </h5>
+
+                                            </Col>
+                                            <Col>
+                                                <h5 style={{paddingLeft: "10%"}}>
+                                                    8 AM - 6PM <br/>
+                                                    8 AM - 6PM <br/>
+                                                    8 AM - 6PM <br/>
+                                                    8 AM - 6PM <br/>
+                                                    8 AM - 4PM <br/>
+                                                    Closed <br/>
+                                                    9 AM - 5PM
+                                                </h5>
+
+                                            </Col>
+                                        </Row>
+                                    </Stack>
+
+                                </Card.ImgOverlay>
+                            </Card>
+
+                        </Col>
+                    </Row>
 
                 </Stack>
             </Container>
