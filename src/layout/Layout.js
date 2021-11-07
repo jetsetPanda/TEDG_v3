@@ -4,12 +4,12 @@ import React from 'react';
 import {BrowserRouter as Router} from "react-router-dom";
 
 // components
-import MenuBar from "../components/MenuBar";
+import NavBar from "../components/NavBar";
 
 const Layout = ({children}) => {
     return (
         <Router>
-            <MenuBar/>
+            <NavBar/>
             <main>{children}</main>
         </Router>
     )
