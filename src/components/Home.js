@@ -82,7 +82,7 @@ function Home(props) {
                         <h1 className="text-center mt-4">Our Services</h1>
                     </div>
 
-                    <div className="d-flex flex-row flex-wrap">
+                    <div className="d-flex flex-row flex-wrap justify-content-around">
 
                         {servicesList && servicesList.map((list, index) => {
                             console.log("svcs list: ", list);
@@ -100,9 +100,9 @@ function Home(props) {
 
                     </div>
 
-                    <div>
+                    <div className="text-center" >
 
-                        <Button className="align-content-center">VIEW OUR SERVICES</Button>
+                        <Button  variant="outline-primary" size="lg">VIEW OUR SERVICES</Button>
 
                     </div>
 

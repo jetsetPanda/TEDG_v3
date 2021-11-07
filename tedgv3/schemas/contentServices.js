@@ -1,15 +1,15 @@
 export default {
-    name: "ourTeamContent",
-    title: "Page Content -- MEET THE TEAM",
+    name: "servicesContent",
+    title: "Page Content -- SERVICES",
     type: "document",
     fields: [
         {
             name: "pageName",
-            title: "Page Name (note: bish dis will also show in breadcrumb)",
+            title: "Page Name",
             type: "string",
         },
         {
-            name: 'bannerImage',
+            name: 'servicesImage',
             title: 'Banner Image',
             type: 'image',
             options: {
@@ -25,11 +25,11 @@ export default {
         },
         {
             name: "headliner",
-            title: "Jumbo Headliner",
-            type: "string",
+            title: "Jumbotron Headliner",
+            type: "text",
         },
         {
-            name: "subHeadlinePortableText",
+            name: "subHeadline",
             title: "Long Copy",
             type: "array",
             of: [

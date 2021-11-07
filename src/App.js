@@ -7,7 +7,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import SmileGallery from "./components/SmileGallery";
 import SingleSmile from "./components/SingleSmile";
-import NewPatients from "./components/NewPatients";
+import PatientInfo from "./components/PatientInfo";
 import Faq from "./components/FAQ";
 import Services from "./components/Services";
 import OurTeam from "./components/OurTeam";
@@ -23,7 +23,7 @@ function App() {
                 <Route component={About} path={'/about'} />
                 <Route component={OurTeam} path={'/meet-the-team'} />
                 <Route component={OurTechnology} path={'our-technology'} />
-                <Route component={NewPatients} path={'/new-patients'} />
+                <Route component={PatientInfo} path={'/patient-info'} />
                 <Route component={SingleSmile} path={'/smile-gallery/:slug'} />
                 <Route component={Faq} path={'/faq'} />
                 <Route component={Services} path={'/services'} />
