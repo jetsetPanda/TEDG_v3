@@ -29,7 +29,7 @@ export default {
             type: "string",
         },
         {
-            name: "subHeadlinePortableText",
+            name: "subHeadline",
             title: "Long Copy",
             type: "array",
             of: [
