@@ -16,21 +16,6 @@ export default {
             type: "string",
         },
         {
-            name: "teamMemberJobTitle",
-            title: "Job Title / Specialty (note: leave empty if admin)",
-            type: "string",
-        },
-        {
-            name: "teamMemberBio",
-            title: "Team Member Bio",
-            type: "array",
-            of: [
-                {
-                    type: 'block'
-                }
-            ]
-        },
-        {
             name: 'teamMemberImage',
             title: "Team Member Image",
             type: 'image',
@@ -45,6 +30,31 @@ export default {
                 },
             ],
         },
+        {
+            name: "teamMemberJobTitle",
+            title: "Job Title / Specialty (note: leave empty if admin)",
+            type: "string",
+        },
+        {
+            name: 'slug',
+            title: 'Optional Slug (URL if Doctor/more detail)',
+            type: 'slug',
+            options: {
+                source: 'title',
+                maxLength: 96,
+            },
+        },
+        {
+            name: "teamMemberBio",
+            title: "Team Member Bio",
+            type: "array",
+            of: [
+                {
+                    type: 'block'
+                }
+            ]
+        },
+
         {
             name: "isGeneralDentist",
             title: "General Dentist? (click if yes!)",
