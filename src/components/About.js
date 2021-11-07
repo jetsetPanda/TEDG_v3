@@ -68,11 +68,13 @@ function About(props) {
                             </div>
 
                             <Breadcrumb>
-                                <BreadcrumbItem>
-                                  <a href="/">
-                                    Home
-                                  </a>
-                                </BreadcrumbItem>
+                                <LinkContainer to="/">
+                                    <BreadcrumbItem>
+                                      <a href="home">
+                                        Home
+                                      </a>
+                                    </BreadcrumbItem>
+                                </LinkContainer>
                                 <BreadcrumbItem active>
                                   {aboutContent.pageName}
                                 </BreadcrumbItem>

@@ -30,7 +30,7 @@ const Div85WidthCentered = styled.div`
   align-items: center;
 `
 
-function OurTeam(props) {
+function MeetTheTeam(props) {
 
 
 
@@ -56,7 +56,7 @@ function OurTeam(props) {
     }, []);
 
     useEffect(() => {
-        sanityClient.fetch(`*[_type == "staffDirectory"] {
+        sanityClient.fetch(`*[_type == "staffDirectory"] | order(order asc) {
             teamMemberName,
             teamMemberJobTitle,
             teamMemberBio,
@@ -95,13 +95,21 @@ function OurTeam(props) {
                                     />
                                 </div>
 
-
                                 <Breadcrumb>
-                                    <BreadcrumbItem>
-                                      <a href="/">
-                                        Home
-                                      </a>
-                                    </BreadcrumbItem>
+                                    <LinkContainer to="/">
+                                        <BreadcrumbItem>
+                                          <a href="home">
+                                            Home
+                                          </a>
+                                        </BreadcrumbItem>
+                                    </LinkContainer>
+                                    <LinkContainer to="/about-us">
+                                        <BreadcrumbItem>
+                                          <a href="about-us">
+                                            About Us
+                                          </a>
+                                        </BreadcrumbItem>
+                                    </LinkContainer>
                                     <BreadcrumbItem active>
                                       {content.pageName}
                                     </BreadcrumbItem>
@@ -134,17 +142,17 @@ function OurTeam(props) {
                         console.log("STAFF list: ", staff);
                         return (
                             <span key={index}>
-                                                 <StyledCard>
-                                                    <Card.Img variant="top" src={staff.teamMemberImage.asset.url} />
-                                                    <Card.Body className="text-center">
-                                                        <Card.Title className="text-center">{staff.teamMemberName}</Card.Title>
-                                                        <Button >
-                                                            {staff.teamMemberJobTitle}
-                                                        </Button>
-                                                    </Card.Body>
+                                 <StyledCard>
+                                    <Card.Img variant="top" src={staff.teamMemberImage.asset.url} />
+                                    <Card.Body className="text-center">
+                                        <Card.Title className="text-center">{staff.teamMemberName}</Card.Title>
+                                        <Button >
+                                            {staff.teamMemberJobTitle}
+                                        </Button>
+                                    </Card.Body>
 
-                                                </StyledCard>
-                                            </span>
+                                </StyledCard>
+                            </span>
                         )
                     })}
 
@@ -156,7 +164,7 @@ function OurTeam(props) {
     );
 }
 
-export default OurTeam;
+export default MeetTheTeam;
 // {/*<img*/}
 // {/*    src={post.mainImage.asset.url}*/}
 // {/*    alt={post.mainImage.alt}*/}
