@@ -6,10 +6,10 @@ import styled from 'styled-components';
 import logo from "../assets/images/logosvg.svg";
 
 const MenuDiv = styled(Nav)`
-    a {
-      font-size: 14px;
-      margin: auto ${props => props.sideMargins || '10px'};
-    }
+  a {
+    font-size: 16px;
+    margin: 2px 5px 2px auto;
+  }
 `
 
 const NavBar = () => {
@@ -30,13 +30,19 @@ const NavBar = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <MenuDiv className="me-auto d-flex justify-content-around">
-                        <LinkContainer to="/about">
-                            <Nav.Link>ABOUT US</Nav.Link>
-                        </LinkContainer>
 
-                        <LinkContainer to="/meet-the-team">
-                            <Nav.Link>OUR TEAM</Nav.Link>
-                        </LinkContainer>
+                        <NavDropdown title="ABOUT US" id="collasible-nav-dropdown">
+                            <LinkContainer to="/about-us">
+                                <NavDropdown.Item href="#">About TEDG</NavDropdown.Item>
+                            </LinkContainer>
+                            <NavDropdown.Divider />
+                            <LinkContainer to="meet-the-team">
+                                <NavDropdown.Item href="#">Meet The Team</NavDropdown.Item>
+                            </LinkContainer>
+                            <NavDropdown.Item href="#">Our Technology</NavDropdown.Item>
+
+                        </NavDropdown>
+
 
                         <LinkContainer to="/services">
                             <Nav.Link>SERVICES</Nav.Link>
@@ -47,31 +53,25 @@ const NavBar = () => {
                         </LinkContainer>
 
                         <LinkContainer to="/patient-info">
-                            <Nav.Link>PATIENT INFORMATION</Nav.Link>
+                            <Nav.Link>PATIENT FORMS</Nav.Link>
                         </LinkContainer>
 
-                        <LinkContainer to="/faq">
-                            <Nav.Link>FAQ</Nav.Link>
+                        <LinkContainer to="/contact-us">
+                            <Nav.Link>CONTACT US</Nav.Link>
                         </LinkContainer>
 
 
-                        <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                        </NavDropdown>
+
                     </MenuDiv>
-                    <MenuDiv sideMargins="10px">
+                    <MenuDiv sideMargins="15px">
                         <LinkContainer to="#">
                             <Button>
                                 CALL US
                             </Button>
                         </LinkContainer>
 
-                        <LinkContainer to="#">
-                            <Button style={{marginLeft:"2rem"}}>
+                        <LinkContainer to="#" style={{margin:"auto 1rem"}}>
+                            <Button>
                                 BOOK ONLINE
                             </Button>
                         </LinkContainer>
