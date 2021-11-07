@@ -8,10 +8,15 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import blockContent from './blockContent'
 import post from './post'
 import author from './author'
-import aboutContent from './aboutContent'
-import ourTeamContent from './ourTeamContent'
-import ourTechnologyContent from "./ourTechnologyContent"
+
+import aboutContent from './contentAbout'
+import ourTeamContent from './contentOurTeam'
+import ourTechnologyContent from "./contentOurTechnology"
+import servicesContent from './contentServices'
+import patientInfoContent from './contentPatientInfo'
+
 import staffDirectory from './staffDirectory'
+
 import servicesGeneral from './servicesGeneral'
 import servicesCosmetic from './servicesCosmetic'
 import servicesPediatric from "./servicesPediatric";
@@ -20,6 +25,7 @@ import servicesEndodontics from "./servicesEndodontics";
 import servicesOralSurgery from "./servicesOralSurgery";
 import servicesPeriodontics from "./servicesPeriodontics";
 import servicesRestorative from "./servicesRestorative";
+
 import technologyList from "./technologyList";
 import servicesList from "./servicesList";
 
@@ -37,6 +43,8 @@ export default createSchema({
     aboutContent,
     ourTeamContent,
     ourTechnologyContent,
+    patientInfoContent,
+    servicesContent,
     staffDirectory,
     servicesGeneral,
     servicesCosmetic,
