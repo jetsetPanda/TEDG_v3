@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import {Accordion, Card, Col, Row} from "react-bootstrap";
+import {Accordion, Card, Col, Row, Stack} from "react-bootstrap";
 import subwaylogos from "../assets/images/subwaylogos.png.png";
 import mtabuslogo from "../assets/images/mtabuslogo.jpg";
 import maplogo from "../assets/images/maplogo.png";
@@ -7,7 +7,10 @@ import maplogo from "../assets/images/maplogo.png";
 const PreFooter = (props) => {
 
     return (
-    <Fragment>
+    <Stack>
+        <div>
+            <h1 className="text-center mt-4">Visit Us</h1>
+        </div>
         <Row>
             {/*<Col className="ml-0 mr-auto" lg="5" md="7">*/}
             <Col>
@@ -101,7 +104,7 @@ const PreFooter = (props) => {
             </Col>
 
         </Row>
-    </Fragment>
+    </Stack>
     )
 };
 
