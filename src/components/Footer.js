@@ -20,14 +20,14 @@ const Footer = (props) => {
 
     return (
     <>
-        <Row className="mb-4">
-            <Col className="px-0">
+        <Row className="mb-4 mt-5 pt-md-5">
+            <Col md={6} sm={12} className="px-0">
                 <Card className="bg-light text-dark" border="light" >
                     <Card.Img src={footerImage} alt="Card image" />
                 </Card>
             </Col>
 
-            <Col className="px-0">
+            <Col md={6} sm={12}  className="px-0 d-none d-sm-block">
                 <Card className="bg-light text-dark" border="light" >
                     <Card.Img variant="bottom" src={footerRight} style={{opacity: "0.3", maxHeight: "646px"}}/>
                     <Card.ImgOverlay>

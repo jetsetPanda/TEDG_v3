@@ -7,6 +7,8 @@ import {Link} from "react-router-dom";
 
 import { Container, Breadcrumb, BreadcrumbItem, Row, Col, Stack, Image, Button, Card } from 'react-bootstrap';
 import styled from "styled-components";
+import PreFooter from "./PreFooter";
+import Footer from "./Footer";
 
 
 const TopRow = styled(Row)`
@@ -312,7 +314,8 @@ function MeetTheTeam(props) {
                         </div>
                     }
 
-
+                <PreFooter/>
+                <Footer/>
             </Container>
         </>
     );
