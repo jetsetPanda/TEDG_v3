@@ -5,14 +5,6 @@ import { LinkContainer } from "react-router-bootstrap";
 
 import {Container, Row, Col, Stack, Image, Button, Card, Breadcrumb, BreadcrumbItem} from 'react-bootstrap';
 import styled from "styled-components";
-import homeBanner from '../assets/images/home-banner2x.png';
-
-const TopRow = styled(Row)`
-    background-color: darkblue;
-    h1 {
-      color: #ffffff;
-    }
-`
 
 const Div85WidthCentered = styled.div`
   width: 85%;
