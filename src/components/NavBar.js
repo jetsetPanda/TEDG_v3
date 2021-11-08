@@ -12,20 +12,26 @@ const MenuDiv = styled(Nav)`
   }
 `
 
+const StyledNavBrand =styled(Navbar.Brand)`
+  @media (max-width: 768px) {
+    width: 250px
+  }
+`
+
 const NavBar = () => {
     return (
 
         <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
             <Container>
                 <LinkContainer to="/">
-                    <Navbar.Brand href="#home">
+                    <StyledNavBrand href="#home">
                         <img
                             src={logo}
                             width="100%"
                             className="d-inline-block align-top"
-                            alt="React Bootstrap logo"
+                            alt="TEDG logo"
                         />
-                    </Navbar.Brand>
+                    </StyledNavBrand>
                 </LinkContainer>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
