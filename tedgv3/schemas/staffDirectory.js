@@ -23,6 +23,26 @@ export default {
             type: "string",
         },
         {
+            name: 'jobType',
+            title: 'Job Designation',
+            type: 'string',
+            options: {
+                list: [
+                    { title: 'General Dentist', value: 'general' },
+                    { title: 'Specialist', value: 'specialist' },
+                    { title: 'Hygienist', value: 'hygienist' },
+                    { title: 'Dental Assistant', value: 'assistant' },
+                    { title: 'Admin Staff', value: 'admin' },
+                    { title: 'Admin Special', value: 'adminSpecial'}
+                ],
+            },
+        },
+        {
+            name: "teamMemberJobTitle",
+            title: "Job Title / Specialty (note: leave empty if admin)",
+            type: "string",
+        },
+        {
             name: 'teamMemberImage',
             title: "Team Member Image",
             type: 'image',
@@ -37,14 +57,10 @@ export default {
                 },
             ],
         },
-        {
-            name: "teamMemberJobTitle",
-            title: "Job Title / Specialty (note: leave empty if admin)",
-            type: "string",
-        },
+
         {
             name: 'slug',
-            title: 'Optional Slug (URL if Doctor/more detail)',
+            title: 'Slug (URL - MAKE SURE TO ADD if a Doctor)',
             type: 'slug',
             options: {
                 source: 'title',
