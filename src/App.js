@@ -23,11 +23,12 @@ function App() {
                 <Route component={Home} path={'/'} exact />
                 <Route component={About} path={'/about-us'} exact />
                 <Route component={MeetTheTeam} path={'/about-us/meet-the-team'} exact/>
+                <Route component={Services} path={'/services'} />
+                <Route component={Services} path={'/services'} />
                 <Route component={OurTechnology} path={'/our-technology'} />
                 <Route component={PatientInfo} path={'/patient-info'} />
                 <Route component={SingleSmile} path={'/smile-gallery/:slug'} />
                 <Route component={ContactUs} path={'/contact-us'} />
-                <Route component={Services} path={'/services'} />
                 <Route component={SmileGallery} path={'/smile-gallery'} />
                 <Route component={SingleDoctorPage} path={'/about-us/meet-the-team/:slug'} />
             </Switch>
