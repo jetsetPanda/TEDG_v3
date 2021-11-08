@@ -6,6 +6,7 @@ import {LinkContainer} from "react-router-bootstrap";
 import styled from "styled-components";
 import PreFooter from "./PreFooter";
 import Footer from "./Footer";
+import SmileVirtualBanner from "./SmileVirtualBanner";
 
 const StyledImg = styled(Image)`
   border-radius: 50%;
@@ -102,9 +103,10 @@ function SingleDoctorPage(props) {
                                 </Row>
 
                                 {currentSlug === 'dr-todd-goldstein' &&
-                                <>
-                                    <h1>ITS GOLDSTEIN!</h1>
-                                </>
+                                    <div className="mt-md-5">
+                                        <SmileVirtualBanner/>
+                                    </div>
+
                                 }
 
                                 <PreFooter/>
