@@ -7,11 +7,12 @@ import {Container, Row, Col, Stack, Image, Button, Card, Fade} from 'react-boots
 import styled from "styled-components";
 import homeBanner from '../assets/images/home-banner2x.png';
 import cardSample from '../assets/images/card-sample2x.png';
-import smileVirtualBanner from '../assets/images/home-smilevirtual-banner.png'
+import smileVirtualBanner from '../assets/images/smilevirtual.png'
 
 import footerImage from '../assets/images/footerImage.png';
 import PreFooter from "./PreFooter";
 import Footer from "./Footer";
+import SmileVirtualBanner from "./SmileVirtualBanner";
 
 
 
@@ -29,6 +30,14 @@ const Div85WidthCentered = styled.div`
 const StyledCard = styled(Card)`
   margin: 10px 10px;
   width: 18rem;
+  @media (max-width: 768px) {
+    width: 8rem;
+  }
+`
+const StyledCardTitle =styled(Card.Title)`
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
 `
 
 function Home(props) {
@@ -98,7 +107,7 @@ function Home(props) {
                                      <StyledCard  border="light">
                                         <Card.Img variant="top" src={list.serviceImage.asset.url} />
                                         <Card.Body>
-                                            <Card.Title className="text-center">{list.serviceName}</Card.Title>
+                                            <StyledCardTitle className="text-center">{list.serviceName}</StyledCardTitle>
                                         </Card.Body>
                                     </StyledCard>
                                 </span>
@@ -113,14 +122,7 @@ function Home(props) {
 
                     </div>
 
-                    <div>
-                        <Image
-                            src={smileVirtualBanner}
-                            alt='smile virtual'
-                            className=""
-                            fluid
-                        />
-                    </div>
+                    <SmileVirtualBanner/>
 
                     <div>
                         <h1 className="text-center mt-4">Smile Gallery</h1>
@@ -144,10 +146,6 @@ function Home(props) {
 
                     <div>
                         <h1 className="text-center mt-4">Testimonials</h1>
-                    </div>
-
-                    <div>
-                        <h1 className="text-center mt-4">Visit Us</h1>
                     </div>
 
                     <PreFooter/>

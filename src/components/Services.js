@@ -23,6 +23,15 @@ const Div85WidthCentered = styled.div`
 const StyledCard = styled(Card)`
   margin: 10px 10px;
   width: 18rem;
+  @media (max-width: 768px) {
+    width: 8rem;
+  }
+`
+
+const StyledCardTitle =styled(Card.Title)`
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
 `
 
 function About(props) {
@@ -88,11 +97,13 @@ function About(props) {
 
 
                                 <Breadcrumb>
-                                    <BreadcrumbItem>
-                                      <a href="/">
-                                        Home
-                                      </a>
-                                    </BreadcrumbItem>
+                                    <LinkContainer to="/">
+                                        <BreadcrumbItem>
+                                          <a href="home">
+                                            Home
+                                          </a>
+                                        </BreadcrumbItem>
+                                    </LinkContainer>
                                     <BreadcrumbItem active>
                                       {content.pageName}
                                     </BreadcrumbItem>
@@ -120,9 +131,10 @@ function About(props) {
                                                  <StyledCard>
                                                     <Card.Img variant="top" src={list.serviceImage.asset.url} />
                                                     <Card.Body className="text-center">
-                                                        <Card.Title className="text-center">{list.serviceName}</Card.Title>
-                                                        <Button >
-                                                            /{list.serviceLink}
+                                                        <StyledCardTitle className="text-center">{list.serviceName}</StyledCardTitle>
+                                                        <Button size="sm" >
+                                                            Learn More
+
                                                         </Button>
                                                     </Card.Body>
 
