@@ -4,6 +4,14 @@ import subwaylogos from "../assets/images/subwaylogos.png.png";
 import mtabuslogo from "../assets/images/mtabuslogo.jpg";
 import maplogo from "../assets/images/maplogo.png";
 
+import styled from "styled-components";
+
+const StyledLink = styled.a`
+  text-decoration: none;
+  color: #3274e5;
+  font-weight: bold;
+`
+
 const PreFooter = (props) => {
 
     return (
@@ -32,7 +40,7 @@ const PreFooter = (props) => {
                             <br/>
                             As a major Manhattan transit hub, you can easily visit us by subway on the 6, N, Q, and R subway lines at the Wall Street station, as well as several other train stops.
                             <br/><br/>
-                            <a href="http://tripplanner.mta.info/MyTrip/ui_web/customplanner/TripPlanner.aspx" target="_blank"><span className="directions-link">Click here</span></a> to access the MTA TripPlanner.
+                            <StyledLink href="http://tripplanner.mta.info/MyTrip/ui_web/customplanner/TripPlanner.aspx" target="_blank"><span className="directions-link">Click here</span></StyledLink> to access the MTA TripPlanner.
                         </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="1">
@@ -48,7 +56,7 @@ const PreFooter = (props) => {
                             <br/>
                             Multiple MTA bus lines such as the M15-SBS, M20, M55, and more converge by our convenient Lower Manhattan location.
                             <br/><br/>
-                            <a href="http://tripplanner.mta.info/MyTrip/ui_web/customplanner/TripPlanner.aspx" target="_blank"><span className="directions-link">Click here</span></a> to access the MTA TripPlanner.
+                            <StyledLink href="http://tripplanner.mta.info/MyTrip/ui_web/customplanner/TripPlanner.aspx" target="_blank"><span className="directions-link">Click here</span></StyledLink> to access the MTA TripPlanner.
                         </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="2">
@@ -66,7 +74,7 @@ const PreFooter = (props) => {
                             <br/>
                             You can find ample parking facilities as well as easy bridge and tunnel access to our central office location.
                             <br/><br/>
-                            <a href="https://goo.gl/maps/NUPLm5NA8En8JRDn9" target="_blank"><span className="directions-link">Click here</span></a> for Google Maps Driving Directions.
+                            <StyledLink href="https://goo.gl/maps/NUPLm5NA8En8JRDn9" target="_blank"><span className="directions-link">Click here</span></StyledLink> for Google Maps Driving Directions.
                         </Accordion.Body>
                     </Accordion.Item>
                 </Accordion>
