@@ -16,8 +16,9 @@ function SmileVirtualBanner(props) {
                         Get a FREE Smile Virtual Consult today!
                     </h5>
                 </Card.Text>
-                <Button size="md" className="px-md-5" style={{marginLeft: "5.5rem"}}>Start Here</Button>
-
+                <a href="https://app.smilevirtual.com/Dr-Todd-Goldstein/sign-up" target="_blank">
+                    <Button size="md" className="px-md-5" style={{marginLeft: "5.5rem"}}>Start Here</Button>
+                </a>
 
             </Card.ImgOverlay>
         </Card>
