@@ -13,7 +13,8 @@ import ContactUs from "./components/ContactUs";
 import Services from "./components/Services";
 import MeetTheTeam from "./components/MeetTheTeam";
 import OurTechnology from "./components/OurTechnology";
-
+import CovidPage from "./components/CovidPage";
+import InsurancePage from "./components/InsurancePage";
 
 function App() {
   return (
@@ -26,7 +27,9 @@ function App() {
                 <Route component={Services} path={'/services'} />
                 <Route component={Services} path={'/services'} />
                 <Route component={OurTechnology} path={'/our-technology'} />
-                <Route component={PatientInfo} path={'/patient-info'} />
+                <Route component={PatientInfo} path={'/patient-info'} exact/>
+                <Route component={CovidPage} path={'/patient-info/covid-safety'} exact />
+                <Route component={InsurancePage} path={'/patient-info/insurance'} exact />
                 <Route component={SingleSmile} path={'/smile-gallery/:slug'} />
                 <Route component={ContactUs} path={'/contact-us'} />
                 <Route component={SmileGallery} path={'/smile-gallery'} />
