@@ -112,7 +112,7 @@ function About(props) {
                                        <h2>MEET THE TEAM</h2>
                                        <p>You’re in great hands. Our dedicated team of dentists, specialists, and hygienists have decades of experience and form the fabric of our practice. </p>
                                        <div>
-                                           <LinkContainer to="meet-the-team">
+                                           <LinkContainer to="/about-us/meet-the-team">
                                                 <Button variant="outline-primary" size="md">Come Meet Our Team</Button>
                                            </LinkContainer>
                                        </div>

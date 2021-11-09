@@ -1,17 +1,26 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import sanityClient from '../client.js';
 // import PortableText from '@sanity/block-content-to-react';
-// import { LinkContainer } from "react-router-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 
 import {Container, Row, Col, Stack, Image, Button, Card, Fade} from 'react-bootstrap';
 import styled from "styled-components";
 import homeBanner from '../assets/images/home-banner2x.png';
 import cardSample from '../assets/images/card-sample2x.png';
-import smileVirtualBanner from '../assets/images/home-smilevirtual-banner.png'
+import igLogo from '../assets/images/instagramLogo.png';
+import fbLogo from '../assets/images/facebookLogo.png';
+import ig1 from '../assets/images/ig1.jpg';
+import ig2 from '../assets/images/ig2.jpg';
+import ig3 from '../assets/images/ig3.jpg';
+import ig4 from '../assets/images/ig4.jpg';
+import smileImg from '../assets/images/home-smile-img.jpg';
 
-import footerImage from '../assets/images/footerImage.png';
 import PreFooter from "./PreFooter";
 import Footer from "./Footer";
+import SmileVirtualBanner from "./SmileVirtualBanner";
+import {Link} from "react-router-dom";
+import BirdeyeTestimonialCard from "./BirdeyeTestimonialCard";
+import TestimonialSection from "./TestimonialSection";
 
 
 
@@ -29,6 +38,69 @@ const Div85WidthCentered = styled.div`
 const StyledCard = styled(Card)`
   margin: 10px 10px;
   width: 18rem;
+  @media (max-width: 768px) {
+    width: 8rem;
+  }
+`
+const StyledCardTitle = styled(Card.Title)`
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
+`
+const InstagramDiv = styled.div`
+  display: inline-flex;
+ &&::before {
+   background-image: url(${igLogo});
+   background-size: 35px 35px;
+   display: inline-block;
+   width: 35px;
+   height: 35px;
+   content:"";
+   margin-right: 10px;
+ }
+`
+const FacebookDiv = styled.div`
+  display: inline-flex;
+  &&::before {
+    background-image: url(${fbLogo});
+    background-size: 37px 37px;
+    display: inline-block;
+    width: 37px;
+    height: 37px;
+    content:"";
+    margin-right: 10px;
+  }
+`
+
+const StyledLink = styled.a`
+  text-decoration: none;
+  color: #1C2430;
+
+  &&:hover {
+    color: #5e78a8;
+    transition: color 1s;
+  }
+`
+
+const StyledImage = styled(Image)`
+  width: 300px;
+  height: 300px;
+  margin: 10px auto;
+  @media (max-width: 768px) {
+    width: 150px;
+    height: 150px;
+  }
+`
+
+const DivFlex = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
+
 `
 
 function Home(props) {
@@ -82,7 +154,10 @@ function Home(props) {
                     </Div85WidthCentered>
 
                     <div className="text-center" >
-                        <Button variant="outline-primary" size="lg">DR. HOWARD WIMMER'S 20 YEAR TRIBUTE</Button>
+                        <a href="http://www.howardwimmerddstribute.com/pages/2/index.htm" target="_blank">
+                            <Button variant="outline-primary" size="lg">DR. HOWARD WIMMER'S 20 YEAR TRIBUTE</Button>
+                        </a>
+
                     </div>
 
                     <div>
@@ -98,7 +173,7 @@ function Home(props) {
                                      <StyledCard  border="light">
                                         <Card.Img variant="top" src={list.serviceImage.asset.url} />
                                         <Card.Body>
-                                            <Card.Title className="text-center">{list.serviceName}</Card.Title>
+                                            <StyledCardTitle className="text-center">{list.serviceName}</StyledCardTitle>
                                         </Card.Body>
                                     </StyledCard>
                                 </span>
@@ -108,47 +183,82 @@ function Home(props) {
                     </div>
 
                     <div className="text-center" >
-
-                        <Button  variant="outline-primary" size="lg">VIEW OUR SERVICES</Button>
-
+                        <LinkContainer to="/services">
+                            <Button  variant="outline-primary" size="lg">VIEW OUR SERVICES</Button>
+                        </LinkContainer>
                     </div>
 
-                    <div>
-                        <Image
-                            src={smileVirtualBanner}
-                            alt='smile virtual'
-                            className=""
-                            fluid
-                        />
-                    </div>
+                    <SmileVirtualBanner/>
 
                     <div>
                         <h1 className="text-center mt-4">Smile Gallery</h1>
                     </div>
 
                     <Row>
-                        <Card>
-                            <Card.Img variant="bottom" src={cardSample} />
-                            <Card.Body>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make up the bulk
-                                    of the card's content.
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
+                        <Col md={6} sm={12}>
+                            <Image src={smileImg} fluid rounded/>
+                        </Col>
+                        <Col md={6} sm={12}>
+                            <h2 className="mb-md-5">
+                                3-Unit Bridge
+                            </h2>
+                            <h4>
+                                AGE: 20-30 <br/>
+                                GENDER: MALE <br/><br/>
+
+                                PATIENT EMBARRASSED BY APPEARANCE OF METAL BRIDGE WHEN SMILING <br/><br/>
+
+                                PROCEDURE: PLACED NEW 3-UNIT ALL PORCELAIN BRIDGE
+                            </h4>
+                        </Col>
                     </Row>
 
+                    <div className="text-center" >
+                        <LinkContainer to="/smile-gallery">
+                            <Button  variant="outline-primary" size="lg">VIEW FULL SMILE GALLERY</Button>
+                        </LinkContainer>
+                    </div>
+
                     <div>
-                        <h1 className="text-center mt-4">Follow Us</h1>
+                        <h1 className="text-center my-4">Follow Us</h1>
+                        <DivFlex className="d-flex justify-content-center ">
+                            <StyledLink href='https://www.instagram.com/theexchangedentalgroup' target="_blank">
+                                <InstagramDiv className="mx-md-5 mx-sm-4">
+                                    <h3>Instagram</h3>
+                                </InstagramDiv>
+                            </StyledLink>
+
+                            <StyledLink href="https://www.instagram.com/theexchangedentalgroup" target="_blank">
+                                <FacebookDiv className="mx-md-5 mx-sm-4">
+                                    <h3>Facebook</h3>
+                                </FacebookDiv>
+                            </StyledLink>
+
+                        </DivFlex>
+                    </div>
+
+                    <div className="d-flex flex-row flex-wrap justify-content-between">
+                        <StyledLink href='https://www.instagram.com/theexchangedentalgroup' target="_blank">
+                            <StyledImage src={ig1} fluid thumbnail/>
+                        </StyledLink>
+                        <StyledLink href='https://www.instagram.com/theexchangedentalgroup' target="_blank">
+                            <StyledImage src={ig2} fluid thumbnail/>
+                        </StyledLink>
+                        <StyledLink href='https://www.instagram.com/theexchangedentalgroup' target="_blank">
+                            <StyledImage src={ig4} fluid thumbnail/>
+                        </StyledLink>
+                            <StyledLink href='https://www.instagram.com/theexchangedentalgroup' target="_blank">
+                        <StyledImage src={ig3} fluid thumbnail/>
+                        </StyledLink>
                     </div>
 
                     <div>
                         <h1 className="text-center mt-4">Testimonials</h1>
                     </div>
 
-                    <div>
-                        <h1 className="text-center mt-4">Visit Us</h1>
-                    </div>
+
+                    <TestimonialSection/>
+
 
                     <PreFooter/>
 

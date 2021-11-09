@@ -7,8 +7,9 @@ import {Link} from "react-router-dom";
 
 import { Container, Breadcrumb, BreadcrumbItem, Row, Col, Stack, Image, Button, Card } from 'react-bootstrap';
 import styled from "styled-components";
-import homeBanner from '../assets/images/home-banner2x.png';
-import cardSample from '../assets/images/card-sample2x.png';
+import PreFooter from "./PreFooter";
+import Footer from "./Footer";
+
 
 const TopRow = styled(Row)`
   background-color: darkblue;
@@ -17,17 +18,34 @@ const TopRow = styled(Row)`
   }
 `
 
+const StyledDoctorCard = styled(Card)`
+  margin: 10px 10px;
+  width: 19rem;
+  border-color: #ffffff;
+`
 
 const StyledCard = styled(Card)`
   margin: 10px 10px;
   width: 18rem;
+  border-color: #ffffff;
 `
 
+const StyledCardImg = styled(Card.Img)`
+  border-radius: 50%;
+  //&&:hover {
+  //  transform: scale(1.1);
+  //  transition: transform 2s
+  //}
+`
 
 const Div85WidthCentered = styled.div`
   width: 85%;
   margin: 0 auto;
   align-items: center;
+`
+
+const StyledHR = styled.hr`
+  border: 0.5px solid #b3cfff;
 `
 
 function MeetTheTeam(props) {
@@ -58,6 +76,8 @@ function MeetTheTeam(props) {
     useEffect(() => {
         sanityClient.fetch(`*[_type == "staffDirectory"] | order(order asc) {
             teamMemberName,
+            jobType,
+            slug,
             teamMemberJobTitle,
             teamMemberBio,
             teamMemberImage{
@@ -136,29 +156,166 @@ function MeetTheTeam(props) {
                     )
                 })}
 
-                <div className="d-flex flex-row flex-wrap justify-content-around">
 
-                    {staffDirectoryData && staffDirectoryData.map((staff, index) => {
-                        console.log("STAFF list: ", staff);
-                        return (
-                            <span key={index}>
-                                 <StyledCard>
-                                    <Card.Img variant="top" src={staff.teamMemberImage.asset.url} />
-                                    <Card.Body className="text-center">
-                                        <Card.Title className="text-center">{staff.teamMemberName}</Card.Title>
-                                        <Button >
-                                            {staff.teamMemberJobTitle}
-                                        </Button>
-                                    </Card.Body>
+                    {staffDirectoryData &&
+                        <div className="text-center mt-4 mb-4">
+                            <h2 className="py-5">General Dentists</h2>
+                            <div className="d-flex flex-row flex-wrap justify-content-around">
+                                {staffDirectoryData.map((staff, index) => {
+                                    console.log("STAFF list: ", staff);
+                                    if (staff.jobType === 'general') {
+                                        return (
+                                            <span key={index}>
+                                             <StyledDoctorCard>
+                                                <Link to={"/about-us/meet-the-team/" + staff.slug.current} key={staff.slug.current}>
+                                                    <StyledCardImg variant="top" src={staff.teamMemberImage.asset.url} />
+                                                </Link>
+                                                <Card.Body className="text-center">
+                                                    <Card.Title className="text-center">{staff.teamMemberName}</Card.Title>
+                                                    <Card.Subtitle>{staff.teamMemberJobTitle}</Card.Subtitle>
+                                                    <Link to={"/about-us/meet-the-team/" + staff.slug.current} key={staff.slug.current}>
+                                                        <Button className="mt-2" size="sm">
+                                                            Learn More
+                                                        </Button>
+                                                    </Link>
+                                                </Card.Body>
+                                            </StyledDoctorCard>
+                                        </span>
+                                        )
+                                    }
 
-                                </StyledCard>
-                            </span>
-                        )
-                    })}
+                                })
+                                }
+                            </div>
 
-                </div>
+                            <StyledHR/>
 
+                            <h2 className="py-5">Specialists</h2>
+                            <div className="d-flex flex-row flex-wrap justify-content-around">
+                                {staffDirectoryData.map((staff, index) => {
+                                    console.log("STAFF list: ", staff);
+                                    if (staff.jobType === 'specialist') {
+                                        return (
+                                            <span key={index}>
+                                             <StyledDoctorCard>
+                                                <Link to={"/about-us/meet-the-team/" + staff.slug.current} key={staff.slug.current}>
+                                                    <StyledCardImg variant="top" src={staff.teamMemberImage.asset.url} />
+                                                </Link>
+                                                <Card.Body className="text-center">
+                                                    <Card.Title className="text-center">{staff.teamMemberName}</Card.Title>
+                                                    <Card.Subtitle>{staff.teamMemberJobTitle}</Card.Subtitle>
+                                                    <Link to={"/about-us/meet-the-team/" + staff.slug.current} key={staff.slug.current}>
+                                                        <Button className="mt-2" size="sm">
+                                                            Learn More
+                                                        </Button>
+                                                    </Link>
+                                                </Card.Body>
+                                            </StyledDoctorCard>
+                                        </span>
+                                        )
+                                    }
 
+                                })
+                                }
+                            </div>
+
+                            <StyledHR/>
+
+                            <h2 className="py-5">Hygienists</h2>
+                            <div className="d-flex flex-row flex-wrap justify-content-around">
+                                {staffDirectoryData.map((staff, index) => {
+                                    console.log("STAFF list: ", staff);
+                                    if (staff.jobType === 'hygienist') {
+                                        return (
+                                            <span key={index}>
+                                             <StyledCard>
+                                                <StyledCardImg variant="top" src={staff.teamMemberImage.asset.url} />
+                                                <Card.Body className="text-center">
+                                                    <Card.Title className="text-center">{staff.teamMemberName}</Card.Title>
+                                                    <Card.Subtitle>{staff.teamMemberJobTitle}</Card.Subtitle>
+                                                </Card.Body>
+                                            </StyledCard>
+                                        </span>
+                                        )
+                                    }
+
+                                })
+                                }
+                            </div>
+
+                            <StyledHR/>
+
+                            <h2 className="py-5">Dental Assistants</h2>
+                            <div className="d-flex flex-row flex-wrap justify-content-around">
+                                {staffDirectoryData.map((staff, index) => {
+                                    console.log("STAFF list: ", staff);
+                                    if (staff.jobType === 'assistant') {
+                                        return (
+                                            <span key={index}>
+                                             <StyledCard>
+                                                <StyledCardImg variant="top" src={staff.teamMemberImage.asset.url} />
+                                                <Card.Body className="text-center">
+                                                    <Card.Title className="text-center">{staff.teamMemberName}</Card.Title>
+                                                    <Card.Subtitle>{staff.teamMemberJobTitle}</Card.Subtitle>
+                                                </Card.Body>
+                                            </StyledCard>
+                                        </span>
+                                        )
+                                    }
+
+                                })
+                                }
+                            </div>
+
+                            <StyledHR/>
+
+                            <h2 className="py-5">Administrative Staff</h2>
+                            <div className="d-flex flex-row flex-wrap justify-content-around">
+                                {staffDirectoryData.map((staff, index) => {
+                                    console.log("STAFF list: ", staff);
+                                    if (staff.jobType === 'admin') {
+                                        return (
+                                            <span key={index}>
+                                             <StyledCard>
+                                                <StyledCardImg variant="top" src={staff.teamMemberImage.asset.url} />
+                                                <Card.Body className="text-center">
+                                                    <Card.Title className="text-center">{staff.teamMemberName}</Card.Title>
+                                                    <Card.Subtitle>{staff.teamMemberJobTitle}</Card.Subtitle>
+                                                </Card.Body>
+                                            </StyledCard>
+                                        </span>
+                                        )
+                                    }
+                                    <br/>
+                                    if (staff.jobType === 'adminSpecial') {
+                                        return (
+                                            <span key={index}>
+                                             <StyledCard>
+                                                <Link to={"/about-us/meet-the-team/" + staff.slug.current} key={staff.slug.current}>
+                                                    <StyledCardImg variant="top" src={staff.teamMemberImage.asset.url} />
+                                                </Link>
+                                                <Card.Body className="text-center">
+                                                    <Card.Title className="text-center">{staff.teamMemberName}</Card.Title>
+                                                    <Card.Subtitle>{staff.teamMemberJobTitle}</Card.Subtitle>
+                                                    <Link to={"/about-us/meet-the-team/" + staff.slug.current} key={staff.slug.current}>
+                                                        <Button className="mt-2" size="sm">
+                                                            Learn More
+                                                        </Button>
+                                                    </Link>
+                                                </Card.Body>
+                                            </StyledCard>
+                                        </span>
+                                        )
+                                    }
+                                })
+                                }
+                            </div>
+
+                        </div>
+                    }
+
+                <PreFooter/>
+                <Footer/>
             </Container>
         </>
     );

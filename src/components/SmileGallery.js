@@ -18,7 +18,8 @@ function SmileGallery(props) {
                     url
                 },
                 alt
-            }
+            },
+            body
         }`)
         .then((data) => {
             console.log("DATA: ", data);
@@ -36,7 +37,7 @@ function SmileGallery(props) {
                     <article>
                     {postData && postData.map((post,index) => (
 
-                            <Link to={"/post/" + post.slug.current} key={post.slug.current}>
+                        <Link to={"/smile-gallery/" + post.slug.current} key={post.slug.current}>
                             <span key={index}>
                                 {post.mainImage && (
                                     <img

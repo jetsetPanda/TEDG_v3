@@ -1,5 +1,5 @@
 export default {
-  name: 'post',
+  name: 'smile-gallery',
   title: 'Post',
   type: 'document',
   fields: [
