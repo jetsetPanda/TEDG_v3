@@ -10,6 +10,7 @@ import Footer from "./Footer";
 import cardSample from "../assets/images/card-sample2x.png";
 import covidImg from '../assets/images/pt-info-covid.png'
 import insuranceImg from '../assets/images/pt-info-insurance.png'
+import smileImg from "../assets/images/home-smile-img.jpg";
 
 const Div85WidthCentered = styled.div`
   width: 85%;
@@ -17,7 +18,7 @@ const Div85WidthCentered = styled.div`
   align-items: center;
 `
 
-function PatientInfo(props) {
+function InsurancePage(props) {
 
 
     const [patientInfoContent, setPatientContent] = useState(null);
@@ -69,24 +70,25 @@ function PatientInfo(props) {
                                         </BreadcrumbItem>
                                     </LinkContainer>
                                     <BreadcrumbItem active>
-                                        Contact Us
-                                      {/*{content.pageName}*/}
+                                        Insurance
+                                        {/*{content.pageName}*/}
                                     </BreadcrumbItem>
                                 </Breadcrumb>
 
 
                                 <div>
                                     <h1 className="text-center">
-                                        Contact Us
+                                        Accepted Insurance
                                         {/*{content.headliner}*/}
                                     </h1>
                                 </div>
                                 <Div85WidthCentered>
                                     <h3 className="text-center">
-                                        We would love to hear from you! Please choose the method of communication most convenient to you.
-                                        {/*<PortableText blocks={content.subHeadline}/>*/}
+One of the many aspects of our practice that has endeared us to our patients over the years is that while we are a modern, beautiful, and inviting dental practice, we accept a multitude of PPO insurance plans.                                        {/*<PortableText blocks={content.subHeadline}/>*/}
                                     </h3>
                                 </Div85WidthCentered>
+
+
 
                             </Stack>
                         </span>
@@ -106,4 +108,4 @@ function PatientInfo(props) {
     );
 }
 
-export default PatientInfo;
+export default InsurancePage;

@@ -10,6 +10,7 @@ import Footer from "./Footer";
 import cardSample from "../assets/images/card-sample2x.png";
 import covidImg from '../assets/images/pt-info-covid.png'
 import insuranceImg from '../assets/images/pt-info-insurance.png'
+import smileImg from "../assets/images/home-smile-img.jpg";
 
 const Div85WidthCentered = styled.div`
   width: 85%;
@@ -17,7 +18,7 @@ const Div85WidthCentered = styled.div`
   align-items: center;
 `
 
-function PatientInfo(props) {
+function CovidPage(props) {
 
 
     const [patientInfoContent, setPatientContent] = useState(null);
@@ -69,22 +70,22 @@ function PatientInfo(props) {
                                         </BreadcrumbItem>
                                     </LinkContainer>
                                     <BreadcrumbItem active>
-                                        Contact Us
-                                      {/*{content.pageName}*/}
+                                        COVID-19 Safety Information
+                                        {/*{content.pageName}*/}
                                     </BreadcrumbItem>
                                 </Breadcrumb>
 
 
                                 <div>
                                     <h1 className="text-center">
-                                        Contact Us
+                                        COVID-19 Safety Information
                                         {/*{content.headliner}*/}
                                     </h1>
                                 </div>
                                 <Div85WidthCentered>
                                     <h3 className="text-center">
-                                        We would love to hear from you! Please choose the method of communication most convenient to you.
-                                        {/*<PortableText blocks={content.subHeadline}/>*/}
+While many things have changed over the past few months, one thing has remained the same – <strong>our commitment to your safety</strong>.
+Our practice follows recommendations made by the American Dental Association, the CDC and OSHA. We follow these standards so that the care you receive is both safe and comfortable.                                     {/*<PortableText blocks={content.subHeadline}/>*/}
                                     </h3>
                                 </Div85WidthCentered>
 
@@ -106,4 +107,4 @@ function PatientInfo(props) {
     );
 }
 
-export default PatientInfo;
+export default CovidPage;

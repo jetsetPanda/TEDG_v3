@@ -32,20 +32,24 @@ const LeftDiv =styled.div`
 
 function TestimonialSection(props) {
     return (
-        <Row>
-            <Container className="d-flex  justify-content-center">
-                <StyledDiv>
-                    <LeftDiv>
-                        <h2>
-                            What our patients are saying about us:
-                        </h2>
-                    </LeftDiv>
-                    <div className="d-flex">
-                        <BirdeyeTestimonialCard/>
-                    </div>
-                </StyledDiv>
-            </Container>
-        </Row>
+        <>
+            <h1 className="text-center my-5">Testimonials</h1>
+            <Row>
+                <Container className="d-flex  justify-content-center">
+                    <StyledDiv>
+                        <LeftDiv>
+                            <h2>
+                                What our patients are saying about us:
+                            </h2>
+                        </LeftDiv>
+                        <div className="d-flex">
+                            <BirdeyeTestimonialCard/>
+                        </div>
+                    </StyledDiv>
+                </Container>
+            </Row>
+
+        </>
 
     );
 }

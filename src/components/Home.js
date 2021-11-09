@@ -252,10 +252,6 @@ function Home(props) {
                         </StyledLink>
                     </div>
 
-                    <div>
-                        <h1 className="text-center mt-4">Testimonials</h1>
-                    </div>
-
 
                     <TestimonialSection/>
 
