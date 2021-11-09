@@ -1,9 +1,109 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import sanityClient from "../client";
+import {Breadcrumb, BreadcrumbItem, Button, Card, Col, Container, Image, Row, Stack} from "react-bootstrap";
+import {LinkContainer} from "react-router-bootstrap";
+import PortableText from "@sanity/block-content-to-react";
+import styled from "styled-components";
+import TestimonialSection from "./TestimonialSection";
+import PreFooter from "./PreFooter";
+import Footer from "./Footer";
+import cardSample from "../assets/images/card-sample2x.png";
+import covidImg from '../assets/images/pt-info-covid.png'
+import insuranceImg from '../assets/images/pt-info-insurance.png'
 
-const ContactUs = props => (
-    <div>
-        <h1>FAQS !!!</h1>
-    </div>
-);
+const Div85WidthCentered = styled.div`
+  width: 85%;
+  margin: 0 auto;
+  align-items: center;
+`
 
-export default ContactUs;
+function PatientInfo(props) {
+
+
+    const [patientInfoContent, setPatientContent] = useState(null);
+
+    useEffect(() => {
+        sanityClient.fetch(`*[_type == "patientInfoContent"] {
+            pageName,
+            headliner,
+            subHeadline,
+            bannerImage{
+                asset->{
+                    _id,
+                    url
+                },
+                alt
+            },
+            newPatientCopy,
+            firstVisitCopy
+        }`)
+            .then((data) => setPatientContent(data))
+            .catch(console.error);
+    }, []);
+
+    return (
+        <>
+            <Container fluid>
+                {patientInfoContent && patientInfoContent.map((content,index) => {
+                    console.log("CONTENT IS: ", content);
+                    return (
+                        <span key={index}>
+                            <Stack gap={5}>
+
+                                <div>
+                                    <Image
+                                        src={content.bannerImage.asset.url}
+                                        alt=""
+                                        className=""
+                                        fluid
+                                    />
+                                </div>
+
+
+                                <Breadcrumb>
+                                    <LinkContainer to="/">
+                                        <BreadcrumbItem>
+                                          <a href="home">
+                                            Home
+                                          </a>
+                                        </BreadcrumbItem>
+                                    </LinkContainer>
+                                    <BreadcrumbItem active>
+                                        Contact Us
+                                      {/*{content.pageName}*/}
+                                    </BreadcrumbItem>
+                                </Breadcrumb>
+
+
+                                <div>
+                                    <h1 className="text-center">
+                                        Contact Us
+                                        {/*{content.headliner}*/}
+                                    </h1>
+                                </div>
+                                <Div85WidthCentered>
+                                    <h3 className="text-center">
+                                        We would love to hear from you! Please choose the method of communication most convenient to you.
+                                        {/*<PortableText blocks={content.subHeadline}/>*/}
+                                    </h3>
+                                </Div85WidthCentered>
+
+                            </Stack>
+                        </span>
+                    )
+
+
+                })}
+
+
+                <TestimonialSection/>
+                <PreFooter/>
+                <Footer/>
+
+
+            </Container>
+        </>
+    );
+}
+
+export default PatientInfo;
