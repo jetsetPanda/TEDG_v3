@@ -49,10 +49,24 @@ const NavBar = () => {
 
                         </NavDropdown>
 
+                        <NavDropdown title="SERVICES" id="collasible-nav-dropdown">
+                            <LinkContainer to="/services">
+                                <NavDropdown.Item href="#">Our Services</NavDropdown.Item>
+                            </LinkContainer>
+                            <NavDropdown.Divider />
+                            <LinkContainer to="/services/cosmetic-dentistry">
+                                <NavDropdown.Item href="#">Cosmetic Dentistry</NavDropdown.Item>
+                            </LinkContainer>
+                            <NavDropdown.Item href="#">General Dentistry</NavDropdown.Item>
+                            <NavDropdown.Item href="#">Pediatric Dentistry</NavDropdown.Item>
+                            <NavDropdown.Item href="#">Orthodontics</NavDropdown.Item>
+                            <NavDropdown.Item href="#">Endodontics</NavDropdown.Item>
+                            <NavDropdown.Item href="#">Periodontics</NavDropdown.Item>
+                            <NavDropdown.Item href="#">Oral Surgery</NavDropdown.Item>
+                            <NavDropdown.Item href="#">Restorative Dentistry</NavDropdown.Item>
 
-                        <LinkContainer to="/services">
-                            <Nav.Link>SERVICES</Nav.Link>
-                        </LinkContainer>
+                        </NavDropdown>
+
 
                         <LinkContainer to="/smile-gallery">
                             <Nav.Link>SMILE GALLERY</Nav.Link>
