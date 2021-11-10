@@ -5,6 +5,9 @@ import { LinkContainer } from "react-router-bootstrap";
 
 import {Container, Row, Col, Stack, Image, Button, Card, Breadcrumb, BreadcrumbItem} from 'react-bootstrap';
 import styled from "styled-components";
+import TestimonialSection from "./TestimonialSection";
+import PreFooter from "./PreFooter";
+import Footer from "./Footer";
 
 const Div85WidthCentered = styled.div`
   width: 85%;
@@ -72,11 +75,12 @@ function About(props) {
     return (
         <>
             <Container fluid>
+                <Stack gap={5}>
                 {servicesContent && servicesContent.map((content,index) => {
                     console.log("CONTENT IS: ", content);
                     return (
                         <span key={index}>
-                            <Stack gap={5}>
+
 
                                 <div>
                                     <Image
@@ -103,7 +107,7 @@ function About(props) {
 
 
                                 <div>
-                                    <h1 className="text-center">
+                                    <h1 className="text-center mb-2">
                                         {content.headliner}
                                     </h1>
                                 </div>
@@ -114,7 +118,7 @@ function About(props) {
                                 </Div85WidthCentered>
 
 
-                                <div className="d-flex flex-row flex-wrap justify-content-around">
+                                <div className="d-flex flex-row flex-wrap justify-content-around mt-3 mt-md-5">
 
                                     {servicesList && servicesList.map((list, index) => {
                                         console.log("svcs list: ", list);
@@ -124,10 +128,12 @@ function About(props) {
                                                     <Card.Img variant="top" src={list.serviceImage.asset.url} />
                                                     <Card.Body className="text-center">
                                                         <StyledCardTitle className="text-center">{list.serviceName}</StyledCardTitle>
-                                                        <Button size="sm" >
-                                                            Learn More
+                                                        <LinkContainer to={`/services/${list.serviceLink}`}>
+                                                            <Button size="sm" >
+                                                                Learn More
+                                                            </Button>
+                                                        </LinkContainer>
 
-                                                        </Button>
                                                     </Card.Body>
 
                                                 </StyledCard>
@@ -137,16 +143,18 @@ function About(props) {
 
                                 </div>
 
-                            </Stack>
+
                         </span>
                     )
 
 
                 })}
 
+                <TestimonialSection/>
+                <PreFooter/>
+                <Footer/>
 
-
-
+                </Stack>
             </Container>
         </>
     );
