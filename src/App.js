@@ -16,6 +16,8 @@ import OurTechnology from "./components/OurTechnology";
 import CovidPage from "./components/CovidPage";
 import InsurancePage from "./components/InsurancePage";
 
+import ServicesCosmetic from "./components/ServicesCosmetic";
+
 function App() {
   return (
     <Layout>
@@ -24,8 +26,7 @@ function App() {
                 <Route component={Home} path={'/'} exact />
                 <Route component={About} path={'/about-us'} exact />
                 <Route component={MeetTheTeam} path={'/about-us/meet-the-team'} exact/>
-                <Route component={Services} path={'/services'} />
-                <Route component={Services} path={'/services'} />
+                <Route component={Services} path={'/services'} exact/>
                 <Route component={OurTechnology} path={'/our-technology'} />
                 <Route component={PatientInfo} path={'/patient-info'} exact/>
                 <Route component={CovidPage} path={'/patient-info/covid-safety'} exact />
@@ -34,6 +35,8 @@ function App() {
                 <Route component={ContactUs} path={'/contact-us'} />
                 <Route component={SmileGallery} path={'/smile-gallery'} />
                 <Route component={SingleDoctorPage} path={'/about-us/meet-the-team/:slug'} />
+                <Route component={ServicesCosmetic} path={'/services/cosmetic-dentistry'} exact/>
+
             </Switch>
         </Container>
     </Layout>
