@@ -17,6 +17,7 @@ import CovidPage from "./components/CovidPage";
 import InsurancePage from "./components/InsurancePage";
 
 import ServicesCosmetic from "./components/ServicesCosmetic";
+import ServicesEndodontics from './components/ServicesEndodontics';
 
 function App() {
   return (
@@ -36,6 +37,10 @@ function App() {
                 <Route component={SmileGallery} path={'/smile-gallery'} />
                 <Route component={SingleDoctorPage} path={'/about-us/meet-the-team/:slug'} />
                 <Route component={ServicesCosmetic} path={'/services/cosmetic-dentistry'} exact/>
+                <Route component={ServicesEndodontics} path={'/services/endodontics'} exact/>
+
+
+
 
             </Switch>
         </Container>
