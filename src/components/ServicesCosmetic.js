@@ -17,8 +17,11 @@ const ButtonThing = (props) => (
 
 
 function ServicesCosmetic(props) {
+
+    let isSubhead = true;
     let isPic = true;
     let isSlug = true;
+
 
     let slugName = '/about-us/meet-the-team'
 
@@ -45,7 +48,15 @@ function ServicesCosmetic(props) {
                     </BreadcrumbItem>
                 </Breadcrumb>
 
-                <h1 className="text-center mt-4">Cosmetic Dentistry</h1>
+                <h1 className="text-center mt-4 mb-4 pb-4">Cosmetic Dentistry</h1>
+
+                {isSubhead &&
+                    <h2 className="text-center mt-4 mb-4">Conveniently located in Manhattan’s Financial District, our office
+                    offers a variety of teeth-straightening options with our in-house
+                    orthodontist, Dr. Weeman.
+                    </h2>
+                }
+
 
                 <Row className="mt-5">
                     {isPic
