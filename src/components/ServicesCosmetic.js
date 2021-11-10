@@ -6,6 +6,14 @@ import PreFooter from "./PreFooter";
 import Footer from "./Footer";
 import cardSample from "../assets/images/card-sample2x.png";
 
+const ButtonThing = (props) => (
+    <div className="text-left">
+        <LinkContainer to={props.slug}>
+            <Button variant="outline-primary" size="md">{props.copy}</Button>
+        </LinkContainer>
+    </div>
+
+)
 
 
 function ServicesCosmetic(props) {
