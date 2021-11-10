@@ -42,6 +42,8 @@ function ServicesCosmetic(props) {
     useEffect(() => {
         // grok custom sanity query lang (similar to graphQL)
         sanityClient.fetch(`*[_type == "servicesList"] {
+            serviceName,
+            serviceLink,
             description
         }`)
             .then((data) => setServiceInfo(data))
@@ -89,13 +91,21 @@ function ServicesCosmetic(props) {
                     </BreadcrumbItem>
                 </Breadcrumb>
 
-                <h1 className="text-center mt-4 mb-4 pb-4">Cosmetic Dentistry</h1>
+                {serviceInfo && serviceInfo.map((info, key) => {
+                    console.log("infoes are: ", info);
+                    if (info.serviceName === 'Cosmetic Dentistry') {
+                        return (
+                            <>
+                                <h1 className="text-center mt-4 mb-4 pb-4">{info.serviceName}</h1>
+                                <h2 className="text-center mt-4 mb-4">
+                                    <PortableText blocks={info.description}/>
+                                </h2>
+                            </>
 
-                {serviceInfo &&
-                <h2 className="text-center mt-4 mb-4">
-                    <PortableText blocks={serviceInfo[0].description}/>
-                </h2>
-                }
+                        )
+                    }
+                })}
+
 
                 {serviceOfferings && serviceOfferings.map((content, index) => {
                     console.log("service content: ", content);
