@@ -1,13 +1,15 @@
 import React, {useEffect, useState} from 'react';
-import {Breadcrumb, BreadcrumbItem, Button, Col, Container, Image, Row, Stack} from "react-bootstrap";
-import {LinkContainer} from "react-router-bootstrap";
+
 import TestimonialSection from "./TestimonialSection";
 import PreFooter from "./PreFooter";
 import Footer from "./Footer";
-import cardSample from "../assets/images/card-sample2x.png";
+import {Breadcrumb, BreadcrumbItem, Button, Col, Container, Image, Row, Stack} from "react-bootstrap";
+import {LinkContainer} from "react-router-bootstrap";
+
 import sanityClient from "../client";
 import PortableText from "@sanity/block-content-to-react";
 import styled from "styled-components";
+
 
 const ButtonThing = (props) => (
     <div className="text-left">
@@ -21,13 +23,13 @@ const StyledImage = styled(Image)`
   //max-width: 600px;
   //max-height: 468px;
 
-  @media screen and (max-width: 480px) {
-
-  }
+  //@media screen and (max-width: 480px) {
+  //
+  //}
 `
 
 
-function ServicesCosmetic(props) {
+function ServicesGeneralDentistry(props) {
 
     let isPic = true;
     let isSlug = true;
@@ -52,7 +54,7 @@ function ServicesCosmetic(props) {
 
     useEffect(() => {
         // grok custom sanity query lang (similar to graphQL)
-        sanityClient.fetch(`*[_type == "servicesCosmetic"] {
+        sanityClient.fetch(`*[_type == "servicesGeneral"] {
             serviceName,
             serviceDescription,
             serviceImage{
@@ -92,8 +94,8 @@ function ServicesCosmetic(props) {
                 </Breadcrumb>
 
                 {serviceInfo && serviceInfo.map((info, key) => {
-                    console.log("infoes are: ", info);
-                    if (info.serviceName === 'Cosmetic Dentistry') {
+                    // console.log("info log: ", info);
+                    if (info.serviceName === 'General Dentistry') {
                         return (
                             <>
                                 <h1 className="text-center mt-4 mb-4 pb-4">{info.serviceName}</h1>
@@ -176,4 +178,4 @@ function ServicesCosmetic(props) {
     );
 }
 
-export default ServicesCosmetic;
+export default ServicesGeneralDentistry;

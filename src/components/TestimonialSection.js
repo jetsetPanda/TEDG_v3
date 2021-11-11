@@ -32,13 +32,13 @@ const LeftDiv =styled.div`
 
 function TestimonialSection(props) {
     return (
-        <>
-            <h1 className="text-center my-5">Testimonials</h1>
+        <div className="my-3 my-md-5">
+            <h1 className="text-center my-4 my-md-5">Testimonials</h1>
             <Row>
                 <Container className="d-flex  justify-content-center">
                     <StyledDiv>
                         <LeftDiv>
-                            <h2>
+                            <h2 className="text-center text-md-start">
                                 What our patients are saying about us:
                             </h2>
                         </LeftDiv>
@@ -49,7 +49,7 @@ function TestimonialSection(props) {
                 </Container>
             </Row>
 
-        </>
+        </div>
 
     );
 }

@@ -4,7 +4,7 @@ import {LinkContainer} from "react-router-bootstrap";
 import TestimonialSection from "./TestimonialSection";
 import PreFooter from "./PreFooter";
 import Footer from "./Footer";
-import cardSample from "../assets/images/card-sample2x.png";
+
 import sanityClient from "../client";
 import PortableText from "@sanity/block-content-to-react";
 import styled from "styled-components";
@@ -27,10 +27,10 @@ const StyledImage = styled(Image)`
 `
 
 
-function ServicesCosmetic(props) {
+function ServicesEndodontics(props) {
 
-    let isPic = true;
-    let isSlug = true;
+    // let isPic = true;
+    let isSlug = false;
 
 
     let slugName = '/about-us/meet-the-team'
@@ -52,7 +52,7 @@ function ServicesCosmetic(props) {
 
     useEffect(() => {
         // grok custom sanity query lang (similar to graphQL)
-        sanityClient.fetch(`*[_type == "servicesCosmetic"] {
+        sanityClient.fetch(`*[_type == "servicesEndodontics"] {
             serviceName,
             serviceDescription,
             serviceImage{
@@ -67,6 +67,7 @@ function ServicesCosmetic(props) {
             .catch(console.error);
     }, []);
 
+    console.log("")
 
     return (
         <Container>
@@ -87,13 +88,15 @@ function ServicesCosmetic(props) {
                         </BreadcrumbItem>
                     </LinkContainer>
                     <BreadcrumbItem active>
-                        Cosmetic Dentistry
+                        Endodontics
                     </BreadcrumbItem>
                 </Breadcrumb>
 
+
+
                 {serviceInfo && serviceInfo.map((info, key) => {
                     console.log("infoes are: ", info);
-                    if (info.serviceName === 'Cosmetic Dentistry') {
+                    if (info.serviceName === 'Endodontics') {
                         return (
                             <>
                                 <h1 className="text-center mt-4 mb-4 pb-4">{info.serviceName}</h1>
@@ -105,7 +108,6 @@ function ServicesCosmetic(props) {
                         )
                     }
                 })}
-
 
                 {serviceOfferings && serviceOfferings.map((content, index) => {
                     console.log("service content: ", content);
@@ -176,4 +178,4 @@ function ServicesCosmetic(props) {
     );
 }
 
-export default ServicesCosmetic;
+export default ServicesEndodontics;

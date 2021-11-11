@@ -49,10 +49,37 @@ const NavBar = () => {
 
                         </NavDropdown>
 
+                        <NavDropdown title="SERVICES" id="collasible-nav-dropdown">
+                            <LinkContainer to="/services">
+                                <NavDropdown.Item href="#">Our Services</NavDropdown.Item>
+                            </LinkContainer>
+                            <NavDropdown.Divider />
+                            <LinkContainer to="/services/cosmetic-dentistry">
+                                <NavDropdown.Item href="#">Cosmetic Dentistry</NavDropdown.Item>
+                            </LinkContainer>
+                            <LinkContainer to="/services/general-dentistry">
+                                <NavDropdown.Item href="#">General Dentistry</NavDropdown.Item>
+                            </LinkContainer>
+                            <LinkContainer to="/services/general-dentistry">
+                                <NavDropdown.Item href="#">Pediatric Dentistry</NavDropdown.Item>
+                            </LinkContainer>
+                            <LinkContainer to="/services/general-dentistry">
+                                <NavDropdown.Item href="#">Orthodontics</NavDropdown.Item>
+                            </LinkContainer>
+                            <LinkContainer to="/services/endodontics">
+                                <NavDropdown.Item href="#">Endodontics</NavDropdown.Item>
+                            </LinkContainer>
+                            <LinkContainer to="/services/general-dentistry">
+                                <NavDropdown.Item href="#">Periodontics</NavDropdown.Item>
+                            </LinkContainer>
+                            <LinkContainer to="/services/general-dentistry">
+                                <NavDropdown.Item href="#">Oral Surgery</NavDropdown.Item>
+                            </LinkContainer>
+                            <LinkContainer to="/services/general-dentistry">
+                                <NavDropdown.Item href="#">Restorative Dentistry</NavDropdown.Item>
+                            </LinkContainer>
+                        </NavDropdown>
 
-                        <LinkContainer to="/services">
-                            <Nav.Link>SERVICES</Nav.Link>
-                        </LinkContainer>
 
                         <LinkContainer to="/smile-gallery">
                             <Nav.Link>SMILE GALLERY</Nav.Link>
