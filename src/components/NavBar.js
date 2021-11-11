@@ -57,17 +57,27 @@ const NavBar = () => {
                             <LinkContainer to="/services/cosmetic-dentistry">
                                 <NavDropdown.Item href="#">Cosmetic Dentistry</NavDropdown.Item>
                             </LinkContainer>
-                            <NavDropdown.Item href="#">General Dentistry</NavDropdown.Item>
-                            <NavDropdown.Item href="#">Pediatric Dentistry</NavDropdown.Item>
-                            <NavDropdown.Item href="#">Orthodontics</NavDropdown.Item>
+                            <LinkContainer to="/services/general-dentistry">
+                                <NavDropdown.Item href="#">General Dentistry</NavDropdown.Item>
+                            </LinkContainer>
+                            <LinkContainer to="/services/general-dentistry">
+                                <NavDropdown.Item href="#">Pediatric Dentistry</NavDropdown.Item>
+                            </LinkContainer>
+                            <LinkContainer to="/services/general-dentistry">
+                                <NavDropdown.Item href="#">Orthodontics</NavDropdown.Item>
+                            </LinkContainer>
                             <LinkContainer to="/services/endodontics">
                                 <NavDropdown.Item href="#">Endodontics</NavDropdown.Item>
                             </LinkContainer>
-
-                            <NavDropdown.Item href="#">Periodontics</NavDropdown.Item>
-                            <NavDropdown.Item href="#">Oral Surgery</NavDropdown.Item>
-                            <NavDropdown.Item href="#">Restorative Dentistry</NavDropdown.Item>
-
+                            <LinkContainer to="/services/general-dentistry">
+                                <NavDropdown.Item href="#">Periodontics</NavDropdown.Item>
+                            </LinkContainer>
+                            <LinkContainer to="/services/general-dentistry">
+                                <NavDropdown.Item href="#">Oral Surgery</NavDropdown.Item>
+                            </LinkContainer>
+                            <LinkContainer to="/services/general-dentistry">
+                                <NavDropdown.Item href="#">Restorative Dentistry</NavDropdown.Item>
+                            </LinkContainer>
                         </NavDropdown>
 
 
