@@ -29,8 +29,8 @@ export default {
             type: "string",
         },
         {
-            name: "subHeadlinePortableText",
-            title: "Long Copy",
+            name: "subHeadline",
+            title: "Subheadline",
             type: "array",
             of: [
                 {

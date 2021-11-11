@@ -45,7 +45,10 @@ const NavBar = () => {
                             <LinkContainer to="/about-us/meet-the-team">
                                 <NavDropdown.Item href="#">Meet The Team</NavDropdown.Item>
                             </LinkContainer>
-                            <NavDropdown.Item href="#">Our Technology</NavDropdown.Item>
+                            <LinkContainer to="/about-us/our-technology">
+                                <NavDropdown.Item href="#">Our Technology</NavDropdown.Item>
+                            </LinkContainer>
+
 
                         </NavDropdown>
 
@@ -60,22 +63,22 @@ const NavBar = () => {
                             <LinkContainer to="/services/general-dentistry">
                                 <NavDropdown.Item href="#">General Dentistry</NavDropdown.Item>
                             </LinkContainer>
-                            <LinkContainer to="/services/general-dentistry">
+                            <LinkContainer to="/services/pediatric-dentistry">
                                 <NavDropdown.Item href="#">Pediatric Dentistry</NavDropdown.Item>
                             </LinkContainer>
-                            <LinkContainer to="/services/general-dentistry">
+                            <LinkContainer to="/services/orthodontics">
                                 <NavDropdown.Item href="#">Orthodontics</NavDropdown.Item>
                             </LinkContainer>
                             <LinkContainer to="/services/endodontics">
                                 <NavDropdown.Item href="#">Endodontics</NavDropdown.Item>
                             </LinkContainer>
-                            <LinkContainer to="/services/general-dentistry">
+                            <LinkContainer to="/services/periodontics">
                                 <NavDropdown.Item href="#">Periodontics</NavDropdown.Item>
                             </LinkContainer>
-                            <LinkContainer to="/services/general-dentistry">
+                            <LinkContainer to="/services/oral-surgery">
                                 <NavDropdown.Item href="#">Oral Surgery</NavDropdown.Item>
                             </LinkContainer>
-                            <LinkContainer to="/services/general-dentistry">
+                            <LinkContainer to="/services/restorative-dentistry">
                                 <NavDropdown.Item href="#">Restorative Dentistry</NavDropdown.Item>
                             </LinkContainer>
                         </NavDropdown>
