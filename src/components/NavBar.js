@@ -45,7 +45,10 @@ const NavBar = () => {
                             <LinkContainer to="/about-us/meet-the-team">
                                 <NavDropdown.Item href="#">Meet The Team</NavDropdown.Item>
                             </LinkContainer>
-                            <NavDropdown.Item href="#">Our Technology</NavDropdown.Item>
+                            <LinkContainer to="/about-us/our-technology">
+                                <NavDropdown.Item href="#">Our Technology</NavDropdown.Item>
+                            </LinkContainer>
+
 
                         </NavDropdown>
 
