@@ -32,17 +32,25 @@ function App() {
         <Container>
             <Switch>
                 <Route component={Home} path={'/'} exact />
+
                 <Route component={About} path={'/about-us'} exact />
                 <Route component={MeetTheTeam} path={'/about-us/meet-the-team'} exact/>
-                <Route component={Services} path={'/services'} exact/>
-                <Route component={OurTechnology} path={'/our-technology'} />
+                <Route component={SingleDoctorPage} path={'/about-us/meet-the-team/:slug'} />
+                <Route component={OurTechnology} path={'/about-us/our-technology'} exact/>
+                {/*<Route component={SingleTechPage} path={'/about-us/our-technology/:slug'} />*/}
+
+
                 <Route component={PatientInfo} path={'/patient-info'} exact/>
                 <Route component={CovidPage} path={'/patient-info/covid-safety'} exact />
                 <Route component={InsurancePage} path={'/patient-info/insurance'} exact />
-                <Route component={SingleSmile} path={'/smile-gallery/:slug'} />
-                <Route component={ContactUs} path={'/contact-us'} />
+
                 <Route component={SmileGallery} path={'/smile-gallery'} />
-                <Route component={SingleDoctorPage} path={'/about-us/meet-the-team/:slug'} />
+                <Route component={SingleSmile} path={'/smile-gallery/:slug'} />
+
+                <Route component={ContactUs} path={'/contact-us'} />
+
+
+                <Route component={Services} path={'/services'} exact/>
                 <Route component={ServicesCosmetic} path={'/services/cosmetic-dentistry'} exact/>
                 <Route component={ServicesEndodontics} path={'/services/endodontics'} exact/>
                 <Route component={ServicesGeneralDentistry} path={'/services/general-dentistry'} exact/>
