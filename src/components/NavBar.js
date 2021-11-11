@@ -60,7 +60,10 @@ const NavBar = () => {
                             <NavDropdown.Item href="#">General Dentistry</NavDropdown.Item>
                             <NavDropdown.Item href="#">Pediatric Dentistry</NavDropdown.Item>
                             <NavDropdown.Item href="#">Orthodontics</NavDropdown.Item>
-                            <NavDropdown.Item href="#">Endodontics</NavDropdown.Item>
+                            <LinkContainer to="/services/endodontics">
+                                <NavDropdown.Item href="#">Endodontics</NavDropdown.Item>
+                            </LinkContainer>
+
                             <NavDropdown.Item href="#">Periodontics</NavDropdown.Item>
                             <NavDropdown.Item href="#">Oral Surgery</NavDropdown.Item>
                             <NavDropdown.Item href="#">Restorative Dentistry</NavDropdown.Item>
