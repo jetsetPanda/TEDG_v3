@@ -73,31 +73,31 @@ function ServicesPediatric(props) {
     return (
         <Container>
             <Stack className="mt-4">
-                <Breadcrumb>
-                    <LinkContainer to="/">
-                        <BreadcrumbItem>
-                            <a href="home">
-                                Home
-                            </a>
-                        </BreadcrumbItem>
-                    </LinkContainer>
-                    <LinkContainer to="/services">
-                        <BreadcrumbItem>
-                            <a href="our-services">
-                                Our Services
-                            </a>
-                        </BreadcrumbItem>
-                    </LinkContainer>
-                    <BreadcrumbItem active>
-                        Cosmetic Dentistry
-                    </BreadcrumbItem>
-                </Breadcrumb>
-
                 {serviceInfo && serviceInfo.map((info, key) => {
                     // console.log("info log: ", info);
                     if (info.serviceName === 'Pediatric Dentistry') {
                         return (
                             <>
+                                <Breadcrumb>
+                                    <LinkContainer to="/">
+                                        <BreadcrumbItem>
+                                            <a href="home">
+                                                Home
+                                            </a>
+                                        </BreadcrumbItem>
+                                    </LinkContainer>
+                                    <LinkContainer to="/services">
+                                        <BreadcrumbItem>
+                                            <a href="our-services">
+                                                Our Services
+                                            </a>
+                                        </BreadcrumbItem>
+                                    </LinkContainer>
+                                    <BreadcrumbItem active>
+                                        {info.serviceName}
+                                    </BreadcrumbItem>
+                                </Breadcrumb>
+
                                 <h1 className="text-center mt-4 mb-4 pb-4">{info.serviceName}</h1>
                                 <h2 className="text-center mt-4 mb-4">
                                     <PortableText blocks={info.description}/>

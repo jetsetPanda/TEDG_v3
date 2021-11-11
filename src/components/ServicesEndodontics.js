@@ -92,8 +92,6 @@ function ServicesEndodontics(props) {
                     </BreadcrumbItem>
                 </Breadcrumb>
 
-
-
                 {serviceInfo && serviceInfo.map((info, key) => {
                     console.log("infoes are: ", info);
                     if (info.serviceName === 'Endodontics') {
