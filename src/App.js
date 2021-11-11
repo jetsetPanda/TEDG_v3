@@ -19,6 +19,12 @@ import InsurancePage from "./components/InsurancePage";
 import ServicesCosmetic from "./components/ServicesCosmetic";
 import ServicesEndodontics from './components/ServicesEndodontics';
 import ServicesGeneralDentistry from './components/ServicesGeneralDentistry';
+import ServicesPediatric from './components/ServicesPediatric';
+import ServicesOrthodontics from './components/ServicesOrthodontics';
+import ServicesPeriodontics from './components/ServicesPeriodontics';
+import ServicesOralSurgery from './components/ServicesOralSurgery';
+import ServicesRestorative from './components/ServicesRestorative';
+
 
 function App() {
   return (
@@ -40,6 +46,13 @@ function App() {
                 <Route component={ServicesCosmetic} path={'/services/cosmetic-dentistry'} exact/>
                 <Route component={ServicesEndodontics} path={'/services/endodontics'} exact/>
                 <Route component={ServicesGeneralDentistry} path={'/services/general-dentistry'} exact/>
+                <Route component={ServicesPediatric} path={'/services/pediatric-dentistry'} exact/>
+                <Route component={ServicesOrthodontics} path={'/services/orthodontics'} exact/>
+                <Route component={ServicesPeriodontics} path={'/services/periodontics'} exact/>
+                <Route component={ServicesOralSurgery} path={'/services/oral-surgery'} exact/>
+                <Route component={ServicesRestorative} path={'/services/restorative-dentistry'} exact/>
+
+
 
 
 
