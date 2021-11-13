@@ -187,7 +187,6 @@ function Home(props) {
                             <Button  variant="outline-primary" size="lg">VIEW OUR SERVICES</Button>
                         </LinkContainer>
                     </div>
-
                     <SmileVirtualBanner/>
 
                     <div>
