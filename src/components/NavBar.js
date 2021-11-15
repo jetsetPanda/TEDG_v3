@@ -4,6 +4,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import styled from 'styled-components';
 
 import logo from "../assets/images/logosvg.svg";
+import {Link} from "react-router-dom";
 
 const MenuDiv = styled(Nav)`
   a {
@@ -12,10 +13,34 @@ const MenuDiv = styled(Nav)`
   }
 `
 
+const StyledMobileCollapse = styled(Navbar.Collapse)`
+  @media (max-width: 768px) {
+    background-color: #dcdedc;
+    padding: 15px 0 25px 20px;
+  }
+`
+
+
 const StyledNavBrand =styled(Navbar.Brand)`
   @media (max-width: 768px) {
     width: 250px
   }
+`
+
+const StyledNavLInk = styled(Nav.Link)`
+  @media (max-width: 768px) {
+    margin: 2px 0 !important;
+  }
+`
+
+const NavButtonLink = styled.a`
+  margin: 1px 2rem;
+  text-align: left;
+  
+  @media (max-width: 768px) {
+    margin: 2px auto 2px 1px !important;
+  }
+
 `
 
 const NavBar = () => {
@@ -34,7 +59,7 @@ const NavBar = () => {
                     </StyledNavBrand>
                 </LinkContainer>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav">
+                <StyledMobileCollapse id="responsive-navbar-nav">
                     <MenuDiv className="me-auto d-flex justify-content-around">
 
                         <NavDropdown title="ABOUT US" id="collasible-nav-dropdown">
@@ -84,72 +109,47 @@ const NavBar = () => {
                         </NavDropdown>
 
 
-                        <LinkContainer to="/smile-gallery">
-                            <Nav.Link>SMILE GALLERY</Nav.Link>
-                        </LinkContainer>
+                            <StyledNavLInk href="/smile-gallery">SMILE GALLERY</StyledNavLInk>
 
-                        <LinkContainer to="/patient-info">
-                            <Nav.Link>PATIENT FORMS</Nav.Link>
-                        </LinkContainer>
+                        <NavDropdown title="PATIENT INFORMATION" id="collapsible-nav-dropdown">
 
-                        <LinkContainer to="/contact-us">
-                            <Nav.Link>CONTACT US</Nav.Link>
-                        </LinkContainer>
+                            <LinkContainer to="/patient-info">
+                                <NavDropdown.Item href="#">Patient Forms and Info</NavDropdown.Item>
+                            </LinkContainer>
+                            <NavDropdown.Divider />
+                            <LinkContainer to="/patient-info/covid-safety">
+                                <NavDropdown.Item href="#">Covid-19 Safety</NavDropdown.Item>
+                            </LinkContainer>
+                            <LinkContainer to="/patient-info/insurance">
+                                <NavDropdown.Item href="#">Insurance and Payments</NavDropdown.Item>
+                            </LinkContainer>
+                        </NavDropdown>
+
+
+
+                            <StyledNavLInk href="/contact-us" className="text-left">CONTACT US</StyledNavLInk>
 
 
 
                     </MenuDiv>
                     <MenuDiv>
-                        <LinkContainer to="#">
+                        <NavButtonLink href="tel:212-422-9229">
                             <Button>
                                 CALL US
                             </Button>
-                        </LinkContainer>
+                        </NavButtonLink>
 
-                        <LinkContainer to="#" style={{margin:"auto 1rem"}}>
+                        <NavButtonLink href="https://nexhealth.com/appt/TheExchangeDentalGroup" target="_blank">
                             <Button>
                                 BOOK ONLINE
                             </Button>
-                        </LinkContainer>
+                        </NavButtonLink>
 
-                        {/*<Nav.Link href="#deets">More deets</Nav.Link>*/}
-                        {/*<Nav.Link eventKey={2} href="#memes">*/}
-                        {/*    Dank memes*/}
-                        {/*</Nav.Link>*/}
                     </MenuDiv>
-                </Navbar.Collapse>
+                </StyledMobileCollapse>
             </Container>
         </Navbar>
     );
 }
 
 export default NavBar;
-
-
-//
-// <Container>
-//     <header className='d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom'>
-//         <LinkContainer to='/smile-gallery'>
-//             <Nav.Link className='d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none'>
-//                 Smile Gallery
-//             </Nav.Link>
-//         </LinkContainer>
-//         <Nav>
-//             <ul className='nav col-12 col-md-auto mb-2 justify-content-center mb-md-0'>
-//                 <li>
-//                     <LinkContainer to='/about'>
-//                         <Nav.Link className='nav-link px-2 link-secondary'>About</Nav.Link>
-//                     </LinkContainer>
-//                 </li>
-//             </ul>
-//
-//             <div className='col-md-3 text-end'>
-//                 <LinkContainer to='/'>
-//                     <button type='button' className='btn btn-outline-primary me-2'>
-//                         Home
-//                     </button>
-//                 </LinkContainer>
-//             </div>
-//         </Nav>
-//     </header>
-// </Container>
