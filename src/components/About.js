@@ -94,7 +94,9 @@ function About(props) {
                             </Div85WidthCentered>
 
                             <div className="text-center" >
-                                <Button variant="outline-primary" size="lg">DR. HOWARD WIMMER'S 20 YEAR TRIBUTE</Button>
+                                <a href="http://www.howardwimmerddstribute.com/pages/2/index.htm" target="_blank">
+                                    <Button variant="outline-primary" size="lg">DR. HOWARD WIMMER'S 20 YEAR TRIBUTE</Button>
+                                </a>
                             </div>
 
                             <Row className="mt-5">
@@ -136,7 +138,9 @@ function About(props) {
                                        <h2>OUR TECHNOLOGY</h2>
                                        <p>As part of our effort to provide the best dental care possible, we use state-of-the-art equipment, modern technology and the most advanced dental techniques.. </p>
                                        <div>
-                                          <Button variant="outline-primary" size="md">View Our Services</Button>
+                                           <LinkContainer to="/about-us/our-technology">
+                                                <Button variant="outline-primary" size="md">View Our Technology</Button>
+                                           </LinkContainer>
                                        </div>
 
                                    </Stack>
