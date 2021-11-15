@@ -111,7 +111,7 @@ function OurTechnology(props) {
                                     Home
                                   </a>
                                 </BreadcrumbItem>
-                                <LinkContainer  to="/about">
+                                <LinkContainer  to="/about-us">
                                     <BreadcrumbItem>
                                       <a href="#">
                                         About Us
