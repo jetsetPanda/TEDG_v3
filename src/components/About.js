@@ -8,6 +8,9 @@ import { Container, Breadcrumb, BreadcrumbItem, Row, Col, Stack, Image, Button, 
 import styled from "styled-components";
 import homeBanner from '../assets/images/home-banner2x.png';
 import cardSample from '../assets/images/card-sample2x.png';
+import TestimonialSection from "./TestimonialSection";
+import PreFooter from "./PreFooter";
+import Footer from "./Footer";
 
 const TopRow = styled(Row)`
   background-color: darkblue;
@@ -50,13 +53,14 @@ function About(props) {
     return (
         <>
             <Container fluid>
+                <Stack gap={5}>
                 {aboutContentData && aboutContentData.map((aboutContent,index) => {
                     console.log("ABOUT DATAAA:", aboutContentData[0]);
                     console.log("reach in: ", aboutContentData[0].headliner[0][0])
 
                     return (
                         <span key={index}>
-                        <Stack gap={5}>
+
 
                             <div>
                                 <Image
@@ -67,7 +71,7 @@ function About(props) {
                                 />
                             </div>
 
-                            <Breadcrumb>
+                            <Breadcrumb className="mt-4">
                                 <LinkContainer to="/">
                                     <BreadcrumbItem>
                                       <a href="home">
@@ -147,12 +151,17 @@ function About(props) {
                                 </Col>
                             </Row>
 
-                        </Stack>
+
                     </span>
 
                     )}
                 )}
 
+                    <TestimonialSection/>
+                    <PreFooter/>
+                    <Footer/>
+
+                </Stack>
             </Container>
         </>
     );
