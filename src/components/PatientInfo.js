@@ -44,11 +44,13 @@ function PatientInfo(props) {
     return (
         <>
             <Container fluid>
+
+                <Stack gap={5}>
                 {patientInfoContent && patientInfoContent.map((content,index) => {
                     console.log("CONTENT IS: ", content);
                     return (
                         <span key={index}>
-                            <Stack gap={5}>
+
 
                                 <div>
                                     <Image
@@ -60,7 +62,7 @@ function PatientInfo(props) {
                                 </div>
 
 
-                                <Breadcrumb>
+                                <Breadcrumb className="mt-4">
                                     <LinkContainer to="/">
                                         <BreadcrumbItem>
                                           <a href="home">
@@ -74,16 +76,25 @@ function PatientInfo(props) {
                                 </Breadcrumb>
 
 
-                                <div>
-                                    <h1 className="text-center">
-                                        {content.headliner}
-                                    </h1>
-                                </div>
+                            <section>
+                                <h1 className="text-center">
+                                    {content.headliner}
+                                </h1>
+
+                            </section>
                                 <Div85WidthCentered>
                                     <h4>
                                         <PortableText blocks={content.subHeadline}/>
                                     </h4>
                                 </Div85WidthCentered>
+
+
+                        </span>
+                    )
+
+
+                })}
+
 
                                 <div>
                                     <h2>New Patient Forms</h2><br/>
@@ -156,19 +167,12 @@ function PatientInfo(props) {
                                 </Col>
                             </Row>
 
-                            </Stack>
-                        </span>
-                    )
-
-
-                })}
-
 
                 <TestimonialSection/>
                 <PreFooter/>
                 <Footer/>
 
-
+                </Stack>
             </Container>
         </>
     );

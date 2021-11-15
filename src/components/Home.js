@@ -81,17 +81,6 @@ const StyledLink = styled.a`
     transition: color 1s;
   }
 `
-
-const StyledImage = styled(Image)`
-  width: 300px;
-  height: 300px;
-  margin: 10px auto;
-  @media (max-width: 768px) {
-    width: 150px;
-    height: 150px;
-  }
-`
-
 const DivFlex = styled.div`
   display: flex;
   justify-content: center;
@@ -102,6 +91,17 @@ const DivFlex = styled.div`
   }
 
 `
+const StyledImage = styled(Image)`
+  width: 300px;
+  height: 300px;
+  margin: 10px auto;
+  @media (max-width: 768px) {
+    width: 150px;
+    height: 150px;
+  }
+`
+
+
 
 function Home(props) {
 
