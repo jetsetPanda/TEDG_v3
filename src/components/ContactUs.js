@@ -42,11 +42,13 @@ function PatientInfo(props) {
     return (
         <>
             <Container fluid>
+                <Stack gap={5}>
+
                 {patientInfoContent && patientInfoContent.map((content,index) => {
                     console.log("CONTENT IS: ", content);
                     return (
                         <span key={index}>
-                            <Stack gap={5}>
+
 
                                 <div>
                                     <Image
@@ -86,7 +88,7 @@ function PatientInfo(props) {
                                     </h3>
                                 </Div85WidthCentered>
 
-                            </Stack>
+
                         </span>
                     )
 
@@ -98,7 +100,7 @@ function PatientInfo(props) {
                 <PreFooter/>
                 <Footer/>
 
-
+                </Stack>
             </Container>
         </>
     );

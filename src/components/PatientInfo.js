@@ -85,11 +85,19 @@ function PatientInfo(props) {
                                     </h4>
                                 </Div85WidthCentered>
 
-                            <h2>New Patient Forms</h2>
-                            <Button>Adult New Patient Forms</Button>
-                            <Button>Pediatric New Patient Forms</Button>
+                                <div>
+                                    <h2>New Patient Forms</h2><br/>
+                                    <a href="https://www.dentalhub.cloud/SivaForms/SecuredForms/ClientHTMLForms/633/e_adult_new_patient_form" target="_blank">
+                                        <Button variant="outline-primary" size="lg">Adult New Patient Forms</Button>
+                                    </a><br/><br/>
+                                    <a href="https://www.dentalhub.cloud/SivaForms/SecuredForms/ClientHTMLForms/633/e_pediatric_new_patient_form" target="_blank" className="mt-3">
+                                        <Button variant="outline-primary" size="lg">Pediatric New Patient Forms</Button>
+                                    </a>
+                                </div>
 
-                                <p>Prior to your first visit, we kindly ask that you please fill out the new patient forms provided above.
+
+
+                                <h5>Prior to your first visit, we kindly ask that you please fill out the new patient forms provided above.
                                     <br/><br/>Please assist us by providing the following information prior to your visit. This saves time and any concerns may be resolved prior to your appointment:
                                 <ul>
                                     <li>Your referral and any x-rays if applicable.</li>
@@ -97,7 +105,7 @@ function PatientInfo(props) {
                                     <li>Dental insurance information and medical insurance information (if applicable).</li>
                                 </ul>
                                 <br/>IMPORTANT: Appointments are limited to the patient only unless a companion is essential. All patients under the age of 18 must be accompanied by one parent or guardian.
-</p>
+</h5>
 
 
                             <Row className="mt-5">

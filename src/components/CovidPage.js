@@ -7,15 +7,31 @@ import styled from "styled-components";
 import TestimonialSection from "./TestimonialSection";
 import PreFooter from "./PreFooter";
 import Footer from "./Footer";
-import cardSample from "../assets/images/card-sample2x.png";
-import covidImg from '../assets/images/pt-info-covid.png'
-import insuranceImg from '../assets/images/pt-info-insurance.png'
-import smileImg from "../assets/images/home-smile-img.jpg";
+import covidicon1 from "../assets/images/covidicon1.svg";
+import covidicon2 from "../assets/images/covidicon2.svg";
+import covidicon3 from "../assets/images/covidicon3.svg";
+import covidicon4 from "../assets/images/covidicon4.svg";
+import covidicon5 from "../assets/images/covidicon5.svg";
+import covidicon6 from "../assets/images/covidicon6.svg";
+
 
 const Div85WidthCentered = styled.div`
   width: 85%;
   margin: 0 auto;
   align-items: center;
+`
+
+const IconImage = styled(Image)`
+  width: 100px;
+  margin-bottom: 2rem;
+`
+
+const IconDiv = styled.div`
+  padding: 0px 25px
+`
+
+const H2px50 = styled.h2`
+  font-size: 3rem;
 `
 
 function CovidPage(props) {
@@ -45,11 +61,12 @@ function CovidPage(props) {
     return (
         <>
             <Container fluid>
+                <Stack gap={5}>
                 {patientInfoContent && patientInfoContent.map((content,index) => {
                     console.log("CONTENT IS: ", content);
                     return (
                         <span key={index}>
-                            <Stack gap={5}>
+
 
                                 <div>
                                     <Image
@@ -61,7 +78,7 @@ function CovidPage(props) {
                                 </div>
 
 
-                                <Breadcrumb>
+                                <Breadcrumb className="mt-4">
                                     <LinkContainer to="/">
                                         <BreadcrumbItem>
                                           <a href="home">
@@ -69,6 +86,13 @@ function CovidPage(props) {
                                           </a>
                                         </BreadcrumbItem>
                                     </LinkContainer>
+                                <LinkContainer to="/patient-info">
+                                    <BreadcrumbItem>
+                                      <a href="home">
+                                        Patient Information
+                                      </a>
+                                    </BreadcrumbItem>
+                                </LinkContainer>
                                     <BreadcrumbItem active>
                                         COVID-19 Safety Information
                                         {/*{content.pageName}*/}
@@ -89,19 +113,106 @@ Our practice follows recommendations made by the American Dental Association, th
                                     </h3>
                                 </Div85WidthCentered>
 
-                            </Stack>
                         </span>
                     )
 
 
                 })}
 
+                <div className="text-center my-5">
+                    <h4>Here are some of the added safety measures we are taking to protect our patients and staff:</h4>
+                </div>
+
+                <Row>
+                    <Col md="4">
+                        <IconDiv className="info info-hover text-center">
+                            <div className="icon icon-dark">
+                                <IconImage
+                                    src={covidicon1}
+                                    alt="covidicon1"
+                                />
+                            </div>
+                            <h5 className="text-center">Masks are required by all patients and staff</h5>
+                        </IconDiv>
+                    </Col>
+                    <Col md="4">
+                        <IconDiv className="info info-hover text-center">
+                            <div className="icon icon-dark">
+                                <IconImage
+                                    src={covidicon2}
+                                    alt="covid icon2"
+
+                                />
+                            </div>
+                            <h5 className="text-center">Pre-screening of all patients prior to appointment</h5>
+                        </IconDiv>
+                    </Col>
+                    <Col md="4">
+                        <IconDiv className="info info-hover text-center">
+                            <div className="icon icon-dark">
+                                <IconImage
+                                    src={covidicon3}
+                                    alt="covid icon3"
+
+                                />
+                            </div>
+                            <h5 className="text-center">Staggered appointments to reduce wait times for social distancing</h5>
+                        </IconDiv>
+                    </Col>
+                </Row>
+                <Row className="my-md-5 pb-md-5">
+                    <Col md="4">
+                        <IconDiv className="info info-hover text-center">
+                            <div className="icon icon-dark text-center">
+                                <IconImage
+                                    src={covidicon4}
+                                    alt="covid icon4"
+                                />
+                            </div>
+                            <h5 className="text-center">Plexiglass safety shield barriers placed in the waiting and check-out areas</h5>
+                        </IconDiv>
+                    </Col>
+                    <Col md="4">
+                        <IconDiv className="info info-hover text-center">
+                            <div className="icon icon-dark">
+                                <IconImage
+                                    src={covidicon5}
+                                    alt="covid icon5"
+
+                                />
+                            </div>
+                            <h5 className="text-center">Medical-grade air filtration equipment has been installed in all rooms</h5>
+                        </IconDiv>
+                    </Col>
+                    <Col md="4">
+                        <IconDiv className="info info-hover text-center">
+                            <div className="icon icon-dark">
+                                <IconImage
+                                    src={covidicon6}
+                                    alt="covid icon6"
+
+                                />
+                            </div>
+                            <h5 className="text-center">Single-use or medically sterilized equipment</h5>
+                        </IconDiv>
+                    </Col>
+                </Row>
+
+                <div>
+                    <h4>
+                        To learn more about the additional safety measures we are taking, please click the COVID-19 Form link below.
+                    </h4>
+                    <H2px50 className="my-3">Covid-19 Form</H2px50>
+                    <a href="https://www.dentalhub.cloud/SivaForms/SecuredForms/ClientHTMLForms/633/covid-19-update" target="_blank">
+                        <Button className="my-3"  variant="outline-primary" size="lg">Covid-19 Health Screening Questionnaire</Button>
+                    </a>
+                </div>
 
                 <TestimonialSection/>
                 <PreFooter/>
                 <Footer/>
 
-
+</Stack>
             </Container>
         </>
     );
