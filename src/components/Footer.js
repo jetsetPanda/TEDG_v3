@@ -134,13 +134,13 @@ const Footer = (props) => {
                                 </Col>
                                 <Col>
                                     <h5 style={{paddingLeft: "10%"}}>
-                                        8 AM - 6PM <br/>
-                                        8 AM - 6PM <br/>
-                                        8 AM - 6PM <br/>
-                                        8 AM - 6PM <br/>
-                                        8 AM - 4PM <br/>
+                                        7:45 AM - 7 PM <br/>
+                                        7:45 AM - 7 PM <br/>
+                                        7:45 AM - 7 PM <br/>
+                                        7:45 AM - 7 PM <br/>
+                                        7:45 AM - 4 PM <br/>
                                         Closed <br/>
-                                        9 AM - 5PM
+                                        9:15 AM - 5 PM
                                     </h5>
 
                                 </Col>
