@@ -114,7 +114,7 @@ const Footer = (props) => {
                                 39 Broadway Suite 2115 <br/>
                                 Financial District <br/>
                                 New York, NY 10006 <br/><br/>
-                                T: (212) 422-9229
+                                Tel: <a href="tel:212-422-9229" style={{color: "#000000"}}>(212) 422-9229</a>
                             </h5>
 
 
