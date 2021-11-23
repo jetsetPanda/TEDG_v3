@@ -174,9 +174,9 @@ function MeetTheTeam(props) {
                                                     <Card.Title className="text-center">{staff.teamMemberName}</Card.Title>
                                                     <Card.Subtitle>{staff.teamMemberJobTitle}</Card.Subtitle>
                                                     <Link to={"/about-us/meet-the-team/" + staff.slug.current} key={staff.slug.current}>
-                                                        <Button className="mt-2" size="sm">
+                                                        {/*<Button className="mt-2" size="md">
                                                             Learn More
-                                                        </Button>
+                                                        </Button>*/}
                                                     </Link>
                                                 </Card.Body>
                                             </StyledDoctorCard>
@@ -205,9 +205,9 @@ function MeetTheTeam(props) {
                                                     <Card.Title className="text-center">{staff.teamMemberName}</Card.Title>
                                                     <Card.Subtitle>{staff.teamMemberJobTitle}</Card.Subtitle>
                                                     <Link to={"/about-us/meet-the-team/" + staff.slug.current} key={staff.slug.current}>
-                                                        <Button className="mt-2" size="sm">
+                                                        {/*<Button className="mt-2" size="md">
                                                             Learn More
-                                                        </Button>
+                                                        </Button>*/}
                                                     </Link>
                                                 </Card.Body>
                                             </StyledDoctorCard>
@@ -221,20 +221,20 @@ function MeetTheTeam(props) {
 
                             <StyledHR/>
 
-                            <h2 className="py-5">Hygienists</h2>
+                            <h2 className="py-5">Dental Hygienists</h2>
                             <div className="d-flex flex-row flex-wrap justify-content-around">
                                 {staffDirectoryData.map((staff, index) => {
                                     console.log("STAFF list: ", staff);
                                     if (staff.jobType === 'hygienist') {
                                         return (
                                             <span key={index}>
-                                             <StyledCard>
+                                             <StyledDoctorCard>
                                                 <StyledCardImg variant="top" src={staff.teamMemberImage.asset.url} />
                                                 <Card.Body className="text-center">
                                                     <Card.Title className="text-center">{staff.teamMemberName}</Card.Title>
-                                                    <Card.Subtitle>{staff.teamMemberJobTitle}</Card.Subtitle>
+                                                    {/*<Card.Subtitle>{staff.teamMemberJobTitle}</Card.Subtitle>*/}
                                                 </Card.Body>
-                                            </StyledCard>
+                                            </StyledDoctorCard>
                                         </span>
                                         )
                                     }
@@ -252,13 +252,13 @@ function MeetTheTeam(props) {
                                     if (staff.jobType === 'assistant') {
                                         return (
                                             <span key={index}>
-                                             <StyledCard>
+                                             <StyledDoctorCard>
                                                 <StyledCardImg variant="top" src={staff.teamMemberImage.asset.url} />
                                                 <Card.Body className="text-center">
                                                     <Card.Title className="text-center">{staff.teamMemberName}</Card.Title>
-                                                    <Card.Subtitle>{staff.teamMemberJobTitle}</Card.Subtitle>
+                                                    {/*<Card.Subtitle>{staff.teamMemberJobTitle}</Card.Subtitle>*/}
                                                 </Card.Body>
-                                            </StyledCard>
+                                            </StyledDoctorCard>
                                         </span>
                                         )
                                     }
@@ -276,13 +276,13 @@ function MeetTheTeam(props) {
                                     if (staff.jobType === 'admin') {
                                         return (
                                             <span key={index}>
-                                             <StyledCard>
+                                             <StyledDoctorCard>
                                                 <StyledCardImg variant="top" src={staff.teamMemberImage.asset.url} />
                                                 <Card.Body className="text-center">
                                                     <Card.Title className="text-center">{staff.teamMemberName}</Card.Title>
                                                     <Card.Subtitle>{staff.teamMemberJobTitle}</Card.Subtitle>
                                                 </Card.Body>
-                                            </StyledCard>
+                                            </StyledDoctorCard>
                                         </span>
                                         )
                                     }
@@ -290,7 +290,7 @@ function MeetTheTeam(props) {
                                     if (staff.jobType === 'adminSpecial') {
                                         return (
                                             <span key={index}>
-                                             <StyledCard>
+                                             <StyledDoctorCard>
                                                 <Link to={"/about-us/meet-the-team/" + staff.slug.current} key={staff.slug.current}>
                                                     <StyledCardImg variant="top" src={staff.teamMemberImage.asset.url} />
                                                 </Link>
@@ -298,12 +298,12 @@ function MeetTheTeam(props) {
                                                     <Card.Title className="text-center">{staff.teamMemberName}</Card.Title>
                                                     <Card.Subtitle>{staff.teamMemberJobTitle}</Card.Subtitle>
                                                     <Link to={"/about-us/meet-the-team/" + staff.slug.current} key={staff.slug.current}>
-                                                        <Button className="mt-2" size="sm">
+                                                        {/*<Button className="mt-2" size="md">
                                                             Learn More
-                                                        </Button>
+                                                        </Button>*/}
                                                     </Link>
                                                 </Card.Body>
-                                            </StyledCard>
+                                            </StyledDoctorCard>
                                         </span>
                                         )
                                     }
