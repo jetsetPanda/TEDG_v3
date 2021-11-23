@@ -21,7 +21,7 @@ import SmileVirtualBanner from "./SmileVirtualBanner";
 import {Link} from "react-router-dom";
 import BirdeyeTestimonialCard from "./BirdeyeTestimonialCard";
 import TestimonialSection from "./TestimonialSection";
-
+import {StyledLinkContainer} from "./UXElements/UiModules";
 
 
 // const BannerImg = styled.img`
@@ -47,6 +47,7 @@ const StyledCardTitle = styled(Card.Title)`
     font-size: 15px;
   }
 `
+
 const InstagramDiv = styled.div`
   display: inline-flex;
  &&::before {
@@ -170,12 +171,14 @@ function Home(props) {
                             console.log("svcs list: ", list);
                             return (
                                 <span key={index}>
-                                     <StyledCard  border="light">
-                                        <Card.Img variant="top" src={list.serviceImage.asset.url} />
-                                        <Card.Body>
-                                            <StyledCardTitle className="text-center">{list.serviceName}</StyledCardTitle>
-                                        </Card.Body>
-                                    </StyledCard>
+                                    <StyledLinkContainer to={`/services/${list.serviceLink}`}>
+                                         <StyledCard  border="light">
+                                            <Card.Img variant="top" src={list.serviceImage.asset.url} />
+                                            <Card.Body>
+                                                <StyledCardTitle className="text-center">{list.serviceName}</StyledCardTitle>
+                                            </Card.Body>
+                                        </StyledCard>
+                                    </StyledLinkContainer>
                                 </span>
                                 )
                         })}
