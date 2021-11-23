@@ -13,6 +13,7 @@ import covidicon3 from "../assets/images/covidicon3.svg";
 import covidicon4 from "../assets/images/covidicon4.svg";
 import covidicon5 from "../assets/images/covidicon5.svg";
 import covidicon6 from "../assets/images/covidicon6.svg";
+import {SubHeaderCopy} from "./UXElements/UiModules";
 
 
 const Div85WidthCentered = styled.div`
@@ -107,10 +108,10 @@ function CovidPage(props) {
                                     </h1>
                                 </div>
                                 <Div85WidthCentered>
-                                    <h3 className="text-center">
+                                    <SubHeaderCopy className="text-center">
 While many things have changed over the past few months, one thing has remained the same – <strong>our commitment to your safety</strong>.
 Our practice follows recommendations made by the American Dental Association, the CDC and OSHA. We follow these standards so that the care you receive is both safe and comfortable.                                     {/*<PortableText blocks={content.subHeadline}/>*/}
-                                    </h3>
+                                    </SubHeaderCopy>
                                 </Div85WidthCentered>
 
                         </span>
@@ -202,7 +203,7 @@ Our practice follows recommendations made by the American Dental Association, th
                     <h4>
                         To learn more about the additional safety measures we are taking, please click the COVID-19 Form link below.
                     </h4>
-                    <H2px50 className="my-3">Covid-19 Form</H2px50>
+                    <H2px50 className="my-3 mt-md-5 mb-md-3 pt-md-3">Covid-19 Form</H2px50>
                     <a href="https://www.dentalhub.cloud/SivaForms/SecuredForms/ClientHTMLForms/633/covid-19-update" target="_blank">
                         <Button className="my-3"  variant="outline-primary" size="lg">Covid-19 Health Screening Questionnaire</Button>
                     </a>
