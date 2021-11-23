@@ -50,7 +50,7 @@ function TestimonialSection(props) {
                     <StyledDiv>
                         <LeftDiv>
                             <h2 className="text-center text-md-start">
-                                What our patients are saying about us:
+                                What Our Patients Are Saying:
                             </h2>
                         </LeftDiv>
                         <div className="d-flex">
