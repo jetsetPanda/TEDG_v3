@@ -21,7 +21,7 @@ import SmileVirtualBanner from "./SmileVirtualBanner";
 import {Link} from "react-router-dom";
 import BirdeyeTestimonialCard from "./BirdeyeTestimonialCard";
 import TestimonialSection from "./TestimonialSection";
-import {StyledLinkContainer} from "./UXElements/UiModules";
+import {StyledLinkContainer, SubHeaderCopy} from "./UXElements/UiModules";
 
 
 // const BannerImg = styled.img`
@@ -145,13 +145,13 @@ function Home(props) {
                         </h1>
                     </div>
                     <Div85WidthCentered>
-                        <h5>
+                        <SubHeaderCopy>
                             Established in the heart of New York City’s Financial District in 1982 by our founder and director, Dr. Howard Wimmer, The Exchange Dental Group is a trusted establishment dedicated to serving the community with continued excellence.
                             <br/><br/>
                             Our mission has always been to help patients maintain healthy, attractive smiles in a professional, courteous office environment. Our team is composed of only the most experienced and qualified doctors and dental hygienists to ensure your treatment is done right.
                             <br/><br/>
                             We are proud to provide a wide array of services to meet a diverse set of patient needs. Whether you're looking for a simple cleaning or a more in-depth procedure like dental implants, we will work with you to design a treatment plan that perfectly suits your needs and fits your schedule.
-                        </h5>
+                        </SubHeaderCopy>
                     </Div85WidthCentered>
 
                     <div className="text-center" >

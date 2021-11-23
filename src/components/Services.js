@@ -9,7 +9,7 @@ import TestimonialSection from "./TestimonialSection";
 import PreFooter from "./PreFooter";
 import Footer from "./Footer";
 
-import {StyledLinkContainer} from "./UXElements/UiModules";
+import {StyledLinkContainer, SubHeaderCopy} from "./UXElements/UiModules";
 
 const Div85WidthCentered = styled.div`
   width: 85%;
@@ -114,9 +114,9 @@ function About(props) {
                                     </h1>
                                 </div>
                                 <Div85WidthCentered>
-                                    <h4>
+                                    <SubHeaderCopy>
                                         <PortableText blocks={content.subHeadline}/>
-                                    </h4>
+                                    </SubHeaderCopy>
                                 </Div85WidthCentered>
 
 
