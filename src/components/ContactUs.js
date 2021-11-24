@@ -8,6 +8,7 @@ import TestimonialSection from "./TestimonialSection";
 import PreFooter from "./PreFooter";
 import Footer from "./Footer";
 import bull from '../assets/images/bull.png';
+import {SubHeaderCopy} from "./UXElements/UiModules";
 
 const Div85WidthCentered = styled.div`
   width: 85%;
@@ -121,10 +122,10 @@ function PatientInfo(props) {
                                     </h1>
                                 </div>
                                 <Div85WidthCentered>
-                                    <h3 className="text-center my-md-5">
+                                    <SubHeaderCopy className="text-center my-md-5">
                                         We would love to hear from you! Please choose the method of communication most convenient to you.
                                         {/*<PortableText blocks={content.subHeadline}/>*/}
-                                    </h3>
+                                    </SubHeaderCopy>
                                 </Div85WidthCentered>
 
                         </span>

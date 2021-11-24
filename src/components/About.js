@@ -11,6 +11,7 @@ import cardSample from '../assets/images/card-sample2x.png';
 import TestimonialSection from "./TestimonialSection";
 import PreFooter from "./PreFooter";
 import Footer from "./Footer";
+import {SubHeaderCopy} from "./UXElements/UiModules";
 
 const TopRow = styled(Row)`
   background-color: darkblue;
@@ -92,9 +93,9 @@ function About(props) {
 
                             </section>
                             <Div85WidthCentered>
-                                <h6>
+                                <SubHeaderCopy>
                                     <PortableText blocks={aboutContent.subHeadlinePortableText}/>
-                                </h6>
+                                </SubHeaderCopy>
                             </Div85WidthCentered>
 
                             <div className="text-center" >

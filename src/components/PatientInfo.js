@@ -10,6 +10,7 @@ import Footer from "./Footer";
 import cardSample from "../assets/images/card-sample2x.png";
 import covidImg from '../assets/images/pt-info-covid.png'
 import insuranceImg from '../assets/images/pt-info-insurance.png'
+import {SubHeaderCopy} from "./UXElements/UiModules";
 
 const Div85WidthCentered = styled.div`
   width: 85%;
@@ -83,9 +84,9 @@ function PatientInfo(props) {
 
                             </section>
                                 <Div85WidthCentered>
-                                    <h4>
+                                    <SubHeaderCopy>
                                         <PortableText blocks={content.subHeadline}/>
-                                    </h4>
+                                    </SubHeaderCopy>
                                 </Div85WidthCentered>
 
 

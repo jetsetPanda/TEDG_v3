@@ -10,6 +10,7 @@ import cardSample from '../assets/images/card-sample2x.png';
 import TestimonialSection from "./TestimonialSection";
 import PreFooter from "./PreFooter";
 import Footer from "./Footer";
+import {SubHeaderCopy} from "./UXElements/UiModules";
 
 
 const Div85WidthCentered = styled.div`
@@ -131,9 +132,9 @@ function OurTechnology(props) {
 
                             </div>
                             <Div85WidthCentered>
-                                <h3 className="text-center">
+                                <SubHeaderCopy className="text-center">
                                     <PortableText blocks={content.subHeadline}/>
-                                </h3>
+                                </SubHeaderCopy>
                             </Div85WidthCentered>
 
 

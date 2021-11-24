@@ -11,6 +11,7 @@ import cardSample from "../assets/images/card-sample2x.png";
 import covidImg from '../assets/images/pt-info-covid.png'
 import insuranceImg from '../assets/images/pt-info-insurance.png'
 import smileImg from "../assets/images/home-smile-img.jpg";
+import {SubHeaderCopy} from "./UXElements/UiModules";
 
 const Div85WidthCentered = styled.div`
   width: 85%;
@@ -45,11 +46,12 @@ function PatientInfo(props) {
     return (
         <>
             <Container fluid>
+                <Stack gap={5}>
                 {patientInfoContent && patientInfoContent.map((content,index) => {
                     console.log("CONTENT IS: ", content);
                     return (
                         <span key={index}>
-                            <Stack gap={5}>
+
 
                                 <div>
                                     <Image
@@ -83,15 +85,15 @@ function PatientInfo(props) {
                                     </h1>
                                 </div>
                                 <Div85WidthCentered>
-                                    <h3 className="text-center">
+                                    <SubHeaderCopy className="text-center">
 Welcome to our Smile Gallery! Our dentists utilize the most
 advanced dental techniques to create beautiful, healthy
 smiles. Please browse through the amazing smile transformations
  we’ve helped our patients achieve.                                        {/*<PortableText blocks={content.subHeadline}/>*/}
-                                    </h3>
+                                    </SubHeaderCopy>
                                 </Div85WidthCentered>
 
-                                                    <Row>
+                    <Row className="mt-5 pt-md-5">
                         <Col md={6} sm={12}>
                             <Image src={smileImg} fluid rounded/>
                         </Col>
@@ -110,7 +112,7 @@ smiles. Please browse through the amazing smile transformations
                         </Col>
                     </Row>
 
-                            </Stack>
+
                         </span>
                     )
 
@@ -121,7 +123,7 @@ smiles. Please browse through the amazing smile transformations
                 <TestimonialSection/>
                 <PreFooter/>
                 <Footer/>
-
+                </Stack>
 
             </Container>
         </>

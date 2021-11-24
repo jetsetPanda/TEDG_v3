@@ -9,6 +9,7 @@ import { Container, Breadcrumb, BreadcrumbItem, Row, Col, Stack, Image, Button, 
 import styled from "styled-components";
 import PreFooter from "./PreFooter";
 import Footer from "./Footer";
+import {SubHeaderCopy} from "./UXElements/UiModules";
 
 
 const TopRow = styled(Row)`
@@ -143,9 +144,9 @@ function MeetTheTeam(props) {
                                 </div>
 
                                 <Div85WidthCentered>
-                                    <h3>
+                                    <SubHeaderCopy>
                                         <PortableText blocks={content.subHeadline}/>
-                                    </h3>
+                                    </SubHeaderCopy>
                                 </Div85WidthCentered>
 
 

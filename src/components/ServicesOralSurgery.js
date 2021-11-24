@@ -9,6 +9,7 @@ import {LinkContainer} from "react-router-bootstrap";
 import sanityClient from "../client";
 import PortableText from "@sanity/block-content-to-react";
 import styled from "styled-components";
+import {SubHeaderCopy} from "./UXElements/UiModules";
 
 
 const ButtonThing = (props) => (
@@ -99,9 +100,9 @@ function ServicesOralSurgery(props) {
                                 </Breadcrumb>
 
                                 <h1 className="text-center mt-4 mb-4 pb-4">{info.serviceName}</h1>
-                                <h2 className="text-center mt-4 mb-4">
+                                <SubHeaderCopy className="text-center mt-4 mb-4">
                                     <PortableText blocks={info.description}/>
-                                </h2>
+                                </SubHeaderCopy>
                             </>
 
                         )

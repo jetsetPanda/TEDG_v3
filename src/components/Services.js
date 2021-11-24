@@ -9,6 +9,8 @@ import TestimonialSection from "./TestimonialSection";
 import PreFooter from "./PreFooter";
 import Footer from "./Footer";
 
+import {StyledLinkContainer, SubHeaderCopy} from "./UXElements/UiModules";
+
 const Div85WidthCentered = styled.div`
   width: 85%;
   margin: 0 auto;
@@ -112,9 +114,9 @@ function About(props) {
                                     </h1>
                                 </div>
                                 <Div85WidthCentered>
-                                    <h4>
+                                    <SubHeaderCopy>
                                         <PortableText blocks={content.subHeadline}/>
-                                    </h4>
+                                    </SubHeaderCopy>
                                 </Div85WidthCentered>
 
 
@@ -124,19 +126,16 @@ function About(props) {
                                         console.log("svcs list: ", list);
                                         return (
                                             <span key={index}>
-                                                 <StyledCard>
-                                                    <Card.Img variant="top" src={list.serviceImage.asset.url} />
-                                                    <Card.Body className="text-center">
-                                                        <StyledCardTitle className="text-center">{list.serviceName}</StyledCardTitle>
-                                                        <LinkContainer to={`/services/${list.serviceLink}`}>
-                                                            <Button size="sm" >
-                                                                Learn More
-                                                            </Button>
-                                                        </LinkContainer>
+                                                <StyledLinkContainer to={`/services/${list.serviceLink}`}>
+                                                     <StyledCard>
+                                                        <Card.Img variant="top" src={list.serviceImage.asset.url} />
+                                                        <Card.Body className="text-center">
+                                                            <StyledCardTitle className="text-center">{list.serviceName}</StyledCardTitle>
 
-                                                    </Card.Body>
+                                                        </Card.Body>
 
-                                                </StyledCard>
+                                                    </StyledCard>
+                                                </StyledLinkContainer>
                                             </span>
                                         )
                                     })}
