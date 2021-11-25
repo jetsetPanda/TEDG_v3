@@ -9,26 +9,12 @@ import TestimonialSection from "./TestimonialSection";
 import PreFooter from "./PreFooter";
 import Footer from "./Footer";
 
-import {StyledLinkContainer, SubHeaderCopy} from "./UXElements/UiModules";
+import {StyledLinkContainer, SubHeaderCopy, StyledCard, StyledCardTitle} from "./UXElements/UiModules";
 
 const Div85WidthCentered = styled.div`
   width: 85%;
   margin: 0 auto;
   align-items: center;
-`
-
-const StyledCard = styled(Card)`
-  margin: 10px 10px;
-  width: 18rem;
-  @media (max-width: 768px) {
-    width: 8rem;
-  }
-`
-
-const StyledCardTitle =styled(Card.Title)`
-  @media (max-width: 768px) {
-    font-size: 15px;
-  }
 `
 
 function About(props) {
@@ -56,7 +42,7 @@ function About(props) {
     }, []);
 
     useEffect(() => {
-        sanityClient.fetch(`*[_type == "servicesList"] {
+        sanityClient.fetch(`*[_type == "servicesList"] | order(order asc) {
             serviceName,
             serviceLink,
             description,
