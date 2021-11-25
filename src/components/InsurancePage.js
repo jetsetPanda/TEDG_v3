@@ -22,10 +22,11 @@ import card0 from "../assets/images/card 0.png";
 import payment1 from "../assets/images/payment 1.png";
 import payment2 from "../assets/images/payment 2.png";
 import careCreditLogo from '../assets/images/carecreditlogo.png';
+import {SubHeaderCopy} from "./UXElements/UiModules";
 
 
 const CareCreditImg = styled(Image)`
-    width: 330px;
+    width: 230px;
     margin-left: 60px;
       @media (max-width: 768px) {
         width: 250px;
@@ -125,9 +126,9 @@ function InsurancePage(props) {
                             </div>
 
                             <div className="text-left mt-5">
-                                <h3>
+                                <h5 >
 One of the many aspects of our practice that has endeared us to our patients over the years is that while we are a modern, beautiful, and inviting dental practice, we accept a multitude of PPO insurance plans.
-                                </h3>
+                                </h5>
                             </div>
 
                             <Row className="mt-md-1">
@@ -181,7 +182,7 @@ One of the many aspects of our practice that has endeared us to our patients ove
                                     </div>
                                 </Col>
                                 <Col md={6}>
-                                    <h4>
+                                    <h5>
                                        <ul>
                                             <li>Aetna</li>
                                             <li>Blue Cross Blue Shield</li>
@@ -194,11 +195,11 @@ One of the many aspects of our practice that has endeared us to our patients ove
                                             <li>Guardian</li>
                                             <li>Humana</li>
                                         </ul>
-                                    </h4>
+                                    </h5>
 
                                 </Col>
                                 <Col md={6}>
-                                    <h4>
+                                    <h5>
                                         <ul>
                                             <li>Lincoln</li>
                                             <li>MetLife</li>
@@ -211,12 +212,12 @@ One of the many aspects of our practice that has endeared us to our patients ove
                                             <li>United Healthcare</li>
                                             <li>& More</li>
                                         </ul>
-                                    </h4>
+                                    </h5>
 
                                 </Col>
                                 <Col md={12} className="mt-md-5">
                                     <strong>
-                                        <h4>Please note that we are not affiliated with any HMO or DMO plans.</h4>
+                                        <h5>Please note that we are not affiliated with any HMO or DMO plans.</h5>
                                     </strong>
                                 </Col>
 
@@ -286,10 +287,10 @@ One of the many aspects of our practice that has endeared us to our patients ove
 
                             <Row className="text-left mt-5">
                                 <Col md={6}>
-                                    <div className="text-start text-">
-                                        <h3>
+                                    <div className="text-start pt-md-3">
+                                        <h5>
         <em>CareCredit</em> offers special financing and low monthly payment options, no annual fees, setup costs, or prepayment penalties. Whether you have dental insurance or not, many services aren’t covered. CareCredit can help you get the healthy, radiant smile you’ve always wanted with low monthly dental payment plans.
-                                        </h3>
+                                        </h5>
                                     </div>
 
                                 </Col>
