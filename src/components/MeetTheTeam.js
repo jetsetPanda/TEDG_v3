@@ -114,14 +114,14 @@ function MeetTheTeam(props) {
     return (
         <>
             <Container fluid>
-
+                <Stack gap={5}>
                 {ourTeamContentData && ourTeamContentData.map((content,index) => {
                     // console.log("ABOUT DATAAA:", ourTeamContentData[0]);
                     // console.log("reach in: ", ourTeamContentData[0].headliner[0][0])
 
                     return (
                         <span key={index}>
-                            <Stack gap={5}>
+
 
                                 <div>
                                     <Image
@@ -132,7 +132,7 @@ function MeetTheTeam(props) {
                                     />
                                 </div>
 
-                                <Breadcrumb>
+                                <Breadcrumb className="mt-4">
                                     <LinkContainer to="/">
                                         <BreadcrumbItem>
                                           <a href="home">
@@ -165,9 +165,6 @@ function MeetTheTeam(props) {
                                     </SubHeaderCopy>
                                 </Div85WidthCentered>
 
-
-
-                        </Stack>
                     </span>
 
                     )
@@ -249,7 +246,6 @@ function MeetTheTeam(props) {
                                         </span>
                                         )
                                     }
-
                                 })
                                 }
                             </div>
@@ -324,6 +320,7 @@ function MeetTheTeam(props) {
 
                 <PreFooter/>
                 <Footer/>
+                </Stack>
             </Container>
         </>
     );

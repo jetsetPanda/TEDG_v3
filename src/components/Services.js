@@ -80,7 +80,7 @@ function About(props) {
                                 </div>
 
 
-                                <Breadcrumb>
+                                <Breadcrumb className="mt-4">
                                     <LinkContainer to="/">
                                         <BreadcrumbItem>
                                           <a href="home">

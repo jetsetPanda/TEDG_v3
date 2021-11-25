@@ -89,13 +89,14 @@ function OurTechnology(props) {
     return (
         <>
             <Container fluid>
+                <Stack gap={5}>
+
                 {contentData && contentData.map((content,index) => {
                     console.log("ABOUT DATAAA:", contentData[0]);
                     console.log("reach in: ", contentData[0].headliner[0][0])
 
                     return (
                         <span key={index}>
-                        <Stack gap={5}>
 
                             <div>
                                 <Image
@@ -106,7 +107,7 @@ function OurTechnology(props) {
                                 />
                             </div>
 
-                            <Breadcrumb>
+                            <Breadcrumb className="mt-4">
                                 <BreadcrumbItem>
                                   <a href="/">
                                     Home
@@ -125,12 +126,12 @@ function OurTechnology(props) {
                               </Breadcrumb>
 
 
-                            <div>
+                            <section>
                                 <h1 className="text-center">
                                     {content.headliner}
                                 </h1>
 
-                            </div>
+                            </section>
                             <Div85WidthCentered>
                                 <SubHeaderCopy className="text-center">
                                     <PortableText blocks={content.subHeadline}/>
@@ -246,16 +247,18 @@ function OurTechnology(props) {
 
                             }
 
-                            <TestimonialSection/>
-                            <PreFooter/>
-                            <Footer/>
 
-                        </Stack>
+
+
                     </span>
 
                     )}
                 )}
+                    <TestimonialSection/>
+                    <PreFooter/>
+                    <Footer/>
 
+            </Stack>
             </Container>
         </>
     );
