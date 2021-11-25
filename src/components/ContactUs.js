@@ -155,12 +155,12 @@ function PatientInfo(props) {
                             </StyledText>
                             <StyledText>
                                 <strong>Give Us a Call</strong> <br/>
-                                Tel: 212-422-9229 <br/>
+                                Tel: <a href="tel:212-422-9229" className="text-decoration-none text-black-50">212-422-9229</a> <br/>
                                 Fax: 212-742-0928
                             </StyledText>
                             <StyledText>
                                 <strong>Send Us An Email</strong> <br/>
-                                Email: reception@theexchangedentalgroup.com
+                                Email: <a href="mailto:reception@theexchangedentalgroup.com" target="_blank"   className="text-decoration-none text-black-50">reception@theexchangedentalgroup.com</a>
                             </StyledText>
                         </RightCol>
                     </Row>
