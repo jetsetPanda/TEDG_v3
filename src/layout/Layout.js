@@ -10,7 +10,7 @@ import styled from "styled-components";
 const DesktopPad = styled.div`
   padding: 60px 0;
   @media (max-width: 768px) {
-  padding: 0;  
+  padding: 50px 0;  
   }
   
 `
