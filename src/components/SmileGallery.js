@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import sanityClient from "../client";
-import {Breadcrumb, BreadcrumbItem, Button, Card, Col, Container, Image, Row, Stack} from "react-bootstrap";
+import {Breadcrumb, BreadcrumbItem, Button, Col, Container, Image, Row, Stack} from "react-bootstrap";
 import {LinkContainer} from "react-router-bootstrap";
 import PortableText from "@sanity/block-content-to-react";
 import styled from "styled-components";
@@ -11,7 +11,10 @@ import cardSample from "../assets/images/card-sample2x.png";
 import covidImg from '../assets/images/pt-info-covid.png'
 import insuranceImg from '../assets/images/pt-info-insurance.png'
 import smileImg from "../assets/images/home-smile-img.jpg";
-import {SubHeaderCopy} from "./UXElements/UiModules";
+import {HoverOverlay, HoverOverlayContent, SubHeaderCopy} from "./UXElements/UiModules";
+
+import {CardHeader, CardImg, CardImgOverlay, CardText, CardTitle} from "reactstrap";
+import {Card as RCard} from "reactstrap";
 
 const Div85WidthCentered = styled.div`
   width: 85%;
@@ -19,10 +22,34 @@ const Div85WidthCentered = styled.div`
   align-items: center;
 `
 
+const CardContainer = styled.div`
+  width: 280px;
+  margin: 10px;
+
+  @media (max-width: 768px) {
+    width: 315px;
+  }
+`
+
+const StrapCard = styled(RCard)`
+  border-radius: 15px;
+    
+`
+
+const CardCopy = styled.p`
+  padding: 0;
+  maring: 0;
+  font-weight: bold;
+  color: #145073;
+
+`
+
+
 function PatientInfo(props) {
 
 
     const [patientInfoContent, setPatientContent] = useState(null);
+    const [smileCardData, setSmileCardData] = useState(null);
 
     useEffect(() => {
         sanityClient.fetch(`*[_type == "patientInfoContent"] {
@@ -42,6 +69,25 @@ function PatientInfo(props) {
             .then((data) => setPatientContent(data))
             .catch(console.error);
     }, []);
+
+
+    useEffect(() => {
+        sanityClient.fetch(`*[_type == "smileGalleryItems"] | order(order asc) {
+            procedure,
+            doctorName,
+            galleryDesc,
+            galleryImage{
+                asset->{
+                    _id,
+                    url
+                },
+                alt
+            },
+        }`)
+            .then((data) => setSmileCardData(data))
+            .catch(console.error);
+    }, []);
+
 
     return (
         <>
@@ -72,7 +118,7 @@ function PatientInfo(props) {
                                         </BreadcrumbItem>
                                     </LinkContainer>
                                     <BreadcrumbItem active>
-                                        Contact Us
+                                        Smile Gallery
                                         {/*{content.pageName}*/}
                                     </BreadcrumbItem>
                                 </Breadcrumb>
@@ -93,32 +139,42 @@ smiles. Please browse through the amazing smile transformations
                                     </SubHeaderCopy>
                                 </Div85WidthCentered>
 
-                    <Row className="mt-5 pt-md-5">
-                        <Col md={6} sm={12}>
-                            <Image src={smileImg} fluid rounded/>
-                        </Col>
-                        <Col md={6} sm={12}>
-                            <h2 className="mb-md-5">
-                                3-Unit Bridge
-                            </h2>
-                            <h4>
-                                AGE: 20-30 <br/>
-                                GENDER: MALE <br/><br/>
-
-                                PATIENT EMBARRASSED BY APPEARANCE OF METAL BRIDGE WHEN SMILING <br/><br/>
-
-                                PROCEDURE: PLACED NEW 3-UNIT ALL PORCELAIN BRIDGE
-                            </h4>
-                        </Col>
-                    </Row>
-
-
                         </span>
                     )
-
-
                 })}
 
+                    <div className="d-flex flex-wrap flex-row justify-content-around">
+                        {smileCardData && smileCardData.map((content,index) => {
+                            console.log("smile gallery items:", content)
+
+                            return(
+                                <span key={index} className="m-0">
+                                    <CardContainer>
+                                        <StrapCard className="content">
+                                            <CardHeader className="text-center">
+                                                <CardCopy>Case {index+1}</CardCopy>
+                                                <CardImg top width="100%"
+                                                         src={content.galleryImage.asset.url}/>
+                                                <CardCopy>{content.procedure}</CardCopy>
+                                            </CardHeader>
+                                            <HoverOverlay className="d-flex flex-column content-overlay">
+                                                <HoverOverlayContent className="content-details">
+                                                    <CardTitle tag="h5" className="underlined-white allcaps text-white">
+                                                        {content.doctorName}
+                                                    </CardTitle>
+                                                    <CardText tag="h6" className="text-white">
+                                                        <PortableText blocks={content.galleryDesc}/>
+                                                    </CardText>
+                                                </HoverOverlayContent>
+                                            </HoverOverlay>
+                                        </StrapCard>
+                                    </CardContainer>
+                                </span>
+
+                            )
+
+                       })}
+                        </div>
 
                 <TestimonialSection/>
                 <PreFooter/>
