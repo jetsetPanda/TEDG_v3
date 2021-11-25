@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {LinkContainer} from "react-router-bootstrap";
 import {CardImgOverlay} from "reactstrap";
+import {Card} from "react-bootstrap";
 
 export const StyledLinkContainer = styled(LinkContainer)`
   cursor: pointer;
@@ -56,4 +57,18 @@ export const HoverOverlayContent = styled.div`
     opacity: 1;
   }
 
+`
+
+export const StyledCard = styled(Card)`
+  margin: 10px 10px;
+  width: 18rem;
+  @media (max-width: 768px) {
+    width: 20rem;
+  }
+`
+
+export const StyledCardTitle =styled(Card.Title)`
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
 `
