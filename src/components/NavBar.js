@@ -46,7 +46,7 @@ const NavButtonLink = styled.a`
 const NavBar = () => {
     return (
 
-        <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+        <Navbar collapseOnSelect expand="lg" bg="light" variant="light" fixed="top" className="mb-md-5">
             <Container>
                 <LinkContainer to="/">
                     <StyledNavBrand href="#home">
