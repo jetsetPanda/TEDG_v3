@@ -46,7 +46,7 @@ const NavButtonLink = styled.a`
 const NavBar = () => {
     return (
 
-        <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+        <Navbar collapseOnSelect expand="lg" bg="light" variant="light" fixed="top" className="mb-md-5">
             <Container>
                 <LinkContainer to="/">
                     <StyledNavBrand href="#home">
@@ -82,30 +82,42 @@ const NavBar = () => {
                                 <NavDropdown.Item href="#">Our Services</NavDropdown.Item>
                             </LinkContainer>
                             <NavDropdown.Divider />
-                            <LinkContainer to="/services/cosmetic-dentistry">
-                                <NavDropdown.Item href="#">Cosmetic Dentistry</NavDropdown.Item>
-                            </LinkContainer>
+
                             <LinkContainer to="/services/general-dentistry">
                                 <NavDropdown.Item href="#">General Dentistry</NavDropdown.Item>
                             </LinkContainer>
-                            <LinkContainer to="/services/pediatric-dentistry">
-                                <NavDropdown.Item href="#">Pediatric Dentistry</NavDropdown.Item>
-                            </LinkContainer>
-                            <LinkContainer to="/services/orthodontics">
-                                <NavDropdown.Item href="#">Orthodontics</NavDropdown.Item>
-                            </LinkContainer>
-                            <LinkContainer to="/services/endodontics">
-                                <NavDropdown.Item href="#">Endodontics</NavDropdown.Item>
-                            </LinkContainer>
-                            <LinkContainer to="/services/periodontics">
-                                <NavDropdown.Item href="#">Periodontics</NavDropdown.Item>
-                            </LinkContainer>
-                            <LinkContainer to="/services/oral-surgery">
-                                <NavDropdown.Item href="#">Oral Surgery</NavDropdown.Item>
-                            </LinkContainer>
+
                             <LinkContainer to="/services/restorative-dentistry">
                                 <NavDropdown.Item href="#">Restorative Dentistry</NavDropdown.Item>
                             </LinkContainer>
+
+                            <LinkContainer to="/services/cosmetic-dentistry">
+                                <NavDropdown.Item href="#">Cosmetic Dentistry</NavDropdown.Item>
+                            </LinkContainer>
+
+
+                            <LinkContainer to="/services/pediatric-dentistry">
+                                <NavDropdown.Item href="#">Pediatric Dentistry</NavDropdown.Item>
+                            </LinkContainer>
+
+                            <LinkContainer to="/services/endodontics">
+                                <NavDropdown.Item href="#">Endodontics</NavDropdown.Item>
+                            </LinkContainer>
+
+                            <LinkContainer to="/services/periodontics">
+                                <NavDropdown.Item href="#">Periodontics</NavDropdown.Item>
+                            </LinkContainer>
+
+                            <LinkContainer to="/services/oral-surgery">
+                                <NavDropdown.Item href="#">Oral Surgery</NavDropdown.Item>
+                            </LinkContainer>
+
+                            <LinkContainer to="/services/orthodontics">
+                                <NavDropdown.Item href="#">Orthodontics</NavDropdown.Item>
+                            </LinkContainer>
+
+
+
                         </NavDropdown>
 
 

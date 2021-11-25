@@ -1,6 +1,6 @@
 export default {
-    name: "servicesList",
-    title: "Services List and Descriptions",
+    name: "smileGalleryItems",
+    title: "Smile Gallery Cards",
     type: "document",
     fields: [
         {
@@ -10,18 +10,18 @@ export default {
             hidden: true,
         },
         {
-            name: "serviceName",
-            title: "Service Name",
+            name: "procedure",
+            title: "Procedure Done (e.g. 3-Unit Bridge, Gum Lift)",
             type: "string",
         },
         {
-            name: "serviceLink",
-            title: "Service URL Link",
+            name: "doctorName",
+            title: "Doctor Name",
             type: "string",
         },
         {
-            name: "description",
-            title: "Description (optional)",
+            name: "galleryDesc",
+            title: "Description (NOTE: make sure to set 'Normal' text type below)",
             type: "array",
             of: [
                 {
@@ -30,7 +30,7 @@ export default {
             ]
         },
         {
-            name: 'serviceImage',
+            name: 'galleryImage',
             title: "Image",
             type: 'image',
             options: {

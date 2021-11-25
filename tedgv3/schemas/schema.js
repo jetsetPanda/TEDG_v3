@@ -14,6 +14,9 @@ import ourTeamContent from './contentOurTeam'
 import ourTechnologyContent from "./contentOurTechnology"
 import servicesContent from './contentServices'
 import patientInfoContent from './contentPatientInfo'
+import smileGalleryContent from "./contentSmileGallery";
+
+import smileGalleryItems from "./smileGalleryItems";
 
 import staffDirectory from './staffDirectory'
 
@@ -44,6 +47,7 @@ export default createSchema({
     ourTeamContent,
     ourTechnologyContent,
     patientInfoContent,
+    smileGalleryContent,
     servicesContent,
     staffDirectory,
     servicesGeneral,
@@ -56,6 +60,7 @@ export default createSchema({
     servicesRestorative,
     technologyList,
     servicesList,
+    smileGalleryItems,
 
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
