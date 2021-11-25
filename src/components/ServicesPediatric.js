@@ -33,7 +33,7 @@ const StyledImage = styled(Image)`
 function ServicesPediatric(props) {
 
     let isPic = true;
-    let isSlug = true;
+    let isSlug = false;
 
 
     let slugName = '/about-us/meet-the-team'
