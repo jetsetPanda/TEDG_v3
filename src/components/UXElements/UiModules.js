@@ -16,7 +16,7 @@ export const SubHeaderCopy = styled.h5`
 `
 
 export const HoverOverlay = styled(CardImgOverlay)`
-    border-radius: 15px;
+    //border-radius: 15px;
     background: rgba(0,0,0,0.7);
     position: absolute;
     height: 100%;

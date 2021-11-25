@@ -108,7 +108,7 @@ function CovidPage(props) {
                                     </h1>
                                 </div>
                                 <Div85WidthCentered>
-                                    <SubHeaderCopy className="text-center">
+                                    <SubHeaderCopy className="text-center my-md-5">
 While many things have changed over the past few months, one thing has remained the same – <strong>our commitment to your safety</strong>.
 Our practice follows recommendations made by the American Dental Association, the CDC and OSHA. We follow these standards so that the care you receive is both safe and comfortable.                                     {/*<PortableText blocks={content.subHeadline}/>*/}
                                     </SubHeaderCopy>

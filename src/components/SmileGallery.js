@@ -32,8 +32,9 @@ const CardContainer = styled.div`
 `
 
 const StrapCard = styled(RCard)`
-  border-radius: 15px;
-    
+  //border-radius: 15px;
+  box-shadow: #ccd4f1 2px 2px 8px;
+
 `
 
 const CardCopy = styled.p`
