@@ -87,7 +87,7 @@ function About(props) {
 
 
                             <section>
-                                <h1 className="text-center">
+                                <h1 className="text-center mt-4 mb-4 pb-4">
                                     {aboutContent.headliner}
                                 </h1>
 
@@ -98,7 +98,7 @@ function About(props) {
                                 </SubHeaderCopy>
                             </Div85WidthCentered>
 
-                            <div className="text-center" >
+                            <div className="text-center" style = {{ paddingBottom: "80px", paddingTop: "50px" }}>
                                 <a href="http://www.howardwimmerddstribute.com/pages/2/index.htm" target="_blank">
                                     <Button variant="outline-primary" size="lg">DR. HOWARD WIMMER'S 20 YEAR TRIBUTE</Button>
                                 </a>

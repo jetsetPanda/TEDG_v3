@@ -154,7 +154,7 @@ function MeetTheTeam(props) {
 
 
                                 <div>
-                                    <h1 className="text-center">
+                                    <h1 className="text-center mt-4 mb-4 pb-4">
                                         {content.headliner}
                                     </h1>
                                 </div>
