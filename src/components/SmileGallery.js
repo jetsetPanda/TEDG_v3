@@ -12,6 +12,7 @@ import covidImg from '../assets/images/pt-info-covid.png'
 import insuranceImg from '../assets/images/pt-info-insurance.png'
 import smileImg from "../assets/images/home-smile-img.jpg";
 import {HoverOverlay, HoverOverlayContent, SubHeaderCopy} from "./UXElements/UiModules";
+import smileBanner from '../assets/images/hero-5.jpg';
 
 import {CardHeader, CardImg, CardImgOverlay, CardText, CardTitle} from "reactstrap";
 import {Card as RCard} from "reactstrap";
@@ -102,7 +103,7 @@ function PatientInfo(props) {
 
                                 <div>
                                     <Image
-                                        src={content.bannerImage.asset.url}
+                                        src={smileBanner}
                                         alt=""
                                         className=""
                                         fluid

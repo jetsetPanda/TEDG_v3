@@ -183,6 +183,8 @@ function Home(props) {
                         <h1 className="text-center mt-4">Smile Gallery</h1>
                     </div>
 
+
+
                     <Row>
                         <Col md={6} sm={12}>
                             <Image src={smileImg} fluid rounded/>

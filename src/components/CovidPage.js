@@ -69,14 +69,14 @@ function CovidPage(props) {
                         <span key={index}>
 
 
-                                <div>
+                                {/*<div>
                                     <Image
                                         src={content.bannerImage.asset.url}
                                         alt=""
                                         className=""
                                         fluid
                                     />
-                                </div>
+                                </div>*/}
 
 
                                 <Breadcrumb className="mt-4">
@@ -101,12 +101,12 @@ function CovidPage(props) {
                                 </Breadcrumb>
 
 
-                                <div>
+                                <section>
                                     <h1 className="text-center mt-4 mb-4 pb-4">
                                         COVID-19 Safety Information
                                         {/*{content.headliner}*/}
                                     </h1>
-                                </div>
+                                </section>
                                 <Div85WidthCentered>
                                     <SubHeaderCopy className="text-center my-md-5">
 While many things have changed over the past few months, one thing has remained the same – <strong>our commitment to your safety</strong>.

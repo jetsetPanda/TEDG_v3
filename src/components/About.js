@@ -7,7 +7,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import { Container, Breadcrumb, BreadcrumbItem, Row, Col, Stack, Image, Button, Card } from 'react-bootstrap';
 import styled from "styled-components";
 import homeBanner from '../assets/images/home-banner2x.png';
-import cardSample from '../assets/images/card-sample2x.png';
+import cardSample from '../assets/images/tech2.jpg';
 import TestimonialSection from "./TestimonialSection";
 import PreFooter from "./PreFooter";
 import Footer from "./Footer";

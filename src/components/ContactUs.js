@@ -3,6 +3,7 @@ import sanityClient from "../client";
 import {Breadcrumb, BreadcrumbItem, Button, Card, Col, Container, Image, Row, Stack} from "react-bootstrap";
 import {LinkContainer} from "react-router-bootstrap";
 import smileVirtual from '../assets/images/smileVirtualMobile.png';
+import contactBanner from '../assets/images/hero-11.jpg';
 import styled from "styled-components";
 import TestimonialSection from "./TestimonialSection";
 import PreFooter from "./PreFooter";
@@ -92,7 +93,7 @@ function PatientInfo(props) {
 
                                 <div>
                                     <Image
-                                        src={content.bannerImage.asset.url}
+                                       src={contactBanner}
                                         alt=""
                                         className=""
                                         fluid
