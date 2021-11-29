@@ -146,7 +146,7 @@ function PatientInfo(props) {
                         </Col>
                         <RightCol md={7} className=" py-3 py-md-0">
                             <StyledText>
-                                Visit us at our convenient location in the heart of Manhattan's Financial District.
+                                Visit us at our office located in the heart of Manhattan's Financial District.
                                 </StyledText>
                             <StyledText className="pt-md-4">
 

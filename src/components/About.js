@@ -7,7 +7,8 @@ import { LinkContainer } from "react-router-bootstrap";
 import { Container, Breadcrumb, BreadcrumbItem, Row, Col, Stack, Image, Button, Card } from 'react-bootstrap';
 import styled from "styled-components";
 import homeBanner from '../assets/images/home-banner2x.png';
-import cardSample from '../assets/images/tech2.jpg';
+import cardTech from '../assets/images/op-room.jpg';
+import cardTeam from '../assets/images/39building.jpg';
 import TestimonialSection from "./TestimonialSection";
 import PreFooter from "./PreFooter";
 import Footer from "./Footer";
@@ -107,7 +108,7 @@ function About(props) {
                             <Row className="mt-5">
                                 <Col sm={12} md={6}>
                                    <Image
-                                       src={cardSample}
+                                       src={cardTeam}
                                        alt=""
                                        className=""
                                        fluid
@@ -131,7 +132,7 @@ function About(props) {
                             <Row className="mt-5">
                                 <Col sm={12} md={6}>
                                    <Image
-                                       src={cardSample}
+                                       src={cardTech}
                                        alt=""
                                        className=""
                                        fluid
