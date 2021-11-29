@@ -88,8 +88,8 @@ const StyledImage = styled(Image)`
   height: 300px;
   margin: 10px auto;
   @media (max-width: 768px) {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
   }
   
 `
@@ -101,7 +101,8 @@ const StyledSmile = styled(Image)`
   border-radius: 5px;
   box-shadow: #333333 2px 2px 8px;
   @media (max-width: 768px) {
-    width: 315px;
+    width: 250px;
+    height: 250px;
   }
   
 `
@@ -246,20 +247,20 @@ function Home(props) {
                         <DivFlex className="d-flex justify-content-center ">
                             <StyledLink href='https://www.instagram.com/theexchangedentalgroup/' target="_blank">
                                 <InstagramDiv className="mx-md-5 mx-sm-4">
-                                    <h3>Instagram</h3>
+                                    <h3 style={{fontSize: "2rem"}}>Instagram</h3>
                                 </InstagramDiv>
                             </StyledLink>
 
                             <StyledLink href='https://www.facebook.com/theexchangedentalgroup/' target="_blank">
                                 <FacebookDiv className="mx-md-5 mx-sm-4">
-                                    <h3>Facebook</h3>
+                                    <h3 style={{fontSize: "2rem"}}>Facebook</h3>
                                 </FacebookDiv>
                             </StyledLink>
 
                         </DivFlex>
                     </div>
 
-                    <div className="d-flex flex-row flex-wrap justify-content-between">
+                    {/*<div className="d-flex flex-row flex-wrap justify-content-between">
                         <StyledLink href='https://www.instagram.com/theexchangedentalgroup' target="_blank">
                             <StyledImage src={ig1} fluid thumbnail/>
                         </StyledLink>
@@ -272,6 +273,20 @@ function Home(props) {
                             <StyledLink href='https://www.instagram.com/theexchangedentalgroup' target="_blank">
                         <StyledImage src={ig3} fluid thumbnail/>
                         </StyledLink>
+                </div>*/}
+
+                    <div className="d-flex flex-row flex-wrap justify-content-around">
+                        <StyledLink href='https://www.instagram.com/theexchangedentalgroup' target="_blank">
+                            <StyledImage src={ig1} fluid thumbnail/>
+                        </StyledLink>
+                        <StyledLink href='https://www.instagram.com/theexchangedentalgroup' target="_blank">
+                            <StyledImage src={ig2} fluid thumbnail/>
+                        </StyledLink>
+                        <StyledLink href='https://www.instagram.com/theexchangedentalgroup' target="_blank">
+                            <StyledImage src={ig4} fluid thumbnail/>
+                        </StyledLink>
+                        
+                    
                     </div>
 
 
