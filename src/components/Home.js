@@ -13,6 +13,10 @@ import ig1 from '../assets/images/ig1.jpg';
 import ig2 from '../assets/images/ig2.jpg';
 import ig3 from '../assets/images/ig3.jpg';
 import ig4 from '../assets/images/ig4.jpg';
+import smile1 from '../assets/images/smile1.jpg';
+import smile2 from '../assets/images/smile2.jpg';
+import smile3 from '../assets/images/smile3.jpg';
+import smile4 from '../assets/images/smile4.jpg';
 import smileImg from '../assets/images/home-smile-img.jpg';
 
 import PreFooter from "./PreFooter";
@@ -87,6 +91,19 @@ const StyledImage = styled(Image)`
     width: 150px;
     height: 150px;
   }
+  
+`
+
+const StyledSmile = styled(Image)`
+  width: 300px;
+  height: 300px;
+  margin: 10px auto;
+  border-radius: 5px;
+  box-shadow: #333333 2px 2px 8px;
+  @media (max-width: 768px) {
+    width: 315px;
+  }
+  
 `
 
 
@@ -185,7 +202,7 @@ function Home(props) {
 
 
 
-                    <Row>
+                 {/*   <Row>
                         <Col md={6} sm={12}>
                             <Image src={smileImg} fluid rounded/>
                         </Col>
@@ -202,7 +219,21 @@ function Home(props) {
                                 PROCEDURE: PLACED NEW 3-UNIT ALL PORCELAIN BRIDGE
                             </h4>
                         </Col>
-                    </Row>
+                 </Row> */}
+
+<div className="d-flex flex-row flex-wrap justify-content-around">
+                        
+                        <StyledSmile src={smile1} fluid/>
+                        <StyledSmile src={smile2} fluid/>
+                        <StyledSmile src={smile3} fluid/>
+                        <StyledSmile src={smile4} fluid/>
+
+                    </div>
+
+
+
+
+
 
                     <div className="text-center" >
                         <LinkContainer to="/smile-gallery">
