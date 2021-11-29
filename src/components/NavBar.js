@@ -62,9 +62,9 @@ const NavBar = () => {
                 <StyledMobileCollapse id="responsive-navbar-nav">
                     <MenuDiv className="me-auto d-flex justify-content-around">
 
-                        <NavDropdown title="ABOUT US" id="collasible-nav-dropdown">
+                        <NavDropdown title="ABOUT" id="collasible-nav-dropdown">
                             <LinkContainer to="/about-us">
-                                <NavDropdown.Item href="#">About TEDG</NavDropdown.Item>
+                                <NavDropdown.Item href="#">About Us</NavDropdown.Item>
                             </LinkContainer>
                             <NavDropdown.Divider />
                             <LinkContainer to="/about-us/meet-the-team">
@@ -126,14 +126,14 @@ const NavBar = () => {
                         <NavDropdown title="PATIENT INFORMATION" id="collapsible-nav-dropdown">
 
                             <LinkContainer to="/patient-info">
-                                <NavDropdown.Item href="#">Patient Forms and Info</NavDropdown.Item>
+                                <NavDropdown.Item href="#">New Patient Forms</NavDropdown.Item>
                             </LinkContainer>
                             <NavDropdown.Divider />
                             <LinkContainer to="/patient-info/covid-safety">
-                                <NavDropdown.Item href="#">Covid-19 Safety</NavDropdown.Item>
+                                <NavDropdown.Item href="#">Covid-19</NavDropdown.Item>
                             </LinkContainer>
                             <LinkContainer to="/patient-info/insurance">
-                                <NavDropdown.Item href="#">Insurance and Payments</NavDropdown.Item>
+                                <NavDropdown.Item href="#">Insurance &amp; Payments</NavDropdown.Item>
                             </LinkContainer>
                         </NavDropdown>
 
