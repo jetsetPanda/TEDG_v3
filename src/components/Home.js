@@ -195,8 +195,7 @@ function Home(props) {
                             <Button  variant="outline-primary" size="lg">VIEW OUR SERVICES</Button>
                         </LinkContainer>
                     </div>
-                    <SmileVirtualBanner/>
-
+                    
                     <div>
                         <h1 className="text-center mt-4">Smile Gallery</h1>
                     </div>
@@ -241,6 +240,9 @@ function Home(props) {
                             <Button  variant="outline-primary" size="lg">VIEW FULL SMILE GALLERY</Button>
                         </LinkContainer>
                     </div>
+
+                    <SmileVirtualBanner/>
+
 
                     <div>
                         <h1 className="text-center my-4">Follow Us</h1>
