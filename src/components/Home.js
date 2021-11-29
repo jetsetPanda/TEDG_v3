@@ -244,13 +244,13 @@ function Home(props) {
                     <div>
                         <h1 className="text-center my-4">Follow Us</h1>
                         <DivFlex className="d-flex justify-content-center ">
-                            <StyledLink href='https://www.instagram.com/theexchangedentalgroup' target="_blank">
+                            <StyledLink href='https://www.instagram.com/theexchangedentalgroup/' target="_blank">
                                 <InstagramDiv className="mx-md-5 mx-sm-4">
                                     <h3>Instagram</h3>
                                 </InstagramDiv>
                             </StyledLink>
 
-                            <StyledLink href="https://www.instagram.com/theexchangedentalgroup" target="_blank">
+                            <StyledLink href='https://www.facebook.com/theexchangedentalgroup/' target="_blank">
                                 <FacebookDiv className="mx-md-5 mx-sm-4">
                                     <h3>Facebook</h3>
                                 </FacebookDiv>
