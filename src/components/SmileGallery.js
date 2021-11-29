@@ -13,6 +13,7 @@ import insuranceImg from '../assets/images/pt-info-insurance.png'
 import smileImg from "../assets/images/home-smile-img.jpg";
 import {HoverOverlay, HoverOverlayContent, SubHeaderCopy} from "./UXElements/UiModules";
 import smileBanner from '../assets/images/hero-smile-gallery.jpg';
+import SmileVirtualBanner from "./SmileVirtualBanner";
 
 import {CardHeader, CardImg, CardImgOverlay, CardText, CardTitle} from "reactstrap";
 import {Card as RCard} from "reactstrap";
@@ -177,7 +178,7 @@ smiles. Please browse through the amazing smile transformations
 
                        })}
                         </div>
-
+                <SmileVirtualBanner/>
                 <TestimonialSection/>
                 <PreFooter/>
                 <Footer/>

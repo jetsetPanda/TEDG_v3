@@ -8,6 +8,7 @@ import styled from "styled-components";
 import TestimonialSection from "./TestimonialSection";
 import PreFooter from "./PreFooter";
 import Footer from "./Footer";
+import SmileVirtualBanner from "./SmileVirtualBanner";
 
 import {StyledLinkContainer, SubHeaderCopy, StyledCard, StyledCardTitle} from "./UXElements/UiModules";
 
@@ -135,6 +136,7 @@ function About(props) {
 
                 })}
 
+                <SmileVirtualBanner/>
                 <TestimonialSection/>
                 <PreFooter/>
                 <Footer/>
