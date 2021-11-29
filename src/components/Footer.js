@@ -169,7 +169,7 @@ const Footer = (props) => {
                                     </InstagramDiv>
                                 </StyledLink>
 
-                                <StyledLink href="https://www.instagram.com/theexchangedentalgroup" target="_blank">
+                                <StyledLink href="https://www.facebook.com/theexchangedentalgroup" target="_blank">
                                     <FacebookDiv className="mx-md-5 mx-sm-4">
                                         <h5>Facebook</h5>
                                     </FacebookDiv>
