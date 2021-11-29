@@ -108,8 +108,8 @@ function CovidPage(props) {
                                     </h1>
                                 </section>
                                 <Div85WidthCentered>
-                                    <SubHeaderCopy className="text-center my-md-5">
-While many things have changed over the past few months, one thing has remained the same – <strong>our commitment to your safety</strong>.
+                                    <SubHeaderCopy>
+While many things have changed over the past few months, one thing has remained the same–<strong>our commitment to your safety</strong>.
 Our practice follows recommendations made by the American Dental Association, the CDC and OSHA. We follow these standards so that the care you receive is both safe and comfortable.                                     {/*<PortableText blocks={content.subHeadline}/>*/}
                                     </SubHeaderCopy>
                                 </Div85WidthCentered>
@@ -119,6 +119,14 @@ Our practice follows recommendations made by the American Dental Association, th
 
 
                 })}
+
+                                <div>
+                                    <h2>Covid-19 Form</h2><br/>
+                                    <a href="https://www.dentalhub.cloud/SivaForms/SecuredForms/ClientHTMLForms/633/covid-19-update" target="_blank">
+                                        <Button variant="outline-primary" size="lg">Covid-19 Health Screening Questionnaire</Button>
+                                    </a>
+                                </div>
+                
 
                 <div className="text-center my-5">
                     <h4>Here are some of the added safety measures we are taking to protect our patients and staff:</h4>
@@ -198,17 +206,6 @@ Our practice follows recommendations made by the American Dental Association, th
                         </IconDiv>
                     </Col>
                 </Row>
-
-                <div>
-                    <h4>
-                        To learn more about the additional safety measures we are taking, please click the COVID-19 Form link below.
-                    </h4>
-                    <H2px50 className="my-3 mt-md-5 mb-md-3 pt-md-3">Covid-19 Form</H2px50>
-                    <a href="https://www.dentalhub.cloud/SivaForms/SecuredForms/ClientHTMLForms/633/covid-19-update" target="_blank">
-                        <Button className="my-3"  variant="outline-primary" size="lg">Covid-19 Health Screening Questionnaire</Button>
-                    </a>
-                </div>
-
                 <TestimonialSection/>
                 <PreFooter/>
                 <Footer/>

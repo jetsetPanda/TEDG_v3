@@ -5,7 +5,7 @@ import { LinkContainer } from "react-router-bootstrap";
 
 import {Container, Row, Col, Stack, Image, Button, Card, Fade} from 'react-bootstrap';
 import styled from "styled-components";
-import homeBanner from '../assets/images/39-years-nyc-hero.jpg';
+import homeBanner from '../assets/images/hero-39-years.jpg';
 import cardSample from '../assets/images/card-sample2x.png';
 import igLogo from '../assets/images/instagramLogo.png';
 import fbLogo from '../assets/images/facebookLogo.png';
