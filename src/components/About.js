@@ -142,7 +142,7 @@ function About(props) {
                                 <Col sm={12} md={6}>
                                    <Stack gap={2}>
                                        <h2>OUR TECHNOLOGY</h2>
-                                       <p>As part of our effort to provide the best dental care possible, we use state-of-the-art equipment, modern technology and the most advanced dental techniques.. </p>
+                                       <p>As part of our effort to provide the best dental care possible, we use state-of-the-art equipment, modern technology and the most advanced dental techniques.</p>
                                        <div>
                                            <LinkContainer to="/about-us/our-technology">
                                                 <Button variant="outline-primary" size="md">View Our Technology</Button>
