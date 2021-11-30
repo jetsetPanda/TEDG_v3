@@ -168,11 +168,11 @@ function PatientInfo(props) {
                         </RightCol>
                     </Row>
 
-                    <Row className="mt-3 mt-md-5">
+                    <Row className="mt-1 mt-md-1">
                         <Col md={5}>
-                            <Stack gap={3}>
+                            <Stack gap={1} className="mb-5 mt-md-1">
                                 <StyledText>
-                                    <strong>You may also reach us with these online contact options:</strong>
+                                   {/* <strong>You may also reach us with these online contact options:</strong> */}
                                 </StyledText>
                                 <a href="https://app.smilevirtual.com/Dr-Todd-Goldstein/sign-up" target="_blank">
                                     <StyledConsultImage src={smileVirtual} fluid />
