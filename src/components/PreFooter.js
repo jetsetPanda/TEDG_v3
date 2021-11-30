@@ -56,7 +56,7 @@ const PreFooter = (props) => {
                             <br/>
                             Multiple MTA bus lines such as the M15-SBS, M20, M55, and more converge by our convenient Lower Manhattan location.
                             <br/><br/>
-                            <StyledLink href="http://tripplanner.mta.info/MyTrip/ui_web/customplanner/TripPlanner.aspx" target="_blank"><span className="directions-link">Click here</span></StyledLink> to access the MTA TripPlanner.
+                            <StyledLink href="http://tripplanner.mta.info/MyTrip/ui_web/customplanner/TripPlanner.aspx" target="_blank"><span className="directions-link">Click here</span></StyledLink> to access the MTA Trip Planner.
                         </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="2">
