@@ -13,6 +13,11 @@ export const StyledLinkContainer = styled(LinkContainer)`
 export const SubHeaderCopy = styled.h5`
   font-size: 20px !important;
   text-align: center;
+  @media (max-width: 768px) {
+    font-size: 16.8px !important;
+    line-height: 1.3 !important;
+  }
+  
 `
 
 export const HoverOverlay = styled(CardImgOverlay)`
