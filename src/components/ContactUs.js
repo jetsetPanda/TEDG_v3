@@ -196,13 +196,13 @@ function PatientInfo(props) {
                                     Sunday
                                 </DaysText>
                                 <StyledText className="pt-md-4">
-                                    7:45 am - 7:00 pm <br/>
-                                    7:45 am - 7:00 pm <br/>
-                                    7:45 am - 7:00 pm <br/>
-                                    7:45 am - 7:00 pm <br/>
-                                    7:45 am - 4:00 pm <br/>
+                                    7:45 AM - 7:00 PM <br/>
+                                    7:45 AM - 7:00 PM <br/>
+                                    7:45 AM - 7:00 PM <br/>
+                                    7:45 AM - 7:00 PM <br/>
+                                    7:45 AM - 4:00 PM <br/>
                                     Closed <br/>
-                                    7:45 am - 7:00 pm <br/>
+                                    9:15 AM - 5:00 PM <br/>
                                 </StyledText>
                             </div>
 
