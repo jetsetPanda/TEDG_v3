@@ -40,7 +40,7 @@ const PreFooter = (props) => {
                             <br/>
                             As a major Manhattan transit hub, you can easily visit us by subway on the 6, N, Q, and R subway lines at the Wall Street station, as well as several other train stops.
                             <br/><br/>
-                            <StyledLink href="http://tripplanner.mta.info/MyTrip/ui_web/customplanner/TripPlanner.aspx" target="_blank"><span className="directions-link">Click here</span></StyledLink> to access the MTA TripPlanner.
+                            <StyledLink href="http://tripplanner.mta.info/MyTrip/ui_web/customplanner/TripPlanner.aspx" target="_blank"><span className="directions-link">Click here</span></StyledLink> to access the MTA Trip Planner.
                         </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="1">
