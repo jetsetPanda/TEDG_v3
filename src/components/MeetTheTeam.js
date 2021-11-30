@@ -123,14 +123,14 @@ function MeetTheTeam(props) {
                         <span key={index}>
 
 
-                                <div>
+                               {/* <div>
                                     <Image
                                         src={content.bannerImage.asset.url}
                                         alt=""
                                         className=""
                                         fluid
                                     />
-                                </div>
+                                </div> */}
 
                                 <Breadcrumb className="mt-4">
                                     <LinkContainer to="/">
@@ -154,7 +154,7 @@ function MeetTheTeam(props) {
 
 
                                 <div>
-                                    <h1 className="text-center">
+                                    <h1 className="text-center mt-4 mb-4 pb-4">
                                         {content.headliner}
                                     </h1>
                                 </div>

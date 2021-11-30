@@ -8,6 +8,7 @@ import styled from "styled-components";
 import TestimonialSection from "./TestimonialSection";
 import PreFooter from "./PreFooter";
 import Footer from "./Footer";
+import SmileVirtualBanner from "./SmileVirtualBanner";
 
 import {StyledLinkContainer, SubHeaderCopy, StyledCard, StyledCardTitle} from "./UXElements/UiModules";
 
@@ -95,7 +96,7 @@ function About(props) {
 
 
                                 <div>
-                                    <h1 className="text-center mb-2">
+                                    <h1 className="text-center mt-4 mb-4 pb-4">
                                         {content.headliner}
                                     </h1>
                                 </div>
@@ -135,6 +136,7 @@ function About(props) {
 
                 })}
 
+                <SmileVirtualBanner/>
                 <TestimonialSection/>
                 <PreFooter/>
                 <Footer/>

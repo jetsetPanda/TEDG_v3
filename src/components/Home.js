@@ -5,7 +5,7 @@ import { LinkContainer } from "react-router-bootstrap";
 
 import {Container, Row, Col, Stack, Image, Button, Card, Fade} from 'react-bootstrap';
 import styled from "styled-components";
-import homeBanner from '../assets/images/39-years-nyc-hero.jpg';
+import homeBanner from '../assets/images/hero-39-years.jpg';
 import cardSample from '../assets/images/card-sample2x.png';
 import igLogo from '../assets/images/instagramLogo.png';
 import fbLogo from '../assets/images/facebookLogo.png';
@@ -13,6 +13,10 @@ import ig1 from '../assets/images/ig1.jpg';
 import ig2 from '../assets/images/ig2.jpg';
 import ig3 from '../assets/images/ig3.jpg';
 import ig4 from '../assets/images/ig4.jpg';
+import smile1 from '../assets/images/smile1.jpg';
+import smile2 from '../assets/images/smile2.jpg';
+import smile3 from '../assets/images/smile3.jpg';
+import smile4 from '../assets/images/smile4.jpg';
 import smileImg from '../assets/images/home-smile-img.jpg';
 
 import PreFooter from "./PreFooter";
@@ -84,9 +88,23 @@ const StyledImage = styled(Image)`
   height: 300px;
   margin: 10px auto;
   @media (max-width: 768px) {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
   }
+  
+`
+
+const StyledSmile = styled(Image)`
+  width: 300px;
+  height: 300px;
+  margin: 10px auto;
+  border-radius: 5px;
+  box-shadow: #333333 2px 2px 8px;
+  @media (max-width: 768px) {
+    width: 250px;
+    height: 250px;
+  }
+  
 `
 
 
@@ -177,13 +195,14 @@ function Home(props) {
                             <Button  variant="outline-primary" size="lg">VIEW OUR SERVICES</Button>
                         </LinkContainer>
                     </div>
-                    <SmileVirtualBanner/>
-
+                    
                     <div>
                         <h1 className="text-center mt-4">Smile Gallery</h1>
                     </div>
 
-                    <Row>
+
+
+                 {/*   <Row>
                         <Col md={6} sm={12}>
                             <Image src={smileImg} fluid rounded/>
                         </Col>
@@ -200,7 +219,21 @@ function Home(props) {
                                 PROCEDURE: PLACED NEW 3-UNIT ALL PORCELAIN BRIDGE
                             </h4>
                         </Col>
-                    </Row>
+                 </Row> */}
+
+<div className="d-flex flex-row flex-wrap justify-content-around">
+                        
+                        <StyledSmile src={smile1} fluid/>
+                        <StyledSmile src={smile2} fluid/>
+                        <StyledSmile src={smile3} fluid/>
+                        <StyledSmile src={smile4} fluid/>
+
+                    </div>
+
+
+
+
+
 
                     <div className="text-center" >
                         <LinkContainer to="/smile-gallery">
@@ -208,25 +241,28 @@ function Home(props) {
                         </LinkContainer>
                     </div>
 
+                    <SmileVirtualBanner/>
+
+
                     <div>
                         <h1 className="text-center my-4">Follow Us</h1>
                         <DivFlex className="d-flex justify-content-center ">
-                            <StyledLink href='https://www.instagram.com/theexchangedentalgroup' target="_blank">
+                            <StyledLink href='https://www.instagram.com/theexchangedentalgroup/' target="_blank">
                                 <InstagramDiv className="mx-md-5 mx-sm-4">
-                                    <h3>Instagram</h3>
+                                    <h3 style={{fontSize: "2rem"}}>Instagram</h3>
                                 </InstagramDiv>
                             </StyledLink>
 
-                            <StyledLink href="https://www.instagram.com/theexchangedentalgroup" target="_blank">
+                            <StyledLink href='https://www.facebook.com/theexchangedentalgroup/' target="_blank">
                                 <FacebookDiv className="mx-md-5 mx-sm-4">
-                                    <h3>Facebook</h3>
+                                    <h3 style={{fontSize: "2rem"}}>Facebook</h3>
                                 </FacebookDiv>
                             </StyledLink>
 
                         </DivFlex>
                     </div>
 
-                    <div className="d-flex flex-row flex-wrap justify-content-between">
+                    {/*<div className="d-flex flex-row flex-wrap justify-content-between">
                         <StyledLink href='https://www.instagram.com/theexchangedentalgroup' target="_blank">
                             <StyledImage src={ig1} fluid thumbnail/>
                         </StyledLink>
@@ -239,6 +275,20 @@ function Home(props) {
                             <StyledLink href='https://www.instagram.com/theexchangedentalgroup' target="_blank">
                         <StyledImage src={ig3} fluid thumbnail/>
                         </StyledLink>
+                </div>*/}
+
+                    <div className="d-flex flex-row flex-wrap justify-content-around">
+                        <StyledLink href='https://www.instagram.com/theexchangedentalgroup' target="_blank">
+                            <StyledImage src={ig1} fluid thumbnail/>
+                        </StyledLink>
+                        <StyledLink href='https://www.instagram.com/theexchangedentalgroup' target="_blank">
+                            <StyledImage src={ig2} fluid thumbnail/>
+                        </StyledLink>
+                        <StyledLink href='https://www.instagram.com/theexchangedentalgroup' target="_blank">
+                            <StyledImage src={ig4} fluid thumbnail/>
+                        </StyledLink>
+                        
+                    
                     </div>
 
 

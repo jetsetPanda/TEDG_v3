@@ -3,6 +3,7 @@ import sanityClient from "../client";
 import {Breadcrumb, BreadcrumbItem, Button, Card, Col, Container, Image, Row, Stack} from "react-bootstrap";
 import {LinkContainer} from "react-router-bootstrap";
 import smileVirtual from '../assets/images/smileVirtualMobile.png';
+import contactBanner from '../assets/images/hero-contact-us.jpg';
 import styled from "styled-components";
 import TestimonialSection from "./TestimonialSection";
 import PreFooter from "./PreFooter";
@@ -92,7 +93,7 @@ function PatientInfo(props) {
 
                                 <div>
                                     <Image
-                                        src={content.bannerImage.asset.url}
+                                       src={contactBanner}
                                         alt=""
                                         className=""
                                         fluid
@@ -145,23 +146,25 @@ function PatientInfo(props) {
                         </Col>
                         <RightCol md={7} className=" py-3 py-md-0">
                             <StyledText>
-                                <strong>Visit us at our convenient location in the heart of the Financial District.</strong>
+                                Visit us at our office located in the heart of Manhattan's Financial District.
                                 </StyledText>
                             <StyledText className="pt-md-4">
 
-                                <strong>Our Address</strong> <br/>
+                                <strong>Our Location</strong> <br/>
                                 39 Broadway Suite 2115 <br/>
-                                New York, NY 10006
+                                New York, NY 10006<br/>
+                                Tel: <a href="tel:212-422-9229" className="text-decoration-none">(212) 422-9229</a> <br/>
+                                Fax: (212) 742-0928<br/><br/>
                             </StyledText>
                             <StyledText>
-                                <strong>Give Us a Call</strong> <br/>
-                                Tel: <a href="tel:212-422-9229" className="text-decoration-none text-black-50">212-422-9229</a> <br/>
-                                Fax: 212-742-0928
-                            </StyledText>
+                                <strong>Email Us</strong> <br/>
+                                <a href="mailto:reception@theexchangedentalgroup.com" target="_blank"   className="text-decoration-none">reception@theexchangedentalgroup.com</a>
+                            </StyledText><br/>
                             <StyledText>
-                                <strong>Send Us An Email</strong> <br/>
-                                Email: <a href="mailto:reception@theexchangedentalgroup.com" target="_blank"   className="text-decoration-none text-black-50">reception@theexchangedentalgroup.com</a>
+                                <strong>Schedule an Appointment</strong><br/>
+                                <Button><a href="https://nexhealth.com/appt/TheExchangeDentalGroup" target="_blank"  className="text-decoration-none" style={{paddingLieft: "5px", color: "#ffffff"}}>BOOK ONLINE</a></Button>
                             </StyledText>
+                            
                         </RightCol>
                     </Row>
 

@@ -7,7 +7,8 @@ import { LinkContainer } from "react-router-bootstrap";
 import { Container, Breadcrumb, BreadcrumbItem, Row, Col, Stack, Image, Button, Card } from 'react-bootstrap';
 import styled from "styled-components";
 import homeBanner from '../assets/images/home-banner2x.png';
-import cardSample from '../assets/images/card-sample2x.png';
+import cardTech from '../assets/images/op-room.jpg';
+import cardTeam from '../assets/images/39building.jpg';
 import TestimonialSection from "./TestimonialSection";
 import PreFooter from "./PreFooter";
 import Footer from "./Footer";
@@ -87,7 +88,7 @@ function About(props) {
 
 
                             <section>
-                                <h1 className="text-center">
+                                <h1 className="text-center mt-4 mb-4 pb-4">
                                     {aboutContent.headliner}
                                 </h1>
 
@@ -98,7 +99,7 @@ function About(props) {
                                 </SubHeaderCopy>
                             </Div85WidthCentered>
 
-                            <div className="text-center" >
+                            <div className="text-center" style = {{ paddingBottom: "80px", paddingTop: "50px" }}>
                                 <a href="http://www.howardwimmerddstribute.com/pages/2/index.htm" target="_blank">
                                     <Button variant="outline-primary" size="lg">DR. HOWARD WIMMER'S 20 YEAR TRIBUTE</Button>
                                 </a>
@@ -107,7 +108,7 @@ function About(props) {
                             <Row className="mt-5">
                                 <Col sm={12} md={6}>
                                    <Image
-                                       src={cardSample}
+                                       src={cardTeam}
                                        alt=""
                                        className=""
                                        fluid
@@ -131,7 +132,7 @@ function About(props) {
                             <Row className="mt-5">
                                 <Col sm={12} md={6}>
                                    <Image
-                                       src={cardSample}
+                                       src={cardTech}
                                        alt=""
                                        className=""
                                        fluid
@@ -141,7 +142,7 @@ function About(props) {
                                 <Col sm={12} md={6}>
                                    <Stack gap={2}>
                                        <h2>OUR TECHNOLOGY</h2>
-                                       <p>As part of our effort to provide the best dental care possible, we use state-of-the-art equipment, modern technology and the most advanced dental techniques.. </p>
+                                       <p>As part of our effort to provide the best dental care possible, we use state-of-the-art equipment, modern technology and the most advanced dental techniques.</p>
                                        <div>
                                            <LinkContainer to="/about-us/our-technology">
                                                 <Button variant="outline-primary" size="md">View Our Technology</Button>

@@ -12,6 +12,8 @@ import covidImg from '../assets/images/pt-info-covid.png'
 import insuranceImg from '../assets/images/pt-info-insurance.png'
 import smileImg from "../assets/images/home-smile-img.jpg";
 import {HoverOverlay, HoverOverlayContent, SubHeaderCopy} from "./UXElements/UiModules";
+import smileBanner from '../assets/images/hero-smile-gallery.jpg';
+import SmileVirtualBanner from "./SmileVirtualBanner";
 
 import {CardHeader, CardImg, CardImgOverlay, CardText, CardTitle} from "reactstrap";
 import {Card as RCard} from "reactstrap";
@@ -102,7 +104,7 @@ function PatientInfo(props) {
 
                                 <div>
                                     <Image
-                                        src={content.bannerImage.asset.url}
+                                        src={smileBanner}
                                         alt=""
                                         className=""
                                         fluid
@@ -126,7 +128,7 @@ function PatientInfo(props) {
 
 
                                 <div>
-                                    <h1 className="text-center">
+                                    <h1 className="text-center mt-4 mb-4 pb-4">
                                         Smile Gallery
                                         {/*{content.headliner}*/}
                                     </h1>
@@ -176,7 +178,7 @@ smiles. Please browse through the amazing smile transformations
 
                        })}
                         </div>
-
+                <SmileVirtualBanner/>
                 <TestimonialSection/>
                 <PreFooter/>
                 <Footer/>

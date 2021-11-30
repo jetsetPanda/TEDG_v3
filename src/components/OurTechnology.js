@@ -98,14 +98,14 @@ function OurTechnology(props) {
                     return (
                         <span key={index}>
 
-                            <div>
+                            {/*<div>
                                 <Image
                                     src={content.bannerImage.asset.url}
                                     alt=""
                                     className=""
                                     fluid
                                 />
-                            </div>
+                            </div>*/}
 
                             <Breadcrumb className="mt-4">
                                 <BreadcrumbItem>
@@ -127,13 +127,13 @@ function OurTechnology(props) {
 
 
                             <section>
-                                <h1 className="text-center">
+                                <h1 className="text-center mt-4 mb-4 pb-4">
                                     {content.headliner}
                                 </h1>
 
                             </section>
                             <Div85WidthCentered>
-                                <SubHeaderCopy className="text-center">
+                                <SubHeaderCopy className="text-center" style = {{ paddingBottom: "50px"}}>
                                     <PortableText blocks={content.subHeadline}/>
                                 </SubHeaderCopy>
                             </Div85WidthCentered>
