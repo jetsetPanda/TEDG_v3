@@ -5,14 +5,22 @@ import {Card} from "react-bootstrap";
 
 export const StyledLinkContainer = styled(LinkContainer)`
   cursor: pointer;
+  transition: color 0.2s;
+
   &:hover {
-    color: #6da4fd;
+    color: #4286fa;
+    transition: color 0.2s;
   }
 `
 
 export const SubHeaderCopy = styled.h5`
   font-size: 20px !important;
   text-align: center;
+  @media (max-width: 768px) {
+    font-size: 16.8px !important;
+    line-height: 1.3 !important;
+  }
+  
 `
 
 export const HoverOverlay = styled(CardImgOverlay)`

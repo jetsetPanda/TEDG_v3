@@ -12,7 +12,7 @@ const StyledAccHeader = styled(Accordion.Item)`
 const FaqAccordion = (props) => (
     <div className="my-md-3">
         <h2 className="my-md-5 text-center pt-md-3">Frequently Asked Questions</h2>
-        <Accordion defaultActiveKey="0">
+        <Accordion>
             <StyledAccHeader eventKey="0">
                 <Accordion.Header>Do you accept dental emergency cases?</Accordion.Header>
                 <Accordion.Body>

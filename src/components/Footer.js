@@ -114,7 +114,7 @@ const Footer = (props) => {
                                 39 Broadway Suite 2115 <br/>
                                 Financial District <br/>
                                 New York, NY 10006 <br/><br/>
-                                Tel: <a href="tel:212-422-9229" style={{color: "#000000"}}>(212) 422-9229</a>
+                                <a href="tel:212-422-9229" className="text-decoration-none">(212) 422-9229</a>
                             </h5>
 
 
@@ -169,7 +169,7 @@ const Footer = (props) => {
                                     </InstagramDiv>
                                 </StyledLink>
 
-                                <StyledLink href="https://www.instagram.com/theexchangedentalgroup" target="_blank">
+                                <StyledLink href="https://www.facebook.com/theexchangedentalgroup" target="_blank">
                                     <FacebookDiv className="mx-md-5 mx-sm-4">
                                         <h5>Facebook</h5>
                                     </FacebookDiv>
