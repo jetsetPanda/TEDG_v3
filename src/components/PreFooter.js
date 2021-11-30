@@ -74,7 +74,7 @@ const PreFooter = (props) => {
                             <br/>
                             You can find ample parking facilities as well as easy bridge and tunnel access to our central office location.
                             <br/><br/>
-                            <StyledLink href="https://goo.gl/maps/NUPLm5NA8En8JRDn9" target="_blank"><span className="directions-link">Click here</span></StyledLink> for Google Maps Driving Directions.
+                            <StyledLink href="https://goo.gl/maps/NUPLm5NA8En8JRDn9" target="_blank"><span className="directions-link">Click here</span></StyledLink> for Google Maps driving directions.
                         </Accordion.Body>
                     </Accordion.Item>
                 </Accordion>
