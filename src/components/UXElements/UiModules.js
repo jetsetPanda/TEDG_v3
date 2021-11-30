@@ -5,8 +5,11 @@ import {Card} from "react-bootstrap";
 
 export const StyledLinkContainer = styled(LinkContainer)`
   cursor: pointer;
+  transition: color 0.2s;
+
   &:hover {
-    color: #6da4fd;
+    color: #4286fa;
+    transition: color 0.2s;
   }
 `
 

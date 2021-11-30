@@ -68,9 +68,10 @@ const StyledLink = styled.a`
   text-decoration: none;
   color: #1C2430;
 
-  &&:hover {
+  &:hover {
     color: #5e78a8;
     transition: color 1s;
+    cursor: pointer;
   }
 `
 const DivFlex = styled.div`
@@ -81,12 +82,18 @@ const DivFlex = styled.div`
     flex-direction: column;
     text-align: center;
   }
-
 `
 const StyledImage = styled(Image)`
   width: 300px;
   height: 300px;
   margin: 10px auto;
+  box-shadow: #333333 2px 2px 8px;
+  transition: .3s ease;
+  &:hover {
+    cursor: pointer;
+    box-shadow: #4b769a -1px 1px 10px;
+    transition: .3s ease;
+  }
   @media (max-width: 768px) {
     width: 250px;
     height: 250px;
@@ -100,11 +107,18 @@ const StyledSmile = styled(Image)`
   margin: 10px auto;
   border-radius: 5px;
   box-shadow: #333333 2px 2px 8px;
+  transition: .3s ease;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: #4b769a -1px 1px 10px;
+    transition: .3s ease;
+  }
+
   @media (max-width: 768px) {
     width: 250px;
     height: 250px;
   }
-  
 `
 
 
@@ -221,13 +235,19 @@ function Home(props) {
                         </Col>
                  </Row> */}
 
-<div className="d-flex flex-row flex-wrap justify-content-around">
-                        
-                        <StyledSmile src={smile1} fluid/>
-                        <StyledSmile src={smile2} fluid/>
-                        <StyledSmile src={smile3} fluid/>
-                        <StyledSmile src={smile4} fluid/>
-
+                    <div className="d-flex flex-row flex-wrap justify-content-around">
+                        <LinkContainer to="/smile-gallery">
+                            <StyledSmile src={smile1} fluid/>
+                        </LinkContainer>
+                        <LinkContainer to="/smile-gallery">
+                            <StyledSmile src={smile2} fluid/>
+                        </LinkContainer>
+                        <LinkContainer to="/smile-gallery">
+                            <StyledSmile src={smile3} fluid/>
+                        </LinkContainer>
+                        <LinkContainer to="/smile-gallery">
+                            <StyledSmile src={smile4} fluid/>
+                        </LinkContainer>
                     </div>
 
 
