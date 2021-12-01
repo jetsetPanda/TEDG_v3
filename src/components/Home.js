@@ -255,7 +255,7 @@ function Home(props) {
 
 
 
-                    <div className="text-center" >
+                    <div className="text-center mb-5" >
                         <LinkContainer to="/smile-gallery">
                             <Button  variant="outline-primary" size="lg">VIEW FULL SMILE GALLERY</Button>
                         </LinkContainer>
