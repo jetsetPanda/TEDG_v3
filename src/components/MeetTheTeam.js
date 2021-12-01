@@ -10,6 +10,7 @@ import styled from "styled-components";
 import PreFooter from "./PreFooter";
 import Footer from "./Footer";
 import {SubHeaderCopy} from "./UXElements/UiModules";
+import TestimonialSection from './TestimonialSection.js';
 
 
 const TopRow = styled(Row)`
@@ -21,6 +22,7 @@ const TopRow = styled(Row)`
 
 const StyledDoctorCard = styled(Card)`
   margin: 10px 10px;
+  padding-bottom: 10px;
   width: 19rem;
   border-color: #ffffff;
 
@@ -172,8 +174,8 @@ function MeetTheTeam(props) {
 
 
                     {staffDirectoryData &&
-                        <div className="text-center mt-4 mb-4">
-                            <h2 className="py-5">General Dentists</h2>
+                        <div className="text-center mb-4">
+                            <h2 className="pb-4 pb-2"><strong>General Dentists</strong></h2>
                             <div className="d-flex flex-row flex-wrap justify-content-around">
                                 {staffDirectoryData.map((staff, index) => {
                                     console.log("STAFF list: ", staff);
@@ -201,7 +203,7 @@ function MeetTheTeam(props) {
 
                             <StyledHR/>
 
-                            <h2 className="py-5">Specialists</h2>
+                            <h2 className="pb-4 pt-4 mt-5"><strong>Specialists</strong></h2>
                             <div className="d-flex flex-row flex-wrap justify-content-around">
                                 {staffDirectoryData.map((staff, index) => {
                                     console.log("STAFF list: ", staff);
@@ -229,7 +231,7 @@ function MeetTheTeam(props) {
 
                             <StyledHR/>
 
-                            <h2 className="py-5">Dental Hygienists</h2>
+                            <h2 className="pb-4 pt-4 mt-5"><strong>Dental Hygienists</strong></h2>
                             <div className="d-flex flex-row flex-wrap justify-content-around">
                                 {staffDirectoryData.map((staff, index) => {
                                     console.log("STAFF list: ", staff);
@@ -252,7 +254,7 @@ function MeetTheTeam(props) {
 
                             <StyledHR/>
 
-                            <h2 className="py-5">Dental Assistants</h2>
+                            <h2 className="pb-4 pt-4 mt-5"><strong>Dental Assistants</strong></h2>
                             <div className="d-flex flex-row flex-wrap justify-content-around">
                                 {staffDirectoryData.map((staff, index) => {
                                     console.log("STAFF list: ", staff);
@@ -276,7 +278,7 @@ function MeetTheTeam(props) {
 
                             <StyledHR/>
 
-                            <h2 className="py-5">Administrative Staff</h2>
+                            <h2 className="pb-4 pt-4 mt-5"><strong>Administrative Staff</strong></h2>
                             <div className="d-flex flex-row flex-wrap justify-content-around">
                                 {staffDirectoryData.map((staff, index) => {
                                     console.log("STAFF list: ", staff);
@@ -317,7 +319,7 @@ function MeetTheTeam(props) {
 
                         </div>
                     }
-
+                <TestimonialSection/>
                 <PreFooter/>
                 <Footer/>
                 </Stack>
