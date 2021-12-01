@@ -121,7 +121,7 @@ Our practice follows recommendations made by the American Dental Association, th
                 })}
 
                                 <div>
-                                    <h2>Covid-19 Form</h2><br/>
+                                    <h2><strong>Covid-19 Form</strong></h2><br/>
                                     <a href="https://www.dentalhub.cloud/SivaForms/SecuredForms/ClientHTMLForms/633/covid-19-update" target="_blank">
                                         <Button variant="outline-primary" size="lg">Covid-19 Health Screening Questionnaire</Button>
                                     </a>

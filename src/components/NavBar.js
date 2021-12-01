@@ -133,7 +133,7 @@ const NavBar = () => {
                                 <NavDropdown.Item href="#">COVID-19 Safety Information</NavDropdown.Item>
                             </LinkContainer>
                             <LinkContainer to="/patient-info/insurance">
-                                <NavDropdown.Item href="#">Insurance &amp; Payments</NavDropdown.Item>
+                                <NavDropdown.Item href="#">Insurance &amp; Financial Information</NavDropdown.Item>
                             </LinkContainer>
                         </NavDropdown>
 
