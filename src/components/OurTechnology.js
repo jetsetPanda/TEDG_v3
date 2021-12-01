@@ -127,7 +127,7 @@ function OurTechnology(props) {
 
 
                             <section>
-                                <h1 className="text-center mt-4 mb-4 pb-4">
+                                <h1 className="text-center mt-4 mb-4 pb-md-3 pb-2">
                                     {content.headliner}
                                 </h1>
 

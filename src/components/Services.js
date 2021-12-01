@@ -96,7 +96,7 @@ function About(props) {
 
 
                                 <div>
-                                    <h1 className="text-center mt-4 mb-4 pb-4">
+                                    <h1 className="text-center mt-4 mb-4 pb-md-3 pb-2">
                                         {content.headliner}
                                     </h1>
                                 </div>
@@ -107,7 +107,7 @@ function About(props) {
                                 </Div85WidthCentered>
 
 
-                                <div className="d-flex flex-row flex-wrap justify-content-around mt-3 mt-md-5">
+                                <div className="d-flex flex-row flex-wrap justify-content-around mt-3 mt-md-5 pt-5 pb-5">
 
                                     {servicesList && servicesList.map((list, index) => {
                                         console.log("svcs list: ", list);

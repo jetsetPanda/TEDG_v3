@@ -117,13 +117,13 @@ function PatientInfo(props) {
 
 
                                 <div>
-                                    <h1 className="text-center">
+                                    <h1 className="text-center mt-4 mb-4 pb-md-3 pb-2">
                                         Contact Us
                                         {/*{content.headliner}*/}
                                     </h1>
                                 </div>
                                 <Div85WidthCentered>
-                                    <SubHeaderCopy className="text-center my-md-5">
+                                    <SubHeaderCopy className="text-center">
                                         We would love to hear from you! Please choose the method of communication most convenient to you.
                                         {/*<PortableText blocks={content.subHeadline}/>*/}
                                     </SubHeaderCopy>
