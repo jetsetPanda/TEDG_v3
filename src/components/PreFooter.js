@@ -17,7 +17,7 @@ const PreFooter = (props) => {
     return (
     <Stack>
         <div>
-            <h1 className="text-center my-4 my-md-5">Visit Us</h1>
+            <h1 className="text-center my-4 my-md-4">Visit Us</h1>
         </div>
         <Row>
             {/*<Col className="ml-0 mr-auto" lg="5" md="7">*/}
