@@ -118,8 +118,18 @@ function PatientInfo(props) {
                                     <li>Dental insurance information and medical insurance information (if applicable)</li>
                                 </ul>
                                 <br/>
-                                <strong>IMPORTANT:</strong> Appointments are limited to the patient only unless a companion is essential. All patients under the age of 18 must be accompanied by one parent or guardian.
-</h5>
+                                <strong>IMPORTANT:</strong> Appointments are limited to the patient only unless a companion is essential. All patients under the age of 18 must be accompanied by one parent or guardian.</h5>
+
+                                <div>
+                                <h2 className="mt-md-4 mt-4 mb-4">
+                                    <strong>What to Expect at Your First Visit</strong>
+                                </h2>
+                           
+
+                                        <h5>As a new patient to our office, we would like to provide you with a summary of what to expect during your first visit with us. You will be in our care for about one hour. When you arrive for your appointment, you will be welcomed by our friendly receptionist who will collect any required information and process your patient information. You will be shown to one of our dental examination rooms where you may speak with the dentist and assistant about any concerns, questions, expectations, or dental health needs you may have. <br/><br/>
+                                        Upon completion of your examination and x-rays, we will provide you with a full dental health report and recommended treatment plan based on our findings. Our trained hygienist will then perform a full general cleaning or begin any recommended therapy for treating any gum/periodontal condition or disease. By the end of your appointment, you will meet your treatment coordinator who will review the treatment plan created by your dentist to help you achieve optimal dental health.
+                                        </h5>
+                                        </div>                     
 
 
                             <Row className="mt-5">
