@@ -130,7 +130,7 @@ const NavBar = () => {
                             </LinkContainer>
                             <NavDropdown.Divider />
                             <LinkContainer to="/patient-info/covid-safety">
-                                <NavDropdown.Item href="#">Covid-19</NavDropdown.Item>
+                                <NavDropdown.Item href="#">COVID-19 Safety Information</NavDropdown.Item>
                             </LinkContainer>
                             <LinkContainer to="/patient-info/insurance">
                                 <NavDropdown.Item href="#">Insurance &amp; Payments</NavDropdown.Item>
