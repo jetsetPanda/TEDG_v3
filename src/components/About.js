@@ -118,7 +118,7 @@ function About(props) {
                                 <Col sm={12} md={6}>
                                    <Stack gap={2}>
                                        <h2>MEET THE TEAM</h2>
-                                       <p>You’re in great hands. Our dedicated team of dentists, specialists, and hygienists have decades of experience and form the fabric of our practice. </p>
+                                       <h5>You’re in great hands. Our dedicated team of dentists, specialists, and hygienists have decades of experience and form the fabric of our practice. </h5>
                                        <div>
                                            <LinkContainer to="/about-us/meet-the-team">
                                                 <Button variant="outline-primary" size="md">Meet The Team</Button>
