@@ -105,7 +105,7 @@ function About(props) {
                                 </a>
                             </div>
 
-                            <Row className="mt-5">
+                            <Row className="mt-2 mt-md-4">
                                 <Col sm={12} md={6}>
                                    <Image
                                        src={cardTeam}
