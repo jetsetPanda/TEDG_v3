@@ -117,13 +117,13 @@ function PatientInfo(props) {
 
 
                                 <div>
-                                    <h1 className="text-center">
+                                    <h1 className="text-center mt-4 mb-4 pb-md-3 pb-2">
                                         Contact Us
                                         {/*{content.headliner}*/}
                                     </h1>
                                 </div>
                                 <Div85WidthCentered>
-                                    <SubHeaderCopy className="text-center my-md-5">
+                                    <SubHeaderCopy className="text-center">
                                         We would love to hear from you! Please choose the method of communication most convenient to you.
                                         {/*<PortableText blocks={content.subHeadline}/>*/}
                                     </SubHeaderCopy>
@@ -168,11 +168,11 @@ function PatientInfo(props) {
                         </RightCol>
                     </Row>
 
-                    <Row className="mt-3 mt-md-5">
+                    <Row className="mt-1 mt-md-1">
                         <Col md={5}>
-                            <Stack gap={3}>
+                            <Stack gap={1} className="mb-5 mt-md-1">
                                 <StyledText>
-                                    <strong>You may also reach us with these online contact options:</strong>
+                                   {/* <strong>You may also reach us with these online contact options:</strong> */}
                                 </StyledText>
                                 <a href="https://app.smilevirtual.com/Dr-Todd-Goldstein/sign-up" target="_blank">
                                     <StyledConsultImage src={smileVirtual} fluid />
@@ -196,13 +196,13 @@ function PatientInfo(props) {
                                     Sunday
                                 </DaysText>
                                 <StyledText className="pt-md-4">
-                                    7:45 am - 7:00 pm <br/>
-                                    7:45 am - 7:00 pm <br/>
-                                    7:45 am - 7:00 pm <br/>
-                                    7:45 am - 7:00 pm <br/>
-                                    7:45 am - 4:00 pm <br/>
+                                    7:45 AM - 7:00 PM <br/>
+                                    7:45 AM - 7:00 PM <br/>
+                                    7:45 AM - 7:00 PM <br/>
+                                    7:45 AM - 7:00 PM <br/>
+                                    7:45 AM - 4:00 PM <br/>
                                     Closed <br/>
-                                    7:45 am - 7:00 pm <br/>
+                                    9:15 AM - 5:00 PM <br/>
                                 </StyledText>
                             </div>
 

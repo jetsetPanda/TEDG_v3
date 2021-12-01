@@ -88,7 +88,7 @@ function About(props) {
 
 
                             <section>
-                                <h1 className="text-center mt-4 mb-4 pb-4">
+                                <h1 className="text-center mt-4 mb-4 pb-md-3 pb-2">
                                     {aboutContent.headliner}
                                 </h1>
 
@@ -105,7 +105,7 @@ function About(props) {
                                 </a>
                             </div>
 
-                            <Row className="mt-5">
+                            <Row className="mt-2 mt-md-4">
                                 <Col sm={12} md={6}>
                                    <Image
                                        src={cardTeam}

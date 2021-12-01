@@ -12,6 +12,7 @@ const StyledImg = styled(Image)`
   border-radius: 50%;
   box-shadow: 0 5px 25px 0 rgb(22 121 171 / 20%);
   color: rgb(22, 121, 171);
+
 `
 
 function SingleDoctorPage(props) {
