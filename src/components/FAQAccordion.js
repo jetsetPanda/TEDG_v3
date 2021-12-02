@@ -9,9 +9,9 @@ const StyledAccHeader = styled(Accordion.Item)`
 `
 
 
-const FaqAccordion = (props) => (
-    <div className="my-md-3">
-        <h2 className="my-md-5 text-center pt-md-3">Patient Resources</h2>
+const FAQAccordion = (props) => (
+    <div className="my-md-3 pb-5">
+        <h2 className="my-md-5 text-center mb-4 mt-4">Patient Resources</h2>
         <Accordion>
             <StyledAccHeader eventKey="0">
                 <Accordion.Header><strong>ZOOM! In-Office Teeth Whitening</strong></Accordion.Header>
@@ -28,7 +28,7 @@ const FaqAccordion = (props) => (
                 </Accordion.Body>
             </StyledAccHeader>
 
-            <StyledAccHeader eventKey="1">
+     {/*}       <StyledAccHeader eventKey="1">
                 <Accordion.Header>Why should I go to the dentist regularly?</Accordion.Header>
                 <Accordion.Body>
                     Many people do not see a dentist on a regular basis, and only go when they have a problem. While these patients may feel they are saving money, it often ends up costing much more in dollars and time when dental issues do inevitably occur. This is because many dental problems do not have symptoms until they reach the advanced stages of the disease process. Preventive treatments such as routine oral exams, cleanings and treatments are considered the best way to prevent tooth decay, pain, and expenses in the future.
@@ -63,11 +63,11 @@ const FaqAccordion = (props) => (
                 <Accordion.Body>
                     Please feel free to call us at the office or if you prefer, we are always available online  via our chat agent located on the bottom right corner of our website.
                 </Accordion.Body>
-            </StyledAccHeader>
+            </StyledAccHeader>*/}
 
         </Accordion>
     </div>
 
 );
 
-export default FaqAccordion;
+export default FAQAccordion;

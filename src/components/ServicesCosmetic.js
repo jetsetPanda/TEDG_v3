@@ -10,6 +10,7 @@ import PortableText from "@sanity/block-content-to-react";
 import styled from "styled-components";
 import {SubHeaderCopy} from "./UXElements/UiModules";
 import smileVirtual from '../assets/images/smileVirtualMobile.png';
+import FAQAccordion from './FAQAccordion';
 
 const StyledConsultImage = styled(Image)`
   padding-right: 75px;
@@ -206,7 +207,7 @@ function ServicesCosmetic(props) {
 
                 }
                                    
-
+        <FAQAccordion/>
             <TestimonialSection/>
             <PreFooter/>
             <Footer/>
