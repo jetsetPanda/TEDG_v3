@@ -9,6 +9,7 @@ import sanityClient from "../client";
 import PortableText from "@sanity/block-content-to-react";
 import styled from "styled-components";
 import {SubHeaderCopy} from "./UXElements/UiModules";
+import SmileVirtualBanner from "./SmileVirtualBanner";
 
 const ButtonThing = (props) => (
     <div className="text-left">
@@ -167,7 +168,7 @@ function ServicesCosmetic(props) {
                     })
 
                 }
-
+<SmileVirtualBanner/>
             <TestimonialSection/>
             <PreFooter/>
             <Footer/>

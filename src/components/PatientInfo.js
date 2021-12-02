@@ -9,7 +9,7 @@ import PreFooter from "./PreFooter";
 import Footer from "./Footer";
 import cardSample from "../assets/images/card-sample2x.png";
 import covidImg from '../assets/images/covid-info.jpg'
-import insuranceImg from '../assets/images/delta-ins.jpg'
+import insuranceImg from '../assets/images/deltadent.jpg'
 import {SubHeaderCopy} from "./UXElements/UiModules";
 import FaqAccordion from "./FAQAccordion";
 
