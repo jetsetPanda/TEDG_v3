@@ -87,7 +87,7 @@ function SingleDoctorPage(props) {
                                 </h1>
 
                                 <Row>
-                                    <Col md={4} sm={12}>
+                                    <Col className="px-4 px-md-0" md={4} sm={12}>
                                         <StyledImg
                                             src={person.teamMemberImage.asset.url}
                                             alt=""
@@ -95,8 +95,8 @@ function SingleDoctorPage(props) {
                                             fluid
                                         />
                                     </Col>
-                                    <Col md={8} sm={12}>
-                                        <p>
+                                    <Col className="mt-4 mt-md-0 px-3 px-md-5" md={8} sm={12}>
+                                        <p className="text-center text-md-start">
                                             <PortableText blocks={person.teamMemberBio}/>
                                         </p>
                                     </Col>
