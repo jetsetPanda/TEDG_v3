@@ -128,7 +128,7 @@ function PatientInfo(props) {
 
 
                                 <div>
-                                    <h1 className="text-center mt-4 mb-4 pb-4">
+                                    <h1 className="text-center mt-4 mb-4 pb-md-3 pb-2">
                                         Smile Gallery
                                         {/*{content.headliner}*/}
                                     </h1>

@@ -10,7 +10,6 @@ import sanityClient from "../client";
 import PortableText from "@sanity/block-content-to-react";
 import styled from "styled-components";
 import {SubHeaderCopy} from "./UXElements/UiModules";
-import FaqAccordion from "./FAQAccordion";
 
 
 const ButtonThing = (props) => (
@@ -100,8 +99,8 @@ function ServicesOralSurgery(props) {
                                     </BreadcrumbItem>
                                 </Breadcrumb>
 
-                                <h1 className="text-center mt-4 mb-4 pb-4">{info.serviceName}</h1>
-                                <SubHeaderCopy className="text-center mt-4 mb-4" style = {{ width: "85%", margin: "0 auto"}}>
+                                <h1 className="text-center mt-4 mb-4 pb-md-3 pb-2">{info.serviceName}</h1>
+                                <SubHeaderCopy className="text-center" style = {{ width: "85%", margin: "0 auto"}}>
                                     <PortableText blocks={info.description}/>
                                 </SubHeaderCopy>
                             </>
@@ -171,7 +170,6 @@ function ServicesOralSurgery(props) {
 
                 }
 
-            <FaqAccordion/>
             <TestimonialSection/>
             <PreFooter/>
             <Footer/>

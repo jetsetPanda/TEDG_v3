@@ -95,7 +95,7 @@ const Footer = (props) => {
 
     return (
     <>
-        <Row className="mb-4 mt-5 pt-md-5">
+        <Row className="mb-4 mt-1 pt-md-1">
             <Col md={6} sm={12} className="px-0">
                 <Card className="bg-light text-dark" border="light" >
                     <Card.Img src={footerImage} alt="Card image" />

@@ -9,6 +9,30 @@ import sanityClient from "../client";
 import PortableText from "@sanity/block-content-to-react";
 import styled from "styled-components";
 import {SubHeaderCopy} from "./UXElements/UiModules";
+import smileVirtual from '../assets/images/smileVirtualMobile.png';
+import FAQAccordion from './FAQAccordion';
+
+const StyledConsultImage = styled(Image)`
+  padding-right: 75px;
+  @media (max-width: 768px) {
+    padding-right: 15px;
+  }
+
+  
+`
+
+const StyledImg = styled(Image)`
+  border-radius: 5px;
+`
+
+const RightCol = styled(Col)`
+
+  
+  @media (max-width: 768px) {
+    padding: 0 12px;
+    
+  }
+`
 
 const ButtonThing = (props) => (
     <div className="text-left">
@@ -97,8 +121,8 @@ function ServicesCosmetic(props) {
                     if (info.serviceName === 'Cosmetic Dentistry') {
                         return (
                             <>
-                                <h1 className="text-center mt-4 mb-4 pb-4">{info.serviceName}</h1>
-                                <SubHeaderCopy className="text-center mt-4 mb-4" style = {{ width: "85%", margin: "0 auto"}}>
+                                <h1 className="text-center mt-4 mb-4 pb-md-3 pb-2">{info.serviceName}</h1>
+                                <SubHeaderCopy className="text-center" style = {{ width: "85%", margin: "0 auto"}}>
                                     <PortableText blocks={info.description}/>
                                 </SubHeaderCopy>
                             </>
@@ -107,7 +131,22 @@ function ServicesCosmetic(props) {
                     }
                 })}
 
+<Row className="mt-5">
+                        <Col md={5}>
+                            <Stack gap={1} className="mb-5 mb-md-3">
 
+                                <a href="https://app.smilevirtual.com/Dr-Todd-Goldstein/sign-up" target="_blank">
+                                    <StyledConsultImage src={smileVirtual} fluid />
+                                </a>
+                            </Stack>
+
+
+                        </Col>
+                        <RightCol md={7} className="pr-3 py-3 py-md-0">
+                            <h2>SMILE VIRTUAL CONSULT</h2><br/>
+                           <p>At The Exchange Dental Group, we help patients achieve a bright, beautiful, life-changing smile with our Smile Makeover. We offer a simple and easy 3-step process to get all of your questions answered virtually by Dr. Goldstein. Request your free virtual consultation and get in touch with our team of dental experts. Get the smile you’ve been waiting for and build your confidence today!</p>
+                        </RightCol>
+                    </Row>
                 {serviceOfferings && serviceOfferings.map((content, index) => {
                     console.log("service content: ", content);
 
@@ -167,7 +206,8 @@ function ServicesCosmetic(props) {
                     })
 
                 }
-
+                                   
+        <FAQAccordion/>
             <TestimonialSection/>
             <PreFooter/>
             <Footer/>

@@ -112,23 +112,28 @@ function InsurancePage(props) {
                                     </BreadcrumbItem>
                                 </LinkContainer>
                                     <BreadcrumbItem active>
-                                        Insurance
+                                    Insurance &amp; Financial Information
                                         {/*{content.pageName}*/}
                                     </BreadcrumbItem>
                                 </Breadcrumb>
 
-
+                                <section>
+                                    <h1 className="text-center mt-4 mb-4 pb-md-3 pb-2">
+                                    Insurance &amp; Financial Information
+                                        {/*{content.headliner}*/}
+                                    </h1>
+                                </section>
                             <div>
-                                <StyledH1 className="text-left mt-md-5">
-                                    Accepted Insurance
+                                <h2>
+                                    <strong>Accepted Insurance</strong>
                                     {/*{content.headliner}*/}
-                                </StyledH1>
+                                </h2>
                             </div>
 
-                            <div className="text-left mt-5">
+                            <div className="text-left mt-4 mb-4 mb-md-1">
                                 <h5 >
-One of the many aspects of our practice that has endeared us to our patients over the years is that while we are a modern, beautiful, and inviting dental practice, we accept a multitude of PPO insurance plans.
-                                </h5>
+                            One of the many aspects of our practice that has endeared us to our patients over the years is that while we are a modern, beautiful, and inviting dental practice, we accept a multitude of PPO insurance plans. <br/><br/> <strong>Please note that we are not affiliated with any HMO or DMO plans.</strong></h5>
+                                
                             </div>
 
                             <Row className="mt-md-1">
@@ -215,18 +220,23 @@ One of the many aspects of our practice that has endeared us to our patients ove
                                     </h5>
 
                                 </Col>
-                                <Col md={12} className="mt-md-5">
+                            {/*}    <Col md={12} className="mt-md-5">
                                     <strong>
-                                        <h5>Please note that we are not affiliated with any HMO or DMO plans.</h5>
+                                        <h5><strong>Please note that we are not affiliated with any HMO or DMO plans.</strong></h5>
                                     </strong>
-                                </Col>
+                    </Col>*/}
 
                             </Row>
 
                             <div>
-                                <StyledH1 className="text-left mt-md-5 pt-md-5">
-                                    Payment Options
-                                </StyledH1>
+                                <h2 className="mt-md-5 mt-5">
+                                    <strong>Payment Options</strong>
+                                </h2>
+                            </div>
+                            <div className="text-left mt-4">
+                                <h5 >
+                            We accept the following payment options:</h5>
+                                
                             </div>
                             <Row>
                                 <Col md={12} className="mt-md-5">
@@ -247,7 +257,7 @@ One of the many aspects of our practice that has endeared us to our patients ove
                                         <Card border="light" style={{ width: '10rem' }} className="text-center">
                                           <Card.Img variant="top" src={card0} />
                                           <Card.Body>
-                                            <Card.Title>Debit</Card.Title>
+                                            <Card.Title>FSA & HSA</Card.Title>
                                           </Card.Body>
                                         </Card>
                                         <Card border="light" style={{ width: '10rem' }} className="text-center">
@@ -256,16 +266,16 @@ One of the many aspects of our practice that has endeared us to our patients ove
                                             <Card.Title>Visa</Card.Title>
                                           </Card.Body>
                                         </Card>
-                                        <Card border="light" style={{ width: '10rem' }} className="text-center">
-                                          <Card.Img variant="top" src={card2} />
-                                          <Card.Body>
-                                            <Card.Title>Discover</Card.Title>
-                                          </Card.Body>
-                                        </Card>
                                         <Card border="light" style={{ width: '10rem'}} className="text-center">
                                           <Card.Img variant="top" src={card3} />
                                           <Card.Body>
                                             <Card.Title>MasterCard</Card.Title>
+                                          </Card.Body>
+                                        </Card>
+                                        <Card border="light" style={{ width: '10rem' }} className="text-center">
+                                          <Card.Img variant="top" src={card2} />
+                                          <Card.Body>
+                                            <Card.Title>Discover</Card.Title>
                                           </Card.Body>
                                         </Card>
                                         <Card border="light" style={{ width: '10rem' }} className="text-center">
@@ -280,12 +290,12 @@ One of the many aspects of our practice that has endeared us to our patients ove
 
 
                             <div>
-                                <StyledH1 className="text-left mt-md-5">
-                                    Financing Options
-                                </StyledH1>
+                                <h2 className="mt-md-4 mt-4">
+                                    <strong>Financing Options</strong>
+                                </h2>
                             </div>
 
-                            <Row className="text-left mt-5">
+                            <Row className="text-left mt-4">
                                 <Col md={6}>
                                     <div className="text-start pt-md-3">
                                         <h5>

@@ -43,7 +43,7 @@ const StyledRow = styled(Row)`
 
 function TestimonialSection(props) {
     return (
-        <div className="my-3 my-md-5" style={{backgroundImage: `url(${homeBanner})`}}>
+        <div className="mt-5" style={{backgroundImage: `url(${homeBanner})`}}>
             <h1 className="text-center my-4 mt-md-5 mb-md-0">Testimonials</h1>
             <StyledRow className="py-md-5">
                 <Container className="d-flex  justify-content-center">

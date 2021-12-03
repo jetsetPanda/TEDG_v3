@@ -127,13 +127,13 @@ function OurTechnology(props) {
 
 
                             <section>
-                                <h1 className="text-center mt-4 mb-4 pb-4">
+                                <h1 className="text-center mt-4 mb-4 pb-md-3 pb-2">
                                     {content.headliner}
                                 </h1>
 
                             </section>
                             <Div85WidthCentered>
-                                <SubHeaderCopy className="text-center" style = {{ paddingBottom: "50px"}}>
+                                <SubHeaderCopy className="text-center">
                                     <PortableText blocks={content.subHeadline}/>
                                 </SubHeaderCopy>
                             </Div85WidthCentered>
@@ -192,7 +192,7 @@ function OurTechnology(props) {
 
                                 return (
                                     <span key={index}>
-                            <Row className="mt-5 justify-content-between">
+                            <Row className="mt-5 pt-2 pt-md-4 justify-content-between">
                     {content.techImage
                         ? <>
                             <Col sm={12} md={5} className="px-3">
