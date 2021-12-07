@@ -10,6 +10,7 @@ import sanityClient from "../client";
 import PortableText from "@sanity/block-content-to-react";
 import styled from "styled-components";
 import {SubHeaderCopy} from "./UXElements/UiModules";
+import OsAccordion from './OsAccordion';
 
 
 const ButtonThing = (props) => (
@@ -169,7 +170,7 @@ function ServicesOralSurgery(props) {
                     })
 
                 }
-
+            <OsAccordion/>
             <TestimonialSection/>
             <PreFooter/>
             <Footer/>

@@ -11,6 +11,7 @@ import PortableText from "@sanity/block-content-to-react";
 import styled from "styled-components";
 import {SubHeaderCopy} from "./UXElements/UiModules";
 import FaqAccordion from "./FAQAccordion";
+import OrthoAccordion from './OrthoAccordion';
 
 
 const ButtonThing = (props) => (
@@ -171,7 +172,7 @@ function ServicesOrthodontics(props) {
 
                 }
 
-
+            <OrthoAccordion/>
             <TestimonialSection/>
             <PreFooter/>
             <Footer/>

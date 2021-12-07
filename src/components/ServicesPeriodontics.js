@@ -10,6 +10,7 @@ import sanityClient from "../client";
 import PortableText from "@sanity/block-content-to-react";
 import styled from "styled-components";
 import {SubHeaderCopy} from "./UXElements/UiModules";
+import PerioAccordion from './PerioAccordion';
 
 
 
@@ -171,7 +172,7 @@ function ServicesPeriodontics(props) {
 
                 }
 
-
+            <PerioAccordion/>
 
             <TestimonialSection/>
             <PreFooter/>
