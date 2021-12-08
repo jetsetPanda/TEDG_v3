@@ -114,7 +114,7 @@ function About(props) {
                                         return (
                                             <span key={index}>
                                                 <StyledLinkContainer to={`/services/${list.serviceLink}`}>
-                                                     <StyledCard>
+                                                     <StyledCard  border="light">
                                                         <Card.Img variant="top" src={list.serviceImage.asset.url} />
                                                         <Card.Body className="text-center">
                                                             <StyledCardTitle className="text-center">{list.serviceName}</StyledCardTitle>

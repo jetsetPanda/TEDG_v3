@@ -87,18 +87,20 @@ const StyledImage = styled(Image)`
   width: 300px;
   height: 300px;
   margin: 10px auto;
-  box-shadow: #333333 2px 2px 8px;
+  box-shadow: #5d5d5d 2px 2px 8px;
   transition: .3s ease;
+
   &:hover {
     cursor: pointer;
-    box-shadow: #4b769a -1px 1px 10px;
+    box-shadow: #5d5d5d -1px 1px 10px;
     transition: .3s ease;
   }
+
   @media (max-width: 768px) {
     width: 250px;
     height: 250px;
   }
-  
+
 `
 
 const StyledSmile = styled(Image)`
