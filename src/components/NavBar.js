@@ -4,6 +4,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import styled from 'styled-components';
 
 import logo from "../assets/images/logosvg.svg";
+import mobilelogo from '../assets/images/logo-final.png';
 import {Link} from "react-router-dom";
 
 const MenuDiv = styled(Nav)`
@@ -40,7 +41,21 @@ const NavButtonLink = styled.a`
   @media (max-width: 768px) {
     margin: 2px auto 2px 1px !important;
   }
+`
 
+const DesktopLogo = styled.img`
+  display: block !important;
+  
+  @media (max-width: 768px) {
+    display: none !important;
+  }
+`
+
+const MobileLogo = styled.img`
+  display: none !important;
+  @media (max-width: 768px) {
+    display: block !important;
+  }
 `
 
 const NavBar = () => {
@@ -50,8 +65,16 @@ const NavBar = () => {
             <Container>
                 <LinkContainer to="/">
                     <StyledNavBrand href="#home">
-                        <img
+                        <DesktopLogo
+                            className="d-none"
                             src={logo}
+                            width="100%"
+                            className="d-inline-block align-top"
+                            alt="TEDG logo"
+                        />
+                        <MobileLogo
+                            className="d-none"
+                            src={mobilelogo}
                             width="100%"
                             className="d-inline-block align-top"
                             alt="TEDG logo"
