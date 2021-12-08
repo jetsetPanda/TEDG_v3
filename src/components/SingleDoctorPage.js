@@ -100,7 +100,6 @@ function SingleDoctorPage(props) {
 
                                     <Col className="mt-5 mt-md-2 px-3 px-md-5" md={8} sm={12}>
 
-
                                         <p className="text-center text-md-start">
                                             <PortableText blocks={person.teamMemberBio}/>
                                         </p>
