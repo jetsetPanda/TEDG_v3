@@ -66,18 +66,16 @@ const NavBar = () => {
                 <LinkContainer to="/">
                     <StyledNavBrand href="#home">
                         <DesktopLogo
-                            className="d-none"
                             src={logo}
                             width="100%"
                             className="d-inline-block align-top"
-                            alt="TEDG logo"
+                            alt="TEDG logo desktop"
                         />
                         <MobileLogo
-                            className="d-none"
                             src={mobilelogo}
-                            width="100%"
+                            width="250px"
                             className="d-inline-block align-top"
-                            alt="TEDG logo"
+                            alt="TEDG logo mobile"
                         />
                     </StyledNavBrand>
                 </LinkContainer>
