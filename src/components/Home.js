@@ -9,7 +9,7 @@ import homeBanner from '../assets/images/hero-39-years.jpg';
 import cardSample from '../assets/images/card-sample2x.png';
 import igLogo from '../assets/images/instagramLogo.png';
 import fbLogo from '../assets/images/facebookLogo.png';
-import ig1 from '../assets/images/ig1.jpg';
+import ig1 from '../assets/images/igcase3.jpg';
 import ig2 from '../assets/images/ig2.jpg';
 import ig3 from '../assets/images/ig3.jpg';
 import ig4 from '../assets/images/ig4.jpg';
