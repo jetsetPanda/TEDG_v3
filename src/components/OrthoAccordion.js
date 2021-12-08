@@ -1,6 +1,8 @@
 import React from 'react';
 import {Accordion, Row, Col} from "react-bootstrap";
 import styled from "styled-components";
+import PDFLink from "./UXElements/PDFLink";
+import ortho from '../files/Post_Op_Ortho.pdf';
 
 
 const StyledAccHeader = styled(Accordion.Item)`
@@ -15,9 +17,13 @@ const OrthoAccordion = (props) => (
         <Accordion>
         <StyledAccHeader eventKey="0">
                 <Accordion.Header><strong>The "Official" No-Eats List</strong></Accordion.Header>
+
                 <Accordion.Body>
+
                     <h4>A List of Food to be Avoided During Your Orthodontic Treatment</h4>
-                    <br/>
+                    <h6 className="py-3">
+                        <PDFLink pdfFile={ortho} cta="Download PDF"/> 
+                    </h6>
                     <Row>
                     <Col>
                     <ul>
