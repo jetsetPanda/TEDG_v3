@@ -1,7 +1,9 @@
 import React from 'react';
 import {Accordion, Row, Col} from "react-bootstrap";
 import styled from "styled-components";
-
+import PDFLink from "./UXElements/PDFLink";
+import zoompre from '../files/ZOOM_Pre_Op.pdf';
+import zoompost from '../files/ZOOM_Post_Op.pdf';
 
 const StyledAccHeader = styled(Accordion.Item)`
   background: #ffffff;
@@ -17,6 +19,9 @@ const FAQAccordion = (props) => (
                 <Accordion.Header><strong>ZOOM! In-Office Teeth Whitening</strong></Accordion.Header>
                 <Accordion.Body>
                 <h3>Pre-Op Information</h3>
+                <h6 className="py-3">
+                        <PDFLink pdfFile={zoompre} cta="Download PDF"/> 
+                    </h6>
                 <br/>ZOOM! In-Office Teeth Whitening is a procedure designed to lighten the color of teeth using a combination of a hydrogen peroxide gel and a specially designed light to produce the maximum whitening results in the shortest time possible. Tooth shades will be assessed before and after. ZOOM! results will vary from person to person and can regress due to a variety of circumstances. Almost all natural teeth can benefit from ZOOM! whitening, and a significant amount of whitening can be achieved in most cases. ZOOM! whitening is not intended to lighten artificial teeth, caps, crowns, veneers, porcelain, composite, or other restorative materials. People with darkly stained yellow or yellow-brown teeth frequently achieve better results than those with gray or bluish-gray teeth. Teeth with multiple colorations, bands, splotches, or spots due to tetracycline use or fluorosis often do not whiten as well and may need multiple treatments or may not lighten at all. ZOOM! is not recommended for pregnant or lactating women. 
                 <br/><br/><strong>
                 It is recommended that one week prior to whitening, patients should use a desensitizing toothpaste such as sensodyne and take Ibuprofen the day oftheir appointment to help reduce sensitivity. </strong>
@@ -27,6 +32,9 @@ const FAQAccordion = (props) => (
                 <br/><br/><br/><br/>
                 
                 <h3>Post-Op Information</h3>
+                <h6 className="py-3">
+                        <PDFLink pdfFile={zoompost} cta="Download PDF"/> 
+                    </h6>
                 Congratulations on completing the ZOOM! Whitening process! Now that your teeth are significantly whiter, there are a few guidelines            to help maintain the look of your new smile. The teeth have a protective layer called the protein pellicule. This layer contains the surface dental             stains and is removed during ZOOM! treatments. It takes 12-24 hours for the barrier to fully develop again. First, use the custom trays at home with        the provided supplemental sealer/whitener as indicated during the appointment. During this period, we also ask that you avoid certain staining foods             and products. 
                 <br/><br/>
                 Below is a list of what you <strong>CAN</strong> and <strong>CANNOT</strong> eat or drink after the procedure. You do not want to eat any food with color (anything that would stain a white shirt) for 24 hours after the treatment.
@@ -66,6 +74,7 @@ const FAQAccordion = (props) => (
  
                 </Accordion.Body>
             </StyledAccHeader>
+            
 
        {/*     <StyledAccHeader eventKey="1">
                 <Accordion.Header>Post-Op Information</Accordion.Header>
