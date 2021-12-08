@@ -12,9 +12,14 @@ const StyledImg = styled(Image)`
   border-radius: 50%;
   box-shadow: 0 5px 25px 0 rgb(22 121 171 / 20%);
   color: rgb(22, 121, 171);
-
 `
 
+const StyledDoctorColumn = styled(Col)`
+  @media (min-width: 769px) {
+    padding: 0px 50px 0px 90px !important;
+  }
+
+`
 
 function SingleDoctorPage(props) {
     console.log("DOCTOR PROPS", props);
@@ -98,12 +103,12 @@ function SingleDoctorPage(props) {
                                         />
                                     </Col>
 
-                                    <Col className="mt-5 mt-md-2 px-3 px-md-5" md={8} sm={12}>
+                                    <StyledDoctorColumn className="mt-5 mt-md-2 px-3" md={8} sm={12}>
 
                                         <p className="text-center text-md-start">
                                             <PortableText blocks={person.teamMemberBio}/>
                                         </p>
-                                    </Col>
+                                    </StyledDoctorColumn>
                                 </Row>
 
                                 {currentSlug === 'dr-todd-goldstein' &&
