@@ -15,6 +15,7 @@ const StyledImg = styled(Image)`
 
 `
 
+
 function SingleDoctorPage(props) {
     console.log("DOCTOR PROPS", props);
 
@@ -96,7 +97,9 @@ function SingleDoctorPage(props) {
                                             fluid
                                         />
                                     </Col>
-                                    <Col className="mt-4 mt-md-0 px-3 px-md-5" md={8} sm={12}>
+
+                                    <Col className="mt-5 mt-md-2 px-3 px-md-5" md={8} sm={12}>
+
                                         <p className="text-center text-md-start">
                                             <PortableText blocks={person.teamMemberBio}/>
                                         </p>
