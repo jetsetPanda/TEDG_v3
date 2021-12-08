@@ -80,3 +80,7 @@ export const StyledCardTitle =styled(Card.Title)`
     font-size: 15px;
   }
 `
+
+export const UnstyledLink = styled.a`
+  text-decoration: none;
+`

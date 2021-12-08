@@ -1,7 +1,8 @@
 import React from 'react';
 import {Accordion, Row, Col} from "react-bootstrap";
 import styled from "styled-components";
-
+import PDFLink from "./UXElements/PDFLink";
+import pdf from '../files/Post Op Perio Surgery.pdf';
 
 const StyledAccHeader = styled(Accordion.Item)`
   background: #ffffff;
@@ -115,7 +116,12 @@ const PerioAccordion = (props) => (
 
             <StyledAccHeader eventKey="2">
                 <Accordion.Header><strong>Implant &amp; Bone Graft</strong></Accordion.Header>
-                <Accordion.Body><h4>Post-Op Instructions</h4><br/>
+                <Accordion.Body><h4>Post-Op Instructions</h4>
+
+                    <h6 className="py-3">
+                        <PDFLink pdfFile={pdf} cta="Click Here To Download the Post Op Instructions Guide."/> (or put the rest of the copy here) the Post Op Instructions Guide.
+                    </h6>
+
                 <ol>
                 <li> <strong>DO NOT</strong> rinse today. Avoid extremely hot food and liquids. </li>
 <li> <strong>Medication: </strong>
