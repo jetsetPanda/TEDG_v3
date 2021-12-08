@@ -1,6 +1,9 @@
 import React from 'react';
 import {Accordion, Row, Col} from "react-bootstrap";
 import styled from "styled-components";
+import PDFLink from "./UXElements/PDFLink";
+import implantbg from '../files/Post_Op_Implant_Bone_Graft.pdf';
+import tissuegraft from '../files/Post_Op_Tissue_Graft.pdf';
 
 
 const StyledAccHeader = styled(Accordion.Item)`
@@ -17,7 +20,10 @@ const OsAccordion = (props) => (
 
             <StyledAccHeader eventKey="0">
                 <Accordion.Header><strong>Implant &amp; Bone Graft</strong></Accordion.Header>
-                <Accordion.Body><h4>Post-Op Instructions</h4><br/>
+                <Accordion.Body><h4>Post-Op Instructions</h4>
+                <h6 className="py-3">
+                        <PDFLink pdfFile={implantbg} cta="Download PDF"/> 
+                    </h6>
                 <ol>
                 <li> <strong>DO NOT</strong> rinse today. Avoid extremely hot food and liquids. </li>
 <li> <strong>Medication: </strong>
@@ -48,7 +54,10 @@ const OsAccordion = (props) => (
 
             <StyledAccHeader eventKey="1">
                 <Accordion.Header><strong>Tissue Graft</strong></Accordion.Header>
-                <Accordion.Body><h4>Post-Op Instructions</h4><br/>
+                <Accordion.Body><h4>Post-Op Instructions</h4>
+                <h6 className="py-3">
+                        <PDFLink pdfFile={tissuegraft} cta="Download PDF"/> 
+                    </h6>
                 <ol>
                 <li> Do not eat anything or drink hot fluids until the numbness has worn off to avoid injury from accidental biting or burning.  </li>
                 <li> No vigorous rinsing, drinking through a straw, or spitting for 3 days so the blood clot will not be disturbed. </li>
