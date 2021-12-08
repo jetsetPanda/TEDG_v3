@@ -2,7 +2,10 @@ import React from 'react';
 import {Accordion, Row, Col} from "react-bootstrap";
 import styled from "styled-components";
 import PDFLink from "./UXElements/PDFLink";
-import pdf from '../files/Post Op Perio Surgery.pdf';
+import implantbg from '../files/Post_Op_Implant_Bone_Graft.pdf';
+import tissuegraft from '../files/Post_Op_Tissue_Graft.pdf';
+import lanap from '../files/Post_Op_LANAP.pdf';
+import periogeneral from '../files/Post_Op_Perio.pdf';
 
 const StyledAccHeader = styled(Accordion.Item)`
   background: #ffffff;
@@ -18,6 +21,9 @@ const PerioAccordion = (props) => (
                 <Accordion.Header><strong>LANAP</strong></Accordion.Header>
                 <Accordion.Body>
                 <h3>Post-Op Diet Instructions</h3>
+                <h6 className="py-3">
+                        <PDFLink pdfFile={lanap} cta="Download PDF"/> 
+                    </h6>
                 <ul>
                     <li>Following Laser Therapy, do not drink through a straw, spit, or rinse for 24 hours as this creates a vacuum in your mouth that can disturb the blood clots that form and act as a band-aid to help stop bleeding.</li>
                     
@@ -68,7 +74,10 @@ const PerioAccordion = (props) => (
 
             <StyledAccHeader eventKey="1">
                 <Accordion.Header><strong>Periodontal Surgery</strong></Accordion.Header>
-                <Accordion.Body><h4>Post-Op Instructions</h4><br/>
+                <Accordion.Body><h4>Post-Op Instructions</h4>
+                <h6 className="py-3">
+                        <PDFLink pdfFile={periogeneral} cta="Download PDF"/> 
+                    </h6>
                 <ol>
                 <li>Do not eat anything or drink hot fluids until the numbness has worn off to avoid injury from
     accidental biting or burning.</li>
@@ -116,12 +125,12 @@ const PerioAccordion = (props) => (
 
             <StyledAccHeader eventKey="2">
                 <Accordion.Header><strong>Implant &amp; Bone Graft</strong></Accordion.Header>
-                <Accordion.Body><h4>Post-Op Instructions</h4>
+                <Accordion.Body>
 
+                    <h4>Post-Op Instructions</h4>                 
                     <h6 className="py-3">
-                        <PDFLink pdfFile={pdf} cta="Click Here To Download the Post Op Instructions Guide."/> (or put the rest of the copy here) the Post Op Instructions Guide.
+                        <PDFLink pdfFile={implantbg} cta="Download PDF"/> 
                     </h6>
-
                 <ol>
                 <li> <strong>DO NOT</strong> rinse today. Avoid extremely hot food and liquids. </li>
 <li> <strong>Medication: </strong>
@@ -152,7 +161,10 @@ const PerioAccordion = (props) => (
 
             <StyledAccHeader eventKey="3">
                 <Accordion.Header><strong>Tissue Graft</strong></Accordion.Header>
-                <Accordion.Body><h4>Post-Op Instructions</h4><br/>
+                <Accordion.Body><h4>Post-Op Instructions</h4>
+                <h6 className="py-3">
+                        <PDFLink pdfFile={tissuegraft} cta="Download PDF"/> 
+                    </h6>
                 <ol>
                 <li> Do not eat anything or drink hot fluids until the numbness has worn off to avoid injury from accidental biting or burning.  </li>
                 <li> No vigorous rinsing, drinking through a straw, or spitting for 3 days so the blood clot will not be disturbed. </li>

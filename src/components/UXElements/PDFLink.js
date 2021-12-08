@@ -4,7 +4,7 @@ import {Button} from "react-bootstrap";
 
 const PDFLink = (props) => (
         <UnstyledLink href={props.pdfFile} download>
-                <Button variant="outline-success">{props.cta}</Button>
+                <Button variant="outline-primary">{props.cta}</Button>
         </UnstyledLink>
 );
 
