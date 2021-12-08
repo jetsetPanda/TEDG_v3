@@ -3,7 +3,6 @@ import {Accordion, Row, Col} from "react-bootstrap";
 import styled from "styled-components";
 import PDFLink from "./UXElements/PDFLink";
 import implantbg from '../files/Post_Op_Implant_Bone_Graft.pdf';
-import tissuegraft from '../files/Post_Op_Tissue_Graft.pdf';
 
 
 const StyledAccHeader = styled(Accordion.Item)`
@@ -52,46 +51,7 @@ const OsAccordion = (props) => (
             </StyledAccHeader>
 
 
-            <StyledAccHeader eventKey="1">
-                <Accordion.Header><strong>Tissue Graft</strong></Accordion.Header>
-                <Accordion.Body><h4>Post-Op Instructions</h4>
-                <h6 className="py-3">
-                        <PDFLink pdfFile={tissuegraft} cta="Download PDF"/> 
-                    </h6>
-                <ol>
-                <li> Do not eat anything or drink hot fluids until the numbness has worn off to avoid injury from accidental biting or burning.  </li>
-                <li> No vigorous rinsing, drinking through a straw, or spitting for 3 days so the blood clot will not be disturbed. </li>
-                <li> Today, rest as much as possible with your head elevated. No vigorous exercising for 3 days.  </li>
-                <li> Slight bleeding is normal for several hours following surgery. If persistent bleeding occurs,place a wet tea bag on the involved area and apply direct pressure for 15-20 continuous
-    minutes. Repeat as necessary.  </li>
-                <li> Do not pull back the lips or cheeks to look at the area as this can disturb the surgical site and
-    increase complications.  </li>
-                <li> Do not eat by the surgical area for 1 week. Soft nutritious foods will be necessary for the first
-    few days. Avoid acidic, spicy, hot (in temperature), and crunchy foods. Drink plenty of fluids.  </li>
-<li> Do not use tobacco or drink alcohol as these will delay healing.  </li>
-<li> Swelling can be lessened by placing a cold compress on the face and alternating on and off
-    for 20 minutes during the first 72 hours.  </li>
-<li> Take all medications the doctor has prescribed for you according to directions.  </li>
-<li> Starting 24 hours after surgery, gently rinse your mouth with ¼ teaspoon of salt in 8 ounces
-      of warm water 3 times a day.  </li>
-<li> After periodontal treatment, proper oral hygiene must be maintained in the surgical area to
-     aid in healing. After 1 week, carefully brush the teeth while avoiding the gums in the area of
-     surgery. The gums and lower parts of the teeth should be cleaned with a dampened piece of
-     cotton. Gentle flossing can be resumed in 2-3 weeks. Regular brushing can be resumed after
-     3 weeks.  </li>
-<li> After periodontal surgery, sensitivity of the teeth may occur. This is remedied by maintaining
-      proper oral hygiene and by the use of specially formulated sensitive toothpaste, such as
-      Sensodyne. </li>
-<li> If a periodontal pack has been placed in your mouth, do not remove it. The pack should
-      remain in place for 1 week. If the pack comes off before this time, it is not an emergency, but
-      the doctor should be notified.  </li>
-<li> Return for your appointment to have the periodontal pack and any sutures removed. If the
-      sutures loosen or come out within 3 days, please inform the office.  </li>
-<li> If you have questions or concerns, please call our office at <a href="tel:212-422-9229">(212) 422-9229</a>. </li>
-</ol>
-                </Accordion.Body>
-            </StyledAccHeader>
-
+ 
         </Accordion>
     </div>
 
