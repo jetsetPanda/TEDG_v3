@@ -2,10 +2,12 @@ import React from 'react';
 import {Accordion, Row, Col} from "react-bootstrap";
 import styled from "styled-components";
 import PDFLink from "./UXElements/PDFLink";
-import implantbg from '../files/Post_Op_Implant_Bone_Graft.pdf';
+import implantbg from '../files/Song-Post-Op-Implant-Bone-Graft.pdf';
 import tissuegraft from '../files/Song-Post-Op-Tissue-Graft.pdf';
-import lanap from '../files/Lanap-Post-Op.pdf';
-import periogeneral from '../files/Song-Post-Op-Perio-Surgery.pdf';
+import lanap from '../files/Post-Op-LANAP.pdf';
+import periogeneral from '../files/Song-Post-Op-Perio.pdf';
+import extractionssong from '../files/Song-Post-Op-Ext.pdf';
+import crownlength from '../files/Post-Op-Crown-Lengthening.pdf';
 
 const StyledAccHeader = styled(Accordion.Item)`
   background: #ffffff;
@@ -28,6 +30,55 @@ const PerioAccordion = (props) => (
                 </Accordion.Body>
             </StyledAccHeader>
 
+            <StyledAccHeader eventKey="1">
+                <Accordion.Header><strong>PERIODONTAL SURGERY</strong></Accordion.Header>
+                <Accordion.Body>
+                <h6 className="py-3">
+                        <PDFLink pdfFile={periogeneral} cta="Post-Operative Instructions PDF"/> 
+                    </h6>
+
+                </Accordion.Body>
+            </StyledAccHeader>
+
+            <StyledAccHeader eventKey="2">
+                <Accordion.Header><strong>CROWN LENGTHENING</strong></Accordion.Header>
+                <Accordion.Body>
+                <h6 className="py-3">
+                        <PDFLink pdfFile={crownlength} cta="Post-Operative Instructions PDF"/> 
+                    </h6>
+
+                </Accordion.Body>
+            </StyledAccHeader>
+
+            <StyledAccHeader eventKey="3">
+                <Accordion.Header><strong>EXTRACTIONS</strong></Accordion.Header>
+                <Accordion.Body>
+                <h6 className="py-3">
+                        <PDFLink pdfFile={extractionssong} cta="Post-Operative Instructions PDF"/> 
+                    </h6>
+
+                </Accordion.Body>
+            </StyledAccHeader>
+
+            <StyledAccHeader eventKey="4">
+                <Accordion.Header><strong>IMPLANT & BONE GRAFT</strong></Accordion.Header>
+                <Accordion.Body>
+                <h6 className="py-3">
+                        <PDFLink pdfFile={implantbg} cta="Post-Operative Instructions PDF"/> 
+                    </h6>
+
+                </Accordion.Body>
+            </StyledAccHeader>
+
+            <StyledAccHeader eventKey="4">
+                <Accordion.Header><strong>CONNECTIVE TISSUE GRAFT</strong></Accordion.Header>
+                <Accordion.Body>
+                <h6 className="py-3">
+                        <PDFLink pdfFile={tissuegraft} cta="Post-Operative Instructions PDF"/> 
+                    </h6>
+
+                </Accordion.Body>
+            </StyledAccHeader>
 
         </Accordion>
 

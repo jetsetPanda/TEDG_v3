@@ -2,7 +2,8 @@ import React from 'react';
 import {Accordion, Row, Col} from "react-bootstrap";
 import styled from "styled-components";
 import PDFLink from "./UXElements/PDFLink";
-import implantas from '../files/Shanin-Post-Op-Implant.pdf';
+import implantas from '../files/Shanin-Post-Op-Implant-Bone-Graft.pdf';
+import implantplacement from '../files/Shanin-Post-Op-Implant.pdf';
 import ext from '../files/Shanin-Post-Op-Ext.pdf';
 
 
@@ -97,8 +98,19 @@ const OsAccordion = (props) => (
                 </Accordion.Body>
             </StyledAccHeader>
 
-            <StyledAccHeader eventKey="1">
+
+            <StyledAccHeader eventKey="2">
                 <Accordion.Header><strong>IMPLANT PLACEMENT</strong></Accordion.Header>
+                <Accordion.Body>
+                <h6 className="py-3">
+                        <PDFLink pdfFile={implantplacement} cta="Post-Operative Instructions PDF"/> 
+                    </h6>
+
+                </Accordion.Body>
+            </StyledAccHeader>
+
+            <StyledAccHeader eventKey="1">
+                <Accordion.Header><strong>IMPLANT & BONE GRAFT</strong></Accordion.Header>
                 <Accordion.Body>
                 <h6 className="py-3">
                         <PDFLink pdfFile={implantas} cta="Post-Operative Instructions PDF"/> 
