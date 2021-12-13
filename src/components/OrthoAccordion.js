@@ -2,7 +2,7 @@ import React from 'react';
 import {Accordion, Row, Col} from "react-bootstrap";
 import styled from "styled-components";
 import PDFLink from "./UXElements/PDFLink";
-import ortho from '../files/Post_Op_Ortho.pdf';
+import ortho from '../files/Ortho-Post-Op.pdf';
 
 
 const StyledAccHeader = styled(Accordion.Item)`
@@ -16,15 +16,15 @@ const OrthoAccordion = (props) => (
         <h2 className="my-md-5 text-center mb-4 mt-4">Patient Resources</h2>
         <Accordion>
         <StyledAccHeader eventKey="0">
-                <Accordion.Header><strong>The "Official" No-Eats List</strong></Accordion.Header>
+               <Accordion.Header><strong>BRACES</strong></Accordion.Header>
 
                 <Accordion.Body>
 
-                    <h4>A List of Food to be Avoided During Your Orthodontic Treatment</h4>
+                {/*    <h4>A List of Food to be Avoided During Your Orthodontic Treatment</h4> */}
                     <h6 className="py-3">
-                        <PDFLink pdfFile={ortho} cta="Download PDF"/> 
+                        <PDFLink pdfFile={ortho} cta="The Official No-Eats List PDF"/> 
                     </h6>
-                    <Row>
+                 {/*    <Row>
                     <Col>
                     <ul>
                     <li><strong>GUM</strong></li>
@@ -92,7 +92,7 @@ const OrthoAccordion = (props) => (
                     In addition to all of the above comes the group called <strong>SWEETS</strong>. Sweets can be eaten but it is very important that you brush or rinse your mouth <strong>immediately</strong> after eating them. The sweets will not cause damage to your braces, but they will cause damage to your teeth. This is how white spots form on your teeth while wearing braces.<br/><br/>
 Should you have a brace come loose before an appointment, please call the same day that you find out that it is broken. We are not going to be upset with you, but we do want to make sure that we have enough time to fix it during your regularly scheduled appointment. Some broken brackets can wait to be fixed while others need to be repaired as soon as possible. <br/><br/>
 The last thing that we would like you to know is that when you <strong>bend your wires or knock a brace loose</strong>, you run the risk of making your <strong>treatment take longer</strong>. If you chew gum, you probably won’t break anything but it will make it more difficult for the teeth to move past each other which means the <strong>treatment will take longer</strong>. If you cheat, you will only be cheating yourself in the end. Just remember these things from the start and you should finish your treatment on time. <br/><br/>
-
+*/}
                 </Accordion.Body>
             </StyledAccHeader>
 
