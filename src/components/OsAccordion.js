@@ -3,6 +3,7 @@ import {Accordion, Row, Col} from "react-bootstrap";
 import styled from "styled-components";
 import PDFLink from "./UXElements/PDFLink";
 import implantas from '../files/Shanin-Post-Op-Implant-Bone-Graft.pdf';
+import implantplacement from '../files/Shanin-Post-Op-Implant.pdf';
 import ext from '../files/Shanin-Post-Op-Ext.pdf';
 
 
@@ -94,6 +95,17 @@ const OsAccordion = (props) => (
                 <strong>Bone Graft/ Membrane </strong><br/>
                 If a bone graft was placed, some of the excess bone fragments may come loose. This is not a cause of concern.  Please tell Dr. Fatehi about this occurrence at the post op. If a membrane was placed, it is even more important to avoid the surgical site.  It is recommended that you avoid excessive lip motion In the area. 
 */}
+                </Accordion.Body>
+            </StyledAccHeader>
+
+
+            <StyledAccHeader eventKey="2">
+                <Accordion.Header><strong>IMPLANT PLACEMENT</strong></Accordion.Header>
+                <Accordion.Body>
+                <h6 className="py-3">
+                        <PDFLink pdfFile={implantplacement} cta="Post-Operative Instructions PDF"/> 
+                    </h6>
+
                 </Accordion.Body>
             </StyledAccHeader>
 
