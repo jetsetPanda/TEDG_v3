@@ -16,7 +16,7 @@ const StyledImg = styled(Image)`
 
 const StyledDoctorColumn = styled(Col)`
   @media (min-width: 769px) {
-    padding: 0px 50px 0px 90px !important;
+    padding: 0px 0px 0px 90px !important;
   }
 
 `
