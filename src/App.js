@@ -34,7 +34,7 @@ function App() {
             <ScrollToTop>
                 <Switch>
                     <Route component={Home} path={'/'} exact />
-                    <Route component={Home} path={'/'} exact />
+                    <Route component={Home} path={'/home'} exact />
                     <Route component={About} path={'/about-us'} exact />
                     <Route component={MeetTheTeam} path={'/about-us/meet-the-team'} exact/>
                     <Route component={SingleDoctorPage} path={'/about-us/meet-the-team/:slug'} />
