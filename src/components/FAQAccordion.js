@@ -4,7 +4,7 @@ import styled from "styled-components";
 import PDFLink from "./UXElements/PDFLink";
 import zoompre from '../files/ZOOM-Pre-Op.pdf';
 import zoompost from '../files/ZOOM-Post-Op.pdf';
-import implantbg from '../files/Post_Op_Implant_Bone_Graft.pdf';
+
 
 const StyledAccHeader = styled(Accordion.Item)`
   background: #ffffff;
