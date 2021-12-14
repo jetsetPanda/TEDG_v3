@@ -3,6 +3,7 @@ import {Accordion, Row, Col} from "react-bootstrap";
 import styled from "styled-components";
 import PDFLink from "./UXElements/PDFLink";
 import ortho from '../files/Ortho-Post-Op.pdf';
+import retainer from '../files/Ortho-Retainers.pdf';
 
 
 const StyledAccHeader = styled(Accordion.Item)`
@@ -93,6 +94,20 @@ const OrthoAccordion = (props) => (
 Should you have a brace come loose before an appointment, please call the same day that you find out that it is broken. We are not going to be upset with you, but we do want to make sure that we have enough time to fix it during your regularly scheduled appointment. Some broken brackets can wait to be fixed while others need to be repaired as soon as possible. <br/><br/>
 The last thing that we would like you to know is that when you <strong>bend your wires or knock a brace loose</strong>, you run the risk of making your <strong>treatment take longer</strong>. If you chew gum, you probably won’t break anything but it will make it more difficult for the teeth to move past each other which means the <strong>treatment will take longer</strong>. If you cheat, you will only be cheating yourself in the end. Just remember these things from the start and you should finish your treatment on time. <br/><br/>
 */}
+                </Accordion.Body>
+            </StyledAccHeader>
+
+
+
+
+            <StyledAccHeader eventKey="1">
+                <Accordion.Header><strong>RETAINERS & BITE PLATES</strong></Accordion.Header>
+                <Accordion.Body>
+                <h6 className="py-3">
+                        <PDFLink pdfFile={retainer} cta="Instructions PDF"/> 
+                    </h6>
+
+
                 </Accordion.Body>
             </StyledAccHeader>
 
