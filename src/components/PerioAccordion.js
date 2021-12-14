@@ -5,7 +5,7 @@ import PDFLink from "./UXElements/PDFLink";
 import implantbg from '../files/Song-Post-Op-Implant-Bone-Graft.pdf';
 import tissuegraft from '../files/Song-Post-Op-Tissue-Graft.pdf';
 import lanap from '../files/Post-Op-LANAP.pdf';
-import periogeneral from '../files/Song-Post-Op-Perio.pdf';
+import periogeneral from '../files/Post-Op-Perio.pdf';
 import extractionssong from '../files/Song-Post-Op-Ext.pdf';
 import crownlength from '../files/Post-Op-Crown-Lengthening.pdf';
 
@@ -21,26 +21,19 @@ const PerioAccordion = (props) => (
         <h2 className="my-md-5 text-center mb-4 mt-4">Patient Resources</h2>
         <Accordion>
             <StyledAccHeader eventKey="0">
-                <Accordion.Header><strong>LANAP</strong></Accordion.Header>
+                <Accordion.Header><strong>LANAP/PERIODONTAL SURGERY</strong></Accordion.Header>
                 <Accordion.Body>
                 <h6 className="py-3">
-                        <PDFLink pdfFile={lanap} cta="Post-Operative Instructions PDF"/> 
+                        <PDFLink pdfFile={lanap} cta="Post-LANAP Diet Instructions PDF"/> 
+                    </h6>
+                    <h6 className="py-3">
+                        <PDFLink pdfFile={periogeneral} cta="Post-Operative Care Instructions PDF"/> 
                     </h6>
 
                 </Accordion.Body>
             </StyledAccHeader>
 
             <StyledAccHeader eventKey="1">
-                <Accordion.Header><strong>PERIODONTAL SURGERY</strong></Accordion.Header>
-                <Accordion.Body>
-                <h6 className="py-3">
-                        <PDFLink pdfFile={periogeneral} cta="Post-Operative Instructions PDF"/> 
-                    </h6>
-
-                </Accordion.Body>
-            </StyledAccHeader>
-
-            <StyledAccHeader eventKey="2">
                 <Accordion.Header><strong>CROWN LENGTHENING</strong></Accordion.Header>
                 <Accordion.Body>
                 <h6 className="py-3">
@@ -50,7 +43,7 @@ const PerioAccordion = (props) => (
                 </Accordion.Body>
             </StyledAccHeader>
 
-            <StyledAccHeader eventKey="3">
+            <StyledAccHeader eventKey="2">
                 <Accordion.Header><strong>EXTRACTIONS</strong></Accordion.Header>
                 <Accordion.Body>
                 <h6 className="py-3">
@@ -60,7 +53,7 @@ const PerioAccordion = (props) => (
                 </Accordion.Body>
             </StyledAccHeader>
 
-            <StyledAccHeader eventKey="4">
+            <StyledAccHeader eventKey="3">
                 <Accordion.Header><strong>IMPLANT & BONE GRAFT</strong></Accordion.Header>
                 <Accordion.Body>
                 <h6 className="py-3">
