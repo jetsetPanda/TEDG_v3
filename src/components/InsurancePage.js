@@ -190,14 +190,18 @@ function InsurancePage(props) {
                                     <h5>
                                        <ul>
                                             <li>Aetna</li>
+                                            <li>Always Care</li>
+                                            <li>Assurant</li>
                                             <li>Blue Cross Blue Shield</li>
                                             <li>Careington</li>
                                             <li>Cigna</li>
+                                            <li>Colonial Life</li>
                                             <li>Delta</li>
-                                            <li>Dental Health Alliance</li>
+                                            <li>Dental Health Alliance (DHA)</li>
                                             <li>First Fortis</li>
                                             <li>First Reliance</li>
                                             <li>Guardian</li>
+                                            <li>Healthplex with the Management Benefit Fund</li>
                                             <li>Humana</li>
                                         </ul>
                                     </h5>
@@ -209,12 +213,16 @@ function InsurancePage(props) {
                                             <li>Lincoln</li>
                                             <li>MetLife</li>
                                             <li>Nippon</li>
+                                            <li>Physicians Mutual</li>
                                             <li>Principal</li>
                                             <li>Renaissance</li>
+                                            <li>Standard of NY </li>
+                                            <li>Starmount</li>
                                             <li>Sunlife Financial</li>
                                             <li>Unicare</li>
                                             <li>United Concordia</li>
                                             <li>United Healthcare</li>
+                                            <li>Unum</li>
                                             <li>& More</li>
                                         </ul>
                                     </h5>
