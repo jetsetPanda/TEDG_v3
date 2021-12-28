@@ -2,8 +2,8 @@ import React from 'react';
 import {Accordion, Row, Col} from "react-bootstrap";
 import styled from "styled-components";
 import PDFLink from "./UXElements/PDFLink";
-import ortho from '../files/Ortho-Post-Op.pdf';
-import retainer from '../files/Ortho-Retainers.pdf';
+import braces from '../files/Ortho-No-Eats-List.pdf';
+import retainers from '../files/Ortho-Retainers.pdf';
 
 
 const StyledAccHeader = styled(Accordion.Item)`
@@ -23,7 +23,7 @@ const OrthoAccordion = (props) => (
 
                 {/*    <h4>A List of Food to be Avoided During Your Orthodontic Treatment</h4> */}
                     <h6 className="py-3">
-                        <PDFLink pdfFile={ortho} cta="The Official No-Eats List PDF"/> 
+                        <PDFLink pdfFile={braces} cta="The Official No-Eats List PDF"/> 
                     </h6>
                  {/*    <Row>
                     <Col>
@@ -104,7 +104,7 @@ The last thing that we would like you to know is that when you <strong>bend your
                 <Accordion.Header><strong>RETAINERS & BITE PLATES</strong></Accordion.Header>
                 <Accordion.Body>
                 <h6 className="py-3">
-                        <PDFLink pdfFile={retainer} cta="Instructions PDF"/> 
+                        <PDFLink pdfFile={retainers} cta="Instructions PDF"/> 
                     </h6>
 
 
