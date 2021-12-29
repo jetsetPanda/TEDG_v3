@@ -19,6 +19,7 @@ import card2 from "../assets/images/card 2.png";
 import card3 from "../assets/images/card3.png";
 import card4 from "../assets/images/card 4.png";
 import card0 from "../assets/images/card 0.png";
+import apple from "../assets/images/apple-pay-icon.png";
 import payment1 from "../assets/images/payment 1.png";
 import payment2 from "../assets/images/payment 2.png";
 import careCreditLogo from '../assets/images/carecreditlogo.png';
@@ -257,9 +258,9 @@ function InsurancePage(props) {
                                           </Card.Body>
                                         </Card>
                                         <Card border="light" style={{ width: '10rem' }} className="text-center">
-                                          <Card.Img variant="top" src={payment2} />
+                                          <Card.Img variant="top" src={apple} />
                                           <Card.Body>
-                                            <Card.Title>Check</Card.Title>
+                                            <Card.Title>Apple Pay</Card.Title>
                                           </Card.Body>
                                         </Card>
                                         <Card border="light" style={{ width: '10rem' }} className="text-center">
