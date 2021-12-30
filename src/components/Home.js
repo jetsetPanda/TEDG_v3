@@ -18,7 +18,7 @@ import smile2 from '../assets/images/smile2.jpg';
 import smile3 from '../assets/images/smile3.jpg';
 import smile4 from '../assets/images/smile4.jpg';
 import smileImg from '../assets/images/home-smile-img.jpg';
-import bg from '../assets/videos/tedg-crop.MP4';
+import bg from '../assets/videos/TEDG-2021.mp4';
 
 import PreFooter from "./PreFooter";
 import Footer from "./Footer";
@@ -89,7 +89,7 @@ const DivFlexVid = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: row;
-  height: 600px;
+  height: 700px;
 
   margin: 10px auto;
   @media (max-width: 768px) {
@@ -171,7 +171,7 @@ function Home(props) {
                     <div>
                     <DivFlexVid className="d-flex justify-content-center ">
                     <video className='videoTag' autoPlay loop muted>
-    <source src={bg} type='video/MP4' />
+    <source src={bg} type='video/mp4' />
 </video>
 </DivFlexVid>
                  {/*     <VideoBg >
