@@ -94,7 +94,7 @@ const DivFlexVid = styled.div`
   margin: 10px auto;
   @media (max-width: 768px) {
     flex-direction: column;
-    height: 100px;
+    height: 200px;
   }
 `
 
