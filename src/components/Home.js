@@ -18,6 +18,7 @@ import smile2 from '../assets/images/smile2.jpg';
 import smile3 from '../assets/images/smile3.jpg';
 import smile4 from '../assets/images/smile4.jpg';
 import smileImg from '../assets/images/home-smile-img.jpg';
+import bg from '../assets/videos/TEDG-2021.mp4';
 
 import PreFooter from "./PreFooter";
 import Footer from "./Footer";
@@ -83,6 +84,21 @@ const DivFlex = styled.div`
     text-align: center;
   }
 `
+
+const DivFlexVid = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  height: 700px;
+
+  margin: 10px auto;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: 100px;
+  }
+`
+
+
 const StyledImage = styled(Image)`
   width: 300px;
   height: 300px;
@@ -153,12 +169,21 @@ function Home(props) {
 
                 <Stack gap={5}>
                     <div>
-                        <Image
+                    <DivFlexVid className="d-flex justify-content-center ">
+                    <video className='videoTag' autoPlay loop muted>
+    <source src={bg} type='video/mp4' />
+</video>
+</DivFlexVid>
+                 {/*     <VideoBg >
+  <VideoBg.Source src={bg} type="video/mp4" />
+</VideoBg>
+
+                      <Image
                             src={homeBanner}
                             alt='home banner'
                             className=""
                             fluid
-                        />
+                       />*/}
                     </div>
                     <div>
                         <h1 className="text-center">
