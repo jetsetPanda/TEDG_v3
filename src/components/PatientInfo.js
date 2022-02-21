@@ -101,10 +101,10 @@ function PatientInfo(props) {
                                 <div>
                                     <h2><strong>New Patient Forms</strong></h2><br/>
                                     <h5>Prior to your first visit, we kindly ask that you please complete the new patient forms provided below.</h5><br/>
-                                   <a href="https://www.dentalhub.cloud/SivaForms/SecuredForms/ClientHTMLForms/633/e_adult_new_patient_form" target="_blank">
+                                   <a href="https://forms.goenlive.com/p/koEaKZtd8Z/" target="_blank">
                                         <Button variant="outline-primary" size="lg">Adult New Patient Forms</Button>
                                     </a><br/><br/>
-                                    <a href="https://www.dentalhub.cloud/SivaForms/SecuredForms/ClientHTMLForms/633/e_pediatric_new_patient_form" target="_blank" className="mt-3">
+                                    <a href="https://forms.goenlive.com/p/1Z9iffjuRG/" target="_blank" className="mt-3">
                                         <Button variant="outline-primary" size="lg">Pediatric New Patient Forms</Button>
                                     </a>
                                 </div>
