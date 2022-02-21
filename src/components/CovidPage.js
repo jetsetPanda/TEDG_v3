@@ -120,12 +120,13 @@ Our practice follows recommendations made by the American Dental Association, th
 
                 })}
 
-                                <div>
+                     {/*          <div>
                                     <h2><strong>Covid-19 Form</strong></h2><br/>
                                     <a href="https://www.dentalhub.cloud/SivaForms/SecuredForms/ClientHTMLForms/633/covid-19-update" target="_blank">
                                         <Button variant="outline-primary" size="lg">Covid-19 Health Screening Questionnaire</Button>
                                     </a>
                                 </div>
+                     */}
                 
 
                 <div className="text-center my-5">
