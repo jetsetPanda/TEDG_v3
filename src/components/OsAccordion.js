@@ -2,9 +2,10 @@ import React from 'react';
 import {Accordion, Row, Col} from "react-bootstrap";
 import styled from "styled-components";
 import PDFLink from "./UXElements/PDFLink";
-import implantas from '../files/Shanin-Post-Op-Implant-Bone-Graft.pdf';
-import implantplacement from '../files/Shanin-Post-Op-Implant.pdf';
-import ext from '../files/Shanin-Post-Op-Ext.pdf';
+import bgraft from '../files/Shanin-Post-Op-Bone-GraftV2.pdf';
+import implantplacement from '../files/Shanin-Post-Op-ImplantV2.pdf';
+import ext from '../files/Shanin-Post-Op-ExtV2.pdf';
+import slift from '../files/Shanin-Post-Op-Sinus-LiftV2.pdf';
 
 
 
@@ -99,8 +100,8 @@ const OsAccordion = (props) => (
             </StyledAccHeader>
 
 
-            <StyledAccHeader eventKey="2">
-                <Accordion.Header><strong>IMPLANT PLACEMENT</strong></Accordion.Header>
+            <StyledAccHeader eventKey="1">
+                <Accordion.Header><strong>IMPLANT</strong></Accordion.Header>
                 <Accordion.Body>
                 <h6 className="py-3">
                         <PDFLink pdfFile={implantplacement} cta="Post-Operative Instructions PDF"/> 
@@ -109,11 +110,20 @@ const OsAccordion = (props) => (
                 </Accordion.Body>
             </StyledAccHeader>
 
-            <StyledAccHeader eventKey="1">
-                <Accordion.Header><strong>IMPLANT & BONE GRAFT</strong></Accordion.Header>
+            <StyledAccHeader eventKey="2">
+                <Accordion.Header><strong>SINUS LIFT</strong></Accordion.Header>
                 <Accordion.Body>
                 <h6 className="py-3">
-                        <PDFLink pdfFile={implantas} cta="Post-Operative Instructions PDF"/> 
+                        <PDFLink pdfFile={slift} cta="Post-Operative Instructions PDF"/> 
+                </h6>
+                </Accordion.Body>
+            </StyledAccHeader>
+
+            <StyledAccHeader eventKey="3">
+                <Accordion.Header><strong>BONE GRAFT</strong></Accordion.Header>
+                <Accordion.Body>
+                <h6 className="py-3">
+                        <PDFLink pdfFile={bgraft} cta="Post-Operative Instructions PDF"/> 
                 </h6>
              {/*   Do not disturb the wound. Avoid rinsing, or spitting on the first 2 days after surgery.  Avoid touching the area and do not pull your lip or cheek out to view the area as that may put excessive tension on the surgical site and impair healing. If a dressing was placed it may dislodge soon after surgery. Unless directed otherwise, simply discard the piece, there is no need to have the area redressed. 
                  <br/><br/>

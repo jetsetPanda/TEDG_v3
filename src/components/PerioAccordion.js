@@ -2,13 +2,13 @@ import React from 'react';
 import {Accordion, Row, Col} from "react-bootstrap";
 import styled from "styled-components";
 import PDFLink from "./UXElements/PDFLink";
-import implantbg from '../files/Post-Op-Implant-BG-Song.pdf';
-import tissuegraft from '../files/Post-Op-Tissue-Graft-Song.pdf';
+import implantbg from '../files/Song-Post-Op-Implant-Bone-GraftV2.pdf';
+import tissuegraft from '../files/Song-Post-Op-Tissue-GraftV2.pdf';
 import lanap from '../files/Post-Op-LANAP.pdf';
-import periogeneral from '../files/Post-Op-Periodontal-Surgery.pdf';
-import sinuslift from '../files/Post-Op-Sinus-Lift-Song.pdf';
-import extractionssong from '../files/Post-Op-Ext-Song.pdf';
-import crownlength from '../files/Post-Op-Crown-Lengthening.pdf';
+import periogeneral from '../files/Post-Op-PerioV2.pdf';
+import sinuslift from '../files/Song-Post-Op-Sinus-LiftV2.pdf';
+import extractionssong from '../files/Song-Post-Op-ExtV2.pdf';
+import crownlength from '../files/Post-Op-Crown-LengtheningV2.pdf';
 
 const StyledAccHeader = styled(Accordion.Item)`
   background: #ffffff;
