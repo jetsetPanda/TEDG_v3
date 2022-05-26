@@ -179,7 +179,7 @@ smiles. Please browse through the amazing smile transformations
                        })}
                         </div>
                 <SmileVirtualBanner/>
-                <TestimonialSection/>
+                {/*   <TestimonialSection/> */}
                 <PreFooter/>
                 <Footer/>
                 </Stack>

@@ -170,7 +170,7 @@ function ServicesRestorative(props) {
 
                 }
 
-            <TestimonialSection/>
+                {/*   <TestimonialSection/> */}
             <PreFooter/>
             <Footer/>
 

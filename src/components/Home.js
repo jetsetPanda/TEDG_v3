@@ -314,7 +314,7 @@ function Home(props) {
                     </div>
 
 
-                    <TestimonialSection/>
+                {/*    <TestimonialSection/> */}
 
 
                     <PreFooter/>

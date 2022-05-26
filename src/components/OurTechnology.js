@@ -254,7 +254,7 @@ function OurTechnology(props) {
 
                     )}
                 )}
-                    <TestimonialSection/>
+                {/*   <TestimonialSection/> */}
                     <PreFooter/>
                     <Footer/>
 
