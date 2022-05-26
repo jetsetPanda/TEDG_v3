@@ -334,7 +334,7 @@ function InsurancePage(props) {
                 })}
 
 
-                <TestimonialSection/>
+                {/*   <TestimonialSection/> */}
                 <PreFooter/>
                 <Footer/>
 

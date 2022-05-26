@@ -174,7 +174,7 @@ function ServicesOrthodontics(props) {
                 }
 
             <OrthoAccordion/>
-            <TestimonialSection/>
+                {/*   <TestimonialSection/> */}
             <PreFooter/>
             <Footer/>
 

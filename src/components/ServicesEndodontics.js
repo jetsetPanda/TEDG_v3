@@ -169,7 +169,7 @@ function ServicesEndodontics(props) {
 
                 }
 
-            <TestimonialSection/>
+                {/*   <TestimonialSection/> */}
             <PreFooter/>
             <Footer/>
 

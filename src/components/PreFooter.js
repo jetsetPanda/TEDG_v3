@@ -11,6 +11,8 @@ const StyledLink = styled.a`
   color: #3274e5;
   font-weight: bold;
 `
+const CustomizedAcordion = styled(Accordion)`
+color: black`;
 
 const PreFooter = (props) => {
 
@@ -25,7 +27,7 @@ const PreFooter = (props) => {
                 <div className="directions">
                     <h5>DIRECTIONS TO 39 BROADWAY</h5>
                 </div>
-                <Accordion defaultActiveKey="0" flush>
+                <CustomizedAcordion defaultActiveKey="0" flush>
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>Subway</Accordion.Header>
                         <Accordion.Body>
@@ -77,7 +79,7 @@ const PreFooter = (props) => {
                             <StyledLink href="https://goo.gl/maps/NUPLm5NA8En8JRDn9" target="_blank"><span className="directions-link">Click here</span></StyledLink> for Google Maps driving directions.
                         </Accordion.Body>
                     </Accordion.Item>
-                </Accordion>
+                </CustomizedAcordion>
 
 
             </Col>

@@ -208,7 +208,7 @@ function ServicesCosmetic(props) {
                 }
                                    
         <FAQAccordion/>
-            <TestimonialSection/>
+                {/*   <TestimonialSection/> */}
             <PreFooter/>
             <Footer/>
 

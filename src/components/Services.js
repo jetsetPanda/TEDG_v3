@@ -137,7 +137,7 @@ function About(props) {
                 })}
 
                 <SmileVirtualBanner/>
-                <TestimonialSection/>
+                {/*   <TestimonialSection/> */}
                 <PreFooter/>
                 <Footer/>
 

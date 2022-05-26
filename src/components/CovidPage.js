@@ -207,7 +207,7 @@ Our practice follows recommendations made by the American Dental Association, th
                         </IconDiv>
                     </Col>
                 </Row>
-                <TestimonialSection/>
+                {/*   <TestimonialSection/> */}
                 <PreFooter/>
                 <Footer/>
 

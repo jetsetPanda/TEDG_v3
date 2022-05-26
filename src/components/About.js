@@ -159,7 +159,7 @@ function About(props) {
                     )}
                 )}
 
-                    <TestimonialSection/>
+                {/*   <TestimonialSection/> */}
                     <PreFooter/>
                     <Footer/>
 

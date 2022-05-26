@@ -170,7 +170,7 @@ function ServicesPediatric(props) {
 
                 }
 
-            <TestimonialSection/>
+                {/*   <TestimonialSection/> */}
             <PreFooter/>
             <Footer/>
 

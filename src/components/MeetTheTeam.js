@@ -319,7 +319,7 @@ function MeetTheTeam(props) {
 
                         </div>
                     }
-                <TestimonialSection/>
+                {/*   <TestimonialSection/> */}
                 <PreFooter/>
                 <Footer/>
                 </Stack>
