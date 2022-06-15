@@ -221,7 +221,6 @@ function InsurancePage(props) {
                                             <li>Starmount</li>
                                             <li>Sunlife Financial</li>
                                             <li>Unicare</li>
-                                            <li>United Concordia</li>
                                             <li>United Healthcare</li>
                                             <li>Unum</li>
                                             <li>& More</li>
