@@ -172,7 +172,7 @@ function ServicesGeneralDentistry(props) {
 
                 }
 
-            <TestimonialSection/>
+                {/*   <TestimonialSection/> */}
             <PreFooter/>
             <Footer/>
 

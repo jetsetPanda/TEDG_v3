@@ -18,6 +18,10 @@ import smile2 from '../assets/images/smile2.jpg';
 import smile3 from '../assets/images/smile3.jpg';
 import smile4 from '../assets/images/smile4.jpg';
 import smileImg from '../assets/images/home-smile-img.jpg';
+import testimonials from '../assets/images/testimonials2.png';
+import review1 from '../assets/images/review1.png';
+import review2 from '../assets/images/review2.jpg';
+import review3 from '../assets/images/review3.jpg';
 
 import PreFooter from "./PreFooter";
 import Footer from "./Footer";
@@ -264,6 +268,28 @@ function Home(props) {
                     </div>
 
                     <SmileVirtualBanner/>
+                
+
+                    <div style={{paddingTop: "30px", width: "80%", display: "flex", justifyContent: "center", margin: "auto"}}>
+                        <Image
+                            src={testimonials}
+                            alt='testimonials'
+                            className=""
+                            fluid
+                        />
+</div>
+
+                    <div className="d-flex flex-row flex-wrap justify-content-around">
+                  
+                            <StyledImage src={review1} fluid thumbnail/>
+                       
+                            <StyledImage src={review2} fluid thumbnail/>
+           
+                            <StyledImage src={review3} fluid thumbnail/>
+    
+                        
+                    
+                    </div>
 
 
                     <div>
@@ -314,7 +340,8 @@ function Home(props) {
                     </div>
 
 
-                    <TestimonialSection/>
+                {/*    <TestimonialSection/> */}
+
 
 
                     <PreFooter/>

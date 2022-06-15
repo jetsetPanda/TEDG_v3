@@ -209,7 +209,7 @@ function PatientInfo(props) {
                         </RightCol>
                     </Row>
 
-                    <TestimonialSection/>
+                {/*   <TestimonialSection/> */}
                     <PreFooter/>
                     <Footer/>
                 </Stack>

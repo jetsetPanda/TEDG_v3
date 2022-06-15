@@ -181,7 +181,7 @@ function PatientInfo(props) {
                             </Row>
 
 
-                <TestimonialSection/>
+                {/*   <TestimonialSection/> */}
                 <PreFooter/>
                 <Footer/>
 

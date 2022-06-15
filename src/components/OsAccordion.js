@@ -11,7 +11,7 @@ import slift from '../files/Shanin-Post-Op-Sinus-LiftV2.pdf';
 
 const StyledAccHeader = styled(Accordion.Item)`
   background: #ffffff;
-  color: #000000;
+  color: props.Textcolor;
 `
 
 
@@ -56,7 +56,7 @@ const OsAccordion = (props) => (
 */}
 
 
-            <StyledAccHeader eventKey="0">
+            <StyledAccHeader eventKey="0" textColor="red">
                 <Accordion.Header><strong>EXTRACTIONS</strong></Accordion.Header>
                 <Accordion.Body>{/*<h4>Post-Operative Extraction Home-Care Instructions</h4>*/}
                 <h6 className="py-3">
