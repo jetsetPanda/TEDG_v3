@@ -18,6 +18,10 @@ import smile2 from '../assets/images/smile2.jpg';
 import smile3 from '../assets/images/smile3.jpg';
 import smile4 from '../assets/images/smile4.jpg';
 import smileImg from '../assets/images/home-smile-img.jpg';
+import testimonials from '../assets/images/testimonials2.png';
+import review1 from '../assets/images/review1.png';
+import review2 from '../assets/images/review2.jpg';
+import review3 from '../assets/images/review3.jpg';
 
 import PreFooter from "./PreFooter";
 import Footer from "./Footer";
@@ -95,6 +99,19 @@ const StyledImage = styled(Image)`
     box-shadow: #5d5d5d -1px 1px 10px;
     transition: .3s ease;
   }
+
+  @media (max-width: 768px) {
+    width: 250px;
+    height: 250px;
+  }
+
+`
+const StyledReview = styled(Image)`
+  width: 350px;
+  height: 350px;
+  margin: 10px auto;
+  box-shadow: #5d5d5d 2px 2px 8px;
+  transition: .3s ease;
 
   @media (max-width: 768px) {
     width: 250px;
@@ -264,8 +281,6 @@ function Home(props) {
                     </div>
 
                     <SmileVirtualBanner/>
-
-
                     <div>
                         <h1 className="text-center my-4">Follow Us</h1>
                         <DivFlex className="d-flex justify-content-center ">
@@ -314,7 +329,38 @@ function Home(props) {
                     </div>
 
 
+
+
+
+
+<div>
+                        <h1 className="text-center mt-4">Testimonials</h1>
+                    </div>
+
+                    <div className="d-flex flex-row flex-wrap justify-content-around">
+                  
+                            <StyledReview src={review1} fluid thumbnail/>
+                       
+                            <StyledReview src={review2} fluid thumbnail/>
+           
+                            <StyledReview src={review3} fluid thumbnail/>
+                         
+                    </div>
+
+
+
+                    <div style={{paddingTop: "30px", width: "80%", display: "flex", justifyContent: "center", margin: "auto"}}>
+                        <Image
+                            src={testimonials}
+                            alt='testimonials'
+                            className=""
+                            fluid
+                        />
+</div>
+
+
                 {/*    <TestimonialSection/> */}
+
 
 
                     <PreFooter/>
