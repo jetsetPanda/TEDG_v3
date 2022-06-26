@@ -106,6 +106,19 @@ const StyledImage = styled(Image)`
   }
 
 `
+const StyledReview = styled(Image)`
+  width: 350px;
+  height: 350px;
+  margin: 10px auto;
+  box-shadow: #5d5d5d 2px 2px 8px;
+  transition: .3s ease;
+
+  @media (max-width: 768px) {
+    width: 250px;
+    height: 250px;
+  }
+
+`
 
 const StyledSmile = styled(Image)`
   width: 300px;
@@ -268,30 +281,6 @@ function Home(props) {
                     </div>
 
                     <SmileVirtualBanner/>
-                
-
-                    <div style={{paddingTop: "30px", width: "80%", display: "flex", justifyContent: "center", margin: "auto"}}>
-                        <Image
-                            src={testimonials}
-                            alt='testimonials'
-                            className=""
-                            fluid
-                        />
-</div>
-
-                    <div className="d-flex flex-row flex-wrap justify-content-around">
-                  
-                            <StyledImage src={review1} fluid thumbnail/>
-                       
-                            <StyledImage src={review2} fluid thumbnail/>
-           
-                            <StyledImage src={review3} fluid thumbnail/>
-    
-                        
-                    
-                    </div>
-
-
                     <div>
                         <h1 className="text-center my-4">Follow Us</h1>
                         <DivFlex className="d-flex justify-content-center ">
@@ -338,6 +327,36 @@ function Home(props) {
                         
                     
                     </div>
+
+
+
+
+
+
+<div>
+                        <h1 className="text-center mt-4">Testimonials</h1>
+                    </div>
+
+                    <div className="d-flex flex-row flex-wrap justify-content-around">
+                  
+                            <StyledReview src={review1} fluid thumbnail/>
+                       
+                            <StyledReview src={review2} fluid thumbnail/>
+           
+                            <StyledReview src={review3} fluid thumbnail/>
+                         
+                    </div>
+
+
+
+                    <div style={{paddingTop: "30px", width: "80%", display: "flex", justifyContent: "center", margin: "auto"}}>
+                        <Image
+                            src={testimonials}
+                            alt='testimonials'
+                            className=""
+                            fluid
+                        />
+</div>
 
 
                 {/*    <TestimonialSection/> */}
